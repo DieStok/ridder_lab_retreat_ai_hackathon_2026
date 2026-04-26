@@ -1,0 +1,27 @@
+.venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+*.log
+logs/
+data/
+
+# Per-team dirs may have their own venvs and data. Catch-all so we don't
+# accidentally commit them at the parent level if something goes sideways.
+submissions/*/.venv/
+submissions/*/.env
+submissions/*/__pycache__/
+submissions/*/logs/
+submissions/*/data/
+
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Notebooks output checkpoints
+*.ipynb_checkpoints/
+
+.DS_Store
