@@ -2,7 +2,7 @@
 
 The goal of this document is to catalogue ideas for lab automation tools that the de Ridder lab could use to enhance
 parts of the day-to-day tasks of scientists. Specifically, using agentic search or tooling to help us contextualize papers,
-deal with the flood of e-mail, get automatic (augmented) meeting/brainstorm recordings (using local models), etc. 
+deal with the flood of e-mail, get automatic (augmented) meeting/brainstorm recordings (using local models), etc.
 
 We will use these ideas to:
 * Get cracking with making some tools at the de Ridder lab 2026 retreat hackathon
@@ -13,7 +13,15 @@ We will use these ideas to:
 The hackathon will be preceded by some tips and tricks for common use cases (deep research and agentic coding) and a public brainstorming session where we try to come up with more ideas than the initial seed ideas we thought up and collected from your input in the lab meeting on sthe 24th of April. One of the organisers (Franka, Myrthe, Adrien, Dieter) will live-edit this document to add your ideas. Then, your team takes one of the ideas and in 50 minutes tries to:
 
 1. Create a clear design document/specification: what problem does the tool solve. What, exactly, should the tool do, and how? Save this as a .md file in a folder for your team locally.
-2. A first implementation of the bot
+2. A first implementation of the bot/tool
+
+We will focus on several use cases:
+1. Tools that interact with Slack, whose backend could be local or in a cloud VM. For instance: an LLM-based workflow that summarizes a paper posted on fyi-papers and pulls in related papers + comments from Bluesky. 
+2. Tools that interact with code, whose backend could be the hpc. For instance: a scheduled ollama job on the hpc that takes code you have written during the day and does a code review for, say: i) possible mistakes; ii) suggesting packages that might help in doing what you want to do; iii) surfacing code optimization possibilities using tools like [numba](https://numba.pydata.org/) or [Cython](https://cython.org/) or parallelizing with joblib or vectorizing with Numpy, etc.
+3. Tools that just run on our laptops. For instance, a local deep research variant that uses your literature database and local models and open-source search, so that we are not beholden to cloud providers. 
+
+Many of these overlap. The core security concern is: anything that gets exposed to the open web, even if via curated APIs (like the Arxiv paper server) is potentially dangerous and needs to be vetted: it should hence not be run on the hpc. 
+
 
 # Lab automation ideas 
 
@@ -31,7 +39,9 @@ execution ideas.
 
 5. A SIG newsletter that the entire lab receives on Slack: the SIGs are pretty siloed and since we are a large lab, group meeting presentations are few and far between. Busy postdocs, especially, have no way of knowing what is going on with everyone's project for months at a time. What if we could instead have an automatic SIG summary, based on a meeting recording (transcript), or slides, or both. Has elements of idea 2 and 3 above. Could also double as a recap of who discussed what last time. 
 
-6. Automated sbatch profiling and (lab-wide) reporting: we usually only profile jobs that are very compute-intensive, and otherwise hopefully follow the sbatch templates with a high nice-factor that Roy gave us. Howe
+6. Automated sbatch/srun profiling and (lab-wide) reporting: we usually only profile jobs that are very compute-intensive, and otherwise hopefully follow the sbatch templates with a high nice-factor that Roy gave us. However: we probably overprovision or overuse both `sbatch` and `srun` jobs, and the current infrastructure requires that everyone check their own jobs' actual usage versus what was requested. Can we use automated tools to surface a daily/weekly report to members on how their jobs did and give recommendations on what to change?
+
+7. Related to the above: automated code optimization: running 
 
 Automated sbatch profiling and reporting
 Reviewing our own papers (using local agents, IP safe)
