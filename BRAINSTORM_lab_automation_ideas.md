@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="images/brainstorm_ridder_lab.png" alt="Brainstorm de Ridder Lab" width="800">
+</div>
+
 # Introduction and setup
 
 The goal of this document is to catalogue ideas for lab automation tools that the de Ridder lab could use to enhance

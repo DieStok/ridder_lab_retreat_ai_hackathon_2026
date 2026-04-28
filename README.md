@@ -1,10 +1,19 @@
+<div align="center">
+  <img src="images/Ye_Olde_Hackathonne.png" alt="Brainstorm de Ridder Lab" width="800">
+  <figcaption>Fig 1. Obligatory AI-generated diagram to add spirit and vim to this README.
+  Motivational quote: 'Hack away'! Hotel: Trivago.</figcaption>
+</div>
+
+
+
 # Ridder Lab AI Hackathon — Spring 2026 Retreat
 
-Welcome. This folder is the playground for the lab retreat. Each team picks an automation idea, hacks on it for the duration of the retreat, and ships their work into `submissions/team_<your_name>/`.
+Welcome. This folder is the playground for the lab retreat. Each team picks an automation idea, hacks on it for the duration of the retreat, and ships their work into `submissions/team_<your_name>/`. Refer to the [brainstorm idea doc](hackathon/BRAINSTORM_lab_automation_ideas.md) to find ideas that we pre-generated and the ideas that we have just come up with.
 
-If you've never used a coding agent (Claude Code, Codex, Cursor, Aider, etc.) before, you'll be using one this week. The lab AGENTS.md and the per-tool stubs in this monorepo are written to give an agent enough context to be useful from the first prompt.
-
-> **Note for the retreat:** this is a *submodule* of the larger `lab_ai_automation` monorepo at `/hpc/compgen/projects/lab_ai_automation/` (also at `github.com/DieStok/ridder_lab_ai_automation`). You can clone just this folder if you want, but cloning the parent monorepo gives your coding agent access to the live `slack_paperbot_ridder_lab` as a real-world worked example, plus the `automation_building_blocks/` library.
+The brainstorm document has more details, but TL;DR the hackathon:
+1. You clone this repo (ideally the top-level ridder_lab_ai_automation repo if you want context for any AI coding agents)
+2. You work with your team in a folder within `submissions`, e.g. `submissions/Spanish_are_best_team_NO_CUBANS` or something similarly innocuous.
+3. You produce i) a markdown document detailing exactly: a) the problem you intend to solve; b) why that is a problem and how LLM agents or other automation could help; c) a proposed architecture/workflow/idea of how to implement this. ; ii) an initial implementation, in so far as you can get that in ±50 minutes with the help of your teammates and your LLM bot of choice.
 
 ## 10-minute start
 
@@ -49,12 +58,9 @@ git push origin team/<your_team>
 
 ## Ground rules
 
-1. **No secrets in commits.** `.env` files are gitignored at every level. If you accidentally commit a token, *immediately* tell `dstoker` so the token can be rotated. (This is non-negotiable; it's not a punishment, it's just the only safe path.)
-2. **No force-pushes to `main`.** Work on `team/<your_team>` branches. Open a PR if you want feedback.
-3. **Don't touch other teams' folders.** Stay inside `submissions/team_<your_team>/`. The shared hackathon-level files (`README.md`, `pyproject.toml`, `automation_ideas.md`, `AGENTS.md`) are also off-limits for in-place editing during the retreat — open an issue or PR if you want them changed.
-4. **Don't install system packages.** The shared `pyproject.toml` is meant to cover most needs. If you need something exotic, add it to your team's own `pyproject.toml` rather than to the shared one. If you really need a system library, ask `dstoker` first.
-5. **Be kind to the cluster.** No long-running processes on submit nodes. If you need batch compute, see `../automation_building_blocks/deployment_recipes/hpc_cron_sbatch.md`.
-6. **Have fun.** A scrappy demo that works beats a polished design that doesn't.
+1. **No force-pushes to `main`.** Work on `team/<your_team>` branches. Open a PR if you want feedback.
+2. **Don't touch other teams' folders.** Stay inside `submissions/team_<your_team>/`. The shared hackathon-level files (`README.md`, `pyproject.toml`, `automation_ideas.md`, `AGENTS.md`) are also off-limits for in-place editing during the retreat — open an issue or PR if you want them changed.
+3. **Have fun.** OR ELSE!
 
 ## What's already in this folder
 
