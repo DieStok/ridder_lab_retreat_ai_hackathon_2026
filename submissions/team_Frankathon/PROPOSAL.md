@@ -54,10 +54,19 @@ I don't need anyone else.
 
 Some notes along the way:
 - Perhaps make more explicit whether [additional_information_and_resources](./additional_information_and_resources) contains any information that may be of interest to human readers. I scanned through it and it seems to touch on important considerations for AI automation in our setting. Just context for AI or also context for mai?
-- Small snippet on how to download uv: ```
+- Small snippet on how to download uv: 
+```
 cd ~/Downloads/
 curl -LsSf https://astral.sh/uv/install.sh | sh
+# return to your team's directory
+cd <path>/ridder_lab_ai_automation/hackathon/submissions/team_<your_team>
 ```
+- Short snippet on how to activate the common venv: `source <path>/ridder_lab_ai_automation/hackathon/.venv/bin/activate`
 - Do you recommend working locally? Or do you leave it up to the team?
+
+Demo:
+```
+python evaluate.py
+```
 
 
