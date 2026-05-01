@@ -64,6 +64,9 @@ cd <path>/ridder_lab_ai_automation/hackathon/submissions/team_<your_team>
 - Short snippet on how to activate the common venv: `source <path>/ridder_lab_ai_automation/hackathon/.venv/bin/activate`
 - Do you recommend working locally? Or do you leave it up to the team?
 
+On my to-do:
+- Read the brainstorm document
+
 Demo:
 ```
 python evaluate.py
