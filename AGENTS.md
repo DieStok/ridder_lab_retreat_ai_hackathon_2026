@@ -1,12 +1,11 @@
 # AGENTS.md — Ridder Lab AI Hackathon (Spring 2026)
 
-> Source of truth for coding-agent behavior during the lab retreat. `.claude/CLAUDE.md` symlinks here. Tools that read `AGENTS.md` (Codex, Cursor, Aider) and `CLAUDE.md` (Claude Code) see the same rules.
->
+> Source of truth for coding-agent behavior during the lab retreat. `.claude/CLAUDE.md` symlinks here. 
 > Concrete and concise. If a rule isn't relevant to your team's work, ignore it; if you need a rule that isn't here, ask the human.
 
 ## Context for the agent
 
-You are working inside one team's submission directory at the De Ridder Lab's spring retreat. The team is hacking on a small AI-automation project for the lab. They are likely on a laptop, possibly behind UMC Utrecht's network. They have ~1–3 days. They want a scrappy working demo, not a polished system.
+You are working inside one team's submission directory at the De Ridder Lab's spring retreat. The team is hacking on a small AI-automation project for the lab. 
 
 The parent monorepo (`lab_ai_automation`) has its own `AGENTS.md` with the lab's general conventions. **This file overrides the parent within the `hackathon/` subtree.**
 
@@ -32,9 +31,10 @@ The parent monorepo (`lab_ai_automation`) has its own `AGENTS.md` with the lab's
 ## Soft rules (the spirit)
 
 - A working scrappy demo is the goal. Skip tests for prototypes; add them when something becomes real.
-- Don't over-engineer. The retreat is hours-to-days, not weeks.
+- Don't over-engineer. The hackathon is ± an hour.
 - Prefer copying from `../automation_building_blocks/` over inventing new patterns. If you copy a block, leave a one-line attribution comment at the top of the file noting which block it came from.
-- When uncertain about a lab convention or what the team actually wants, **ask the human**. The human is in the room.
+- Consider searching through `/hpc/compgen/projects/lab_ai_automation/hackathon/additional_information_and_resources` for useful sources to get started on a problem.
+- When uncertain about a lab convention or what the team actually wants, **ask the human**.
 
 ## Common starting points
 
@@ -45,8 +45,9 @@ The parent monorepo (`lab_ai_automation`) has its own `AGENTS.md` with the lab's
 ## What "done" looks like for a retreat submission
 
 - A `README.md` in your team dir explaining what you built and how to run it.
+- A filled-in `hackathon/submissions/TEMPLATE.md` copied to your team dir and renamed.
 - An entry-point command (`uv run python -m mything.run`, `uv run python app.py`, etc.).
-- An `.env.example` if your code reads tokens.
+- An `.env.example` if your code reads tokens or uses API keys.
 - One commit at minimum, pushed to your `team/<name>` branch.
 
 That's enough. Ship it.

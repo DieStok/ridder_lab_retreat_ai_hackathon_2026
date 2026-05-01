@@ -1,0 +1,3385 @@
+WEBVTT
+
+153f11af-3eef-4dd7-a503-246f05cb3175/6-0
+00:00:03.081 --> 00:00:10.401
+<v Rang-3, F.J. (Franka)>This before, or I tried this once,
+and then it was and not a great success.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/5-0
+00:00:04.601 --> 00:00:04.721
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/7-0
+00:00:11.361 --> 00:00:12.801
+<v Rang-3, F.J. (Franka)>Not great quality.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/8-0
+00:00:11.441 --> 00:00:14.961
+<v Paul>So it's like you get like a summary,
+you get a summary, like a written one.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/12-0
+00:00:16.561 --> 00:00:19.414
+<v Rang-3, F.J. (Franka)>Yeah,
+so now we get the literal transcripts.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/12-1
+00:00:19.414 --> 00:00:24.612
+<v Rang-3, F.J. (Franka)>I'm actually seeing it happening on the
+right, so I'm going to have to hide that,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/10-0
+00:00:21.921 --> 00:00:22.001
+<v Paul>Ah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/12-2
+00:00:24.612 --> 00:00:28.732
+<v Rang-3, F.J. (Franka)>otherwise it's distracting.
+But then we're, so for the retreats,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/12-3
+00:00:28.732 --> 00:00:31.521
+<v Rang-3, F.J. (Franka)>Dieter and I are planning a hackathon.
+And.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/11-0
+00:00:30.201 --> 00:00:30.681
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/18-0
+00:00:33.641 --> 00:00:38.384
+<v Rang-3, F.J. (Franka)>The lab will be divided into smaller
+groups, each with like a little project.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/18-1
+00:00:38.384 --> 00:00:43.005
+<v Rang-3, F.J. (Franka)>And one of the potential projects is to
+come up with a way that you can get</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/13-0
+00:00:41.041 --> 00:00:41.521
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/18-2
+00:00:43.005 --> 00:00:46.046
+<v Rang-3, F.J. (Franka)>automatic summaries and action lists or
+meetings.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/18-3
+00:00:46.046 --> 00:00:50.241
+<v Rang-3, F.J. (Franka)>But you're going to need some input,
+some transcript or a recording.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/14-0
+00:00:46.321 --> 00:00:46.881
+<v Paul>Very nice.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/15-0
+00:00:48.561 --> 00:00:50.001
+<v Paul>Sure, sure.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/17-0
+00:00:50.961 --> 00:00:52.161
+<v Paul>Yeah, sounds good. Perfect.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/19-0
+00:00:53.961 --> 00:00:54.401
+<v Paul>Great.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/20-0
+00:00:55.481 --> 00:00:55.641
+<v Paul>S.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/21-0
+00:00:55.681 --> 00:00:57.761
+<v Rang-3, F.J. (Franka)>Okay, how are you doing?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/22-0
+00:00:58.241 --> 00:01:01.121
+<v Paul>Very good,
+so maybe I will just share my screen.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/23-0
+00:01:01.521 --> 00:01:02.001
+<v Rang-3, F.J. (Franka)>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/24-0
+00:01:02.961 --> 00:01:04.161
+<v Paul>Just go a bit through.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/25-0
+00:01:05.921 --> 00:01:07.601
+<v Paul>So, can you see my VS code?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/26-0
+00:01:07.921 --> 00:01:09.041
+<v Rang-3, F.J. (Franka)>Yes, I can.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/27-0
+00:01:10.641 --> 00:01:12.481
+<v Paul>OK, so.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/28-0
+00:01:13.641 --> 00:01:14.801
+<v Paul>I've been doing this week.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/30-0
+00:01:15.921 --> 00:01:19.063
+<v Paul>It was just integrating the validation
+thing,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/30-1
+00:01:19.063 --> 00:01:24.321
+<v Paul>like just trying to use the markers from
+the paper for different cell types.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/29-0
+00:01:22.721 --> 00:01:23.201
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/31-0
+00:01:25.121 --> 00:01:26.041
+<v Rang-3, F.J. (Franka)>Ohh, nice, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/33-0
+00:01:28.241 --> 00:01:34.230
+<v Paul>And then just not looking at the
+handcraft features for now and just try</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/33-1
+00:01:34.230 --> 00:01:41.121
+<v Paul>to cluster using both embeddings from the
+different models now, not only new spire.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/32-0
+00:01:34.841 --> 00:01:35.321
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/35-0
+00:01:42.961 --> 00:01:46.721
+<v Paul>And combining it with RNA sec, right?
+And just see...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/34-0
+00:01:46.241 --> 00:01:47.841
+<v Rang-3, F.J. (Franka)>Yeah, exciting.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/36-0
+00:01:48.801 --> 00:01:50.721
+<v Paul>How can we interpret or validate?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/37-0
+00:01:49.041 --> 00:01:52.641
+<v Rang-3, F.J. (Franka)>So you also implemented the other models.
+That's also very nice.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/39-0
+00:01:52.481 --> 00:01:56.964
+<v Paul>Yeah, yeah,
+so I will show you first some some full</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/39-1
+00:01:56.964 --> 00:02:01.361
+<v Paul>outputs I got from like just processing
+100 cells.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/38-0
+00:02:01.841 --> 00:02:02.321
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/40-0
+00:02:03.441 --> 00:02:06.641
+<v Paul>And now I'm running the one with all the
+soft cells, which is still running.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/41-0
+00:02:07.681 --> 00:02:09.841
+<v Rang-3, F.J. (Franka)>For this one core, I assume that's...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/43-0
+00:02:08.921 --> 00:02:14.081
+<v Paul>Yeah, so exactly,
+so here it's still running.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/42-0
+00:02:14.881 --> 00:02:15.361
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/47-0
+00:02:15.721 --> 00:02:18.850
+<v Paul>And these ones are the outputs just for
+the 100 cells.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/47-1
+00:02:18.850 --> 00:02:23.061
+<v Paul>So I will just show you what kind of
+outputs I'm getting, when I want to,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/44-0
+00:02:18.961 --> 00:02:19.281
+<v Rang-3, F.J. (Franka)>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/45-0
+00:02:21.561 --> 00:02:22.041
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/47-2
+00:02:23.061 --> 00:02:26.076
+<v Paul>how I want to interpret it now,
+and what stage I am.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/46-0
+00:02:24.801 --> 00:02:25.241
+<v Rang-3, F.J. (Franka)>No.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/47-3
+00:02:26.076 --> 00:02:27.441
+<v Paul>So you can give me some.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/49-0
+00:02:26.281 --> 00:02:32.050
+<v Rang-3, F.J. (Franka)>Can you first tell me a bit about how was
+it to implement these other image</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/49-1
+00:02:32.050 --> 00:02:35.921
+<v Rang-3, F.J. (Franka)>foundation models?
+Were they easy to implement or?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/48-0
+00:02:32.201 --> 00:02:32.721
+<v Paul>Alright.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/53-0
+00:02:36.801 --> 00:02:41.558
+<v Paul>Yeah, very, very easy, yeah, very,
+very similar to to no spire,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/50-0
+00:02:41.201 --> 00:02:41.761
+<v Rang-3, F.J. (Franka)>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/53-1
+00:02:41.558 --> 00:02:47.356
+<v Paul>so no problems and no problems with also
+calling them and and downloading the</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/51-0
+00:02:46.561 --> 00:02:47.041
+<v Rang-3, F.J. (Franka)>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/53-2
+00:02:47.356 --> 00:02:50.849
+<v Paul>weights,
+so no limitation in terms of like how</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/52-0
+00:02:49.201 --> 00:02:49.921
+<v Rang-3, F.J. (Franka)>Nice.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/53-3
+00:02:50.849 --> 00:02:54.194
+<v Paul>many,
+how many I don't know how is it called</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/53-4
+00:02:54.194 --> 00:02:57.241
+<v Paul>require no when you ask for for the like.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/56-0
+00:02:58.241 --> 00:03:04.294
+<v Paul>You know, like some from from APIs, no,
+when you use some APIs or some libraries,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/54-0
+00:02:58.561 --> 00:03:00.001
+<v Rang-3, F.J. (Franka)>Dependencies or?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/56-1
+00:03:04.294 --> 00:03:08.501
+<v Paul>you have a certain,
+sometimes you have limited number of</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/56-2
+00:03:08.501 --> 00:03:14.553
+<v Paul>accesses per week or per day or whatever.
+So this is was one of my main concerns.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/55-0
+00:03:11.521 --> 00:03:11.681
+<v Rang-3, F.J. (Franka)>M.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/56-3
+00:03:14.553 --> 00:03:19.793
+<v Paul>Because for example, if you go to,
+I remember this course I had in the</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/56-4
+00:03:19.793 --> 00:03:22.081
+<v Paul>masters was like about finance.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/58-0
+00:03:22.241 --> 00:03:25.739
+<v Paul>So you have an API,
+you can download data from different</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/58-1
+00:03:25.739 --> 00:03:30.097
+<v Paul>companies in the stock market,
+but you can only access the data just a</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/58-2
+00:03:30.097 --> 00:03:31.201
+<v Paul>few times per day.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/57-0
+00:03:31.921 --> 00:03:32.441
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/59-0
+00:03:32.801 --> 00:03:37.201
+<v Paul>So I didn't know if this is the case,
+but it's not. So it's good.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/60-0
+00:03:35.761 --> 00:03:39.633
+<v Rang-3, F.J. (Franka)>Nice.
+And did you already look into this</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/60-1
+00:03:39.633 --> 00:03:41.521
+<v Rang-3, F.J. (Franka)>rotation or not yet?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/61-0
+00:03:42.241 --> 00:03:45.764
+<v Paul>So, yeah,
+I have some things to tell about this,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/63-0
+00:03:45.361 --> 00:03:48.416
+<v Rang-3, F.J. (Franka)>Okay,
+well then just go in the order that that</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/61-1
+00:03:45.764 --> 00:03:47.201
+<v Paul>so I was thinking...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/62-0
+00:03:48.321 --> 00:03:48.561
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/63-1
+00:03:48.416 --> 00:03:49.521
+<v Rang-3, F.J. (Franka)>you feel is best.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/64-0
+00:03:50.241 --> 00:03:55.080
+<v Paul>Yeah, I think I will mention it now,
+because if not, I think I will forget, so.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/64-1
+00:03:55.080 --> 00:03:55.201
+<v Paul>..</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/66-0
+00:03:57.041 --> 00:04:00.630
+<v Paul>I changed some things.
+I'm still trying a few things to</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/66-1
+00:04:00.630 --> 00:04:05.692
+<v Paul>understand what's the optimal way to do
+it. But looking in detail to Newspire,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/66-2
+00:04:05.692 --> 00:04:09.921
+<v Paul>I just realized that they are not
+training the model using crops.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/65-0
+00:04:11.241 --> 00:04:11.721
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/69-0
+00:04:12.241 --> 00:04:17.244
+<v Paul>So now I'm trying to see what I get
+without using the crops.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/69-1
+00:04:17.244 --> 00:04:22.000
+<v Paul>Just like doing the crops,
+but don't masking them. Sorry.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/67-0
+00:04:21.201 --> 00:04:22.561
+<v Rang-3, F.J. (Franka)>Yeah, yeah, yeah, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/69-2
+00:04:22.000 --> 00:04:26.511
+<v Paul>So not masks, sorry, not so crops, yes,
+but not masks.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/68-0
+00:04:24.481 --> 00:04:24.961
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/69-3
+00:04:26.511 --> 00:04:31.841
+<v Paul>So now I'm using the only the crops with
+no masks for new spire.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/70-0
+00:04:32.561 --> 00:04:36.030
+<v Paul>And for the other ones,
+I'm just trying to understand if it's</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/70-1
+00:04:36.030 --> 00:04:39.051
+<v Paul>better to do the masks or not.
+And if I do the masks,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/70-2
+00:04:39.051 --> 00:04:40.561
+<v Paul>I have maybe to align them.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/72-0
+00:04:42.401 --> 00:04:47.321
+<v Paul>So I'm just trying to iterate and just
+see the different ways which is better</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/71-0
+00:04:46.241 --> 00:04:46.361
+<v Rang-3, F.J. (Franka)>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/72-1
+00:04:47.321 --> 00:04:48.961
+<v Paul>and what makes more sense.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/75-0
+00:04:49.441 --> 00:04:54.830
+<v Rang-3, F.J. (Franka)>Yeah, yeah.
+I could imagine that if you don't mask,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/73-0
+00:04:50.801 --> 00:04:51.681
+<v Paul>So, I'm still there.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/75-1
+00:04:54.830 --> 00:04:58.561
+<v Rang-3, F.J. (Franka)>there is more information available.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/74-0
+00:04:58.161 --> 00:04:58.401
+<v Paul>No.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/80-0
+00:05:00.881 --> 00:05:07.719
+<v Rang-3, F.J. (Franka)>So I imagine by some metrics it will
+perform better because tumor cells might</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/76-0
+00:05:05.001 --> 00:05:05.241
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/77-0
+00:05:07.041 --> 00:05:07.281
+<v Paul>Hmm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/80-1
+00:05:07.719 --> 00:05:11.839
+<v Rang-3, F.J. (Franka)>have also more tumor cells around them,
+right?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/80-2
+00:05:11.839 --> 00:05:17.537
+<v Rang-3, F.J. (Franka)>So the surrounding cells carry
+information also about this cell.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/78-0
+00:05:12.081 --> 00:05:12.561
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/79-0
+00:05:16.561 --> 00:05:17.161
+<v Paul>Mm-hmm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/80-3
+00:05:17.537 --> 00:05:19.641
+<v Rang-3, F.J. (Franka)>But it would be ideal if</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/84-0
+00:05:20.161 --> 00:05:23.612
+<v Rang-3, F.J. (Franka)>both work because then you can kind of
+think,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/81-0
+00:05:22.881 --> 00:05:23.361
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/84-1
+00:05:23.612 --> 00:05:29.764
+<v Rang-3, F.J. (Franka)>am I now doing an analysis that I want to
+incorporate neighborhood information or</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/84-2
+00:05:29.764 --> 00:05:35.541
+<v Rang-3, F.J. (Franka)>am I doing an analysis where I want to be
+blind to neighborhood information?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/82-0
+00:05:30.401 --> 00:05:31.841
+<v Paul>Yeah, sure.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/84-3
+00:05:35.541 --> 00:05:38.241
+<v Rang-3, F.J. (Franka)>But I think for your whole pipeline,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/83-0
+00:05:36.001 --> 00:05:36.481
+<v Paul>Exactly.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/87-0
+00:05:39.601 --> 00:05:42.529
+<v Rang-3, F.J. (Franka)>Right,
+it's independent of this choice and it's</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/87-1
+00:05:42.529 --> 00:05:47.041
+<v Rang-3, F.J. (Franka)>just something that's towards the end you
+can switch on and off the mask.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/85-0
+00:05:43.201 --> 00:05:43.601
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/86-0
+00:05:47.561 --> 00:05:50.001
+<v Paul>Exactly, so that's my way of doing it,
+right?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/88-0
+00:05:50.721 --> 00:05:52.081
+<v Rang-3, F.J. (Franka)>Yeah, yeah, exactly.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/89-0
+00:05:50.881 --> 00:05:55.390
+<v Paul>I don't know if I don't remember if now I
+can just switch it,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/89-1
+00:05:55.390 --> 00:05:57.281
+<v Paul>just take me just one sec.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/90-0
+00:05:58.401 --> 00:06:02.321
+<v Paul>I think I can. I think I did it. Yeah,
+right.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/91-0
+00:06:04.401 --> 00:06:09.521
+<v Paul>So I can apply or not the mask, right?
+So now I'm just trying.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/94-0
+00:06:06.961 --> 00:06:10.525
+<v Rang-3, F.J. (Franka)>Exactly.
+Whatever you feel like continuing with</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/94-1
+00:06:10.525 --> 00:06:13.866
+<v Rang-3, F.J. (Franka)>and exploring,
+and then at some later stage,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/92-0
+00:06:10.641 --> 00:06:10.961
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/93-0
+00:06:12.961 --> 00:06:14.001
+<v Paul>Yeah, exactly.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/94-2
+00:06:13.866 --> 00:06:16.241
+<v Rang-3, F.J. (Franka)>we can contrast the two choices.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/98-0
+00:06:15.801 --> 00:06:20.520
+<v Paul>Exactly, exactly. So yeah,
+so what I'm getting now is just trying to</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/98-1
+00:06:20.520 --> 00:06:25.786
+<v Paul>have like this kind of like just closing
+the loop of the methodology, right?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/98-2
+00:06:25.786 --> 00:06:29.480
+<v Paul>Like you were,
+you told me last week just to maybe go</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/95-0
+00:06:26.801 --> 00:06:27.001
+<v Rang-3, F.J. (Franka)>M.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/98-3
+00:06:29.480 --> 00:06:33.310
+<v Paul>more into the validation part now,
+and I totally agree,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/96-0
+00:06:33.121 --> 00:06:33.601
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/98-4
+00:06:33.310 --> 00:06:35.361
+<v Paul>so I was just working on this.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/101-0
+00:06:35.881 --> 00:06:41.191
+<v Paul>Trying to close close the loop and to
+have like a ready a closed way of of</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/97-0
+00:06:36.081 --> 00:06:36.561
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/101-1
+00:06:41.191 --> 00:06:46.854
+<v Paul>analyzing the performance of the clusters
+and interpretation. So, you see here,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/99-0
+00:06:41.481 --> 00:06:41.961
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/101-2
+00:06:46.854 --> 00:06:50.323
+<v Paul>for example,
+this is the first output I got from</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/101-3
+00:06:50.323 --> 00:06:53.863
+<v Paul>analysis,
+which is this kind of clustering index,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/101-4
+00:06:53.863 --> 00:06:54.641
+<v Paul>like how...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/100-0
+00:06:54.401 --> 00:06:55.001
+<v Rang-3, F.J. (Franka)>Mm-hmm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/102-0
+00:06:55.041 --> 00:06:57.690
+<v Paul>good are the different modalities
+clustering.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/102-1
+00:06:57.690 --> 00:07:01.548
+<v Paul>The things I also consider the number of
+clusters for the metrics,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/102-2
+00:07:01.548 --> 00:07:04.081
+<v Paul>for some of the metrics which are
+relevant.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/103-0
+00:07:05.361 --> 00:07:11.252
+<v Rang-3, F.J. (Franka)>So the how good its clustering is that
+now defined on the spatial features or on</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/103-1
+00:07:11.252 --> 00:07:13.361
+<v Rang-3, F.J. (Franka)>the gene expression features?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/106-0
+00:07:14.881 --> 00:07:18.627
+<v Paul>So, yeah, so depending on the modality,
+right? So,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/104-0
+00:07:18.241 --> 00:07:18.721
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/106-1
+00:07:18.627 --> 00:07:23.840
+<v Paul>if you are using only the models,
+you just use the embeddings from the</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/105-0
+00:07:22.641 --> 00:07:23.121
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/106-2
+00:07:23.840 --> 00:07:28.981
+<v Paul>models, and you are using,
+I'm using a number of PCAs, of PCs, sorry,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/106-3
+00:07:28.981 --> 00:07:29.201
+<v Paul>50.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/107-0
+00:07:30.881 --> 00:07:31.721
+<v Paul>Um...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/109-0
+00:07:33.681 --> 00:07:38.186
+<v Paul>And then when I'm combining them the same,
+right, 50 and 50,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/108-0
+00:07:37.521 --> 00:07:37.681
+<v Rang-3, F.J. (Franka)>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/109-1
+00:07:38.186 --> 00:07:42.321
+<v Paul>so I get embeddings more balanced.
+Also exploring this.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/110-0
+00:07:45.001 --> 00:07:46.241
+<v Paul>And now you can see here.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/112-0
+00:07:47.521 --> 00:07:52.000
+<v Paul>So this is only the clustering score,
+nothing about interpretation,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/112-1
+00:07:52.000 --> 00:07:55.886
+<v Paul>biological meaning.
+And this is interesting here what I've</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/112-2
+00:07:55.886 --> 00:07:59.772
+<v Paul>seen interesting,
+and I think it's also repeating the same</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/112-3
+00:07:59.772 --> 00:08:03.856
+<v Paul>pattern in the other output,
+we can go maybe later into that,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/111-0
+00:08:03.201 --> 00:08:03.681
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/112-4
+00:08:03.856 --> 00:08:06.161
+<v Paul>is that only embeddings with no RNA</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/114-0
+00:08:06.321 --> 00:08:10.714
+<v Paul>they cluster better.
+So it's going in the same direction as</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/114-1
+00:08:10.714 --> 00:08:13.789
+<v Paul>before.
+You remember with the handcrafted</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/113-0
+00:08:13.681 --> 00:08:14.161
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/114-2
+00:08:13.789 --> 00:08:17.596
+<v Paul>features,
+we were getting better clustering somehow</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/114-3
+00:08:17.596 --> 00:08:22.794
+<v Paul>and with embeddings with no RNA the same.
+So it seems that so far that</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/114-4
+00:08:22.794 --> 00:08:26.601
+<v Paul>morphological information is way easier
+to cluster.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/115-0
+00:08:28.321 --> 00:08:32.794
+<v Rang-3, F.J. (Franka)>Yeah, so, but yeah,
+better means that the clusters are more</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/115-1
+00:08:32.794 --> 00:08:34.881
+<v Rang-3, F.J. (Franka)>separated based, yeah, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/118-0
+00:08:33.601 --> 00:08:37.459
+<v Paul>Yeah, yeah, exactly. So,
+and then if you combine it with RNA,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/116-0
+00:08:36.721 --> 00:08:37.201
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/118-1
+00:08:37.459 --> 00:08:41.441
+<v Paul>is the second block,
+and then RNA alone is the last one, right?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/117-0
+00:08:39.841 --> 00:08:40.721
+<v Rang-3, F.J. (Franka)>Yeah, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/119-0
+00:08:42.001 --> 00:08:44.881
+<v Rang-3, F.J. (Franka)>I'm not, uh, well, yeah, I...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/123-0
+00:08:46.721 --> 00:08:52.187
+<v Rang-3, F.J. (Franka)>I didn't really have an expectation for
+morphology per se, but for the RNA,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/123-1
+00:08:52.187 --> 00:08:56.286
+<v Rang-3, F.J. (Franka)>I know that it's difficult to get
+well-defined clusters,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/120-0
+00:08:55.081 --> 00:08:55.601
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/123-2
+00:08:56.286 --> 00:09:01.319
+<v Rang-3, F.J. (Franka)>so I'm not surprised that there the score
+is low. For the morphology,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/121-0
+00:08:58.321 --> 00:08:58.921
+<v Paul>Mm-hmm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/123-3
+00:09:01.319 --> 00:09:06.281
+<v Rang-3, F.J. (Franka)>I'm curious what morphological features
+are separating the clusters.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/122-0
+00:09:06.561 --> 00:09:06.801
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/126-0
+00:09:07.041 --> 00:09:11.740
+<v Rang-3, F.J. (Franka)>Because I really didn't a priori have
+expectation if it's very well separated</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/124-0
+00:09:10.241 --> 00:09:10.561
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/126-1
+00:09:11.740 --> 00:09:12.161
+<v Rang-3, F.J. (Franka)>or not.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/125-0
+00:09:12.641 --> 00:09:13.041
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/129-0
+00:09:15.441 --> 00:09:18.317
+<v Paul>Yeah,
+so for that I will use the handcraft</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/129-1
+00:09:18.317 --> 00:09:22.731
+<v Paul>features, right? I didn't do it yet,
+but for this will be useful,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/127-0
+00:09:18.641 --> 00:09:19.121
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/128-0
+00:09:22.281 --> 00:09:22.961
+<v Rang-3, F.J. (Franka)>Yeah, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/129-2
+00:09:22.731 --> 00:09:27.947
+<v Paul>the handcraft features. But for now,
+what I'm doing now is just using another</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/129-3
+00:09:27.947 --> 00:09:31.492
+<v Paul>metric as well,
+which is the purity of the clusters.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/129-4
+00:09:31.492 --> 00:09:36.641
+<v Paul>So what I'm doing here is for each cell,
+I'm taking the gene expression, I'm</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/132-0
+00:09:37.281 --> 00:09:41.425
+<v Paul>taking the genes which are relevant in
+this list of gene markers,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/130-0
+00:09:40.441 --> 00:09:41.681
+<v Rang-3, F.J. (Franka)>Mhm, mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/132-1
+00:09:41.425 --> 00:09:45.067
+<v Paul>doing the z-score,
+and then turning it with a soft max in</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/132-2
+00:09:45.067 --> 00:09:50.027
+<v Paul>the probability and just trying to match
+the cell type based on probability of</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/132-3
+00:09:50.027 --> 00:09:52.161
+<v Paul>being of 1 cell type or the other.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/131-0
+00:09:52.601 --> 00:09:53.081
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/133-0
+00:10:06.401 --> 00:10:06.641
+<v Rang-3, F.J. (Franka)>M.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/134-0
+00:10:06.681 --> 00:10:09.593
+<v Paul>metric for that.
+So how pure is the cluster in terms of</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/134-1
+00:10:09.593 --> 00:10:10.321
+<v Paul>cell labeling?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/137-0
+00:10:12.641 --> 00:10:16.369
+<v Paul>And also I have a class which is
+anonymous, which is, I have a,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/137-1
+00:10:16.369 --> 00:10:20.796
+<v Paul>I defined a threshold of probability.
+So if you don't have like more than a</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/137-2
+00:10:20.796 --> 00:10:25.281
+<v Paul>certain probability of a segment,
+you just assign these anonymous cell type.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/136-0
+00:10:25.721 --> 00:10:26.201
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/138-0
+00:10:27.041 --> 00:10:31.883
+<v Paul>So this is the purity thing.
+So this would help us somehow to validate</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/138-1
+00:10:31.883 --> 00:10:35.361
+<v Paul>the clusters.
+So the first part would be just how.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/142-0
+00:10:36.561 --> 00:10:42.127
+<v Paul>how the metal is clustering and the other
+one will be how good these clusters are</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/139-0
+00:10:38.681 --> 00:10:39.201
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/142-1
+00:10:42.127 --> 00:10:45.521
+<v Paul>in terms of cell labels and so the labels,
+right?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/140-0
+00:10:43.681 --> 00:10:44.161
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/141-0
+00:10:45.921 --> 00:10:46.641
+<v Rang-3, F.J. (Franka)>No, no.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/143-0
+00:10:49.441 --> 00:10:52.704
+<v Paul>And this is the, for example,
+this is quite poor, right?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/143-1
+00:10:52.704 --> 00:10:55.681
+<v Paul>This I have to improve because the cell
+adaptation.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/144-0
+00:10:56.641 --> 00:10:59.571
+<v Paul>The so the labels are assigned,
+like you see here,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/144-1
+00:10:59.571 --> 00:11:03.361
+<v Paul>the different cell types which were
+assigned for these 100 cells.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/145-0
+00:11:05.561 --> 00:11:05.681
+<v Paul>The.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/148-0
+00:11:07.601 --> 00:11:11.105
+<v Paul>And you also have the P,
+which is the probability,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/148-1
+00:11:11.105 --> 00:11:15.364
+<v Paul>like the mean probability before
+assignment. So, for example,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/146-0
+00:11:13.361 --> 00:11:14.041
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/148-2
+00:11:15.364 --> 00:11:20.448
+<v Paul>for the tumor cells, in average,
+they were assigned even if they had like</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/148-3
+00:11:20.448 --> 00:11:26.081
+<v Paul>0.19 probability of being tumor cells.
+But still, it was the largest probability.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/147-0
+00:11:23.481 --> 00:11:23.961
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/149-0
+00:11:26.481 --> 00:11:27.001
+<v Paul>In England.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/154-0
+00:11:27.761 --> 00:11:32.265
+<v Rang-3, F.J. (Franka)>Yeah, yeah.
+I would for sure not try to optimize cell</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/150-0
+00:11:28.001 --> 00:11:29.361
+<v Paul>for those cells, right?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/154-1
+00:11:32.265 --> 00:11:36.519
+<v Rang-3, F.J. (Franka)>type labeling because that is a field
+unto itself.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/154-2
+00:11:36.519 --> 00:11:39.521
+<v Rang-3, F.J. (Franka)>That's essentially my whole project.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/152-0
+00:11:37.441 --> 00:11:37.841
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/153-0
+00:11:40.161 --> 00:11:40.561
+<v Paul>OK.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/155-0
+00:11:42.161 --> 00:11:43.041
+<v Rang-3, F.J. (Franka)>I think...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/156-0
+00:11:44.641 --> 00:11:47.441
+<v Rang-3, F.J. (Franka)>Rather than using a.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/157-0
+00:11:49.921 --> 00:11:50.401
+<v Rang-3, F.J. (Franka)>And.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/160-0
+00:11:51.921 --> 00:11:56.193
+<v Rang-3, F.J. (Franka)>the cell type labels as a kind of
+intermediate,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/158-0
+00:11:53.041 --> 00:11:53.161
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/160-1
+00:11:56.193 --> 00:12:02.778
+<v Rang-3, F.J. (Franka)>I would try to go directly from the genes
+to a score. So essentially how,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/160-2
+00:12:02.778 --> 00:12:07.584
+<v Rang-3, F.J. (Franka)>for example,
+like the silhouette coefficient for each</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/160-3
+00:12:07.584 --> 00:12:11.321
+<v Rang-3, F.J. (Franka)>gene across the defined clusters or, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/159-0
+00:12:09.721 --> 00:12:10.481
+<v Paul>OKOK.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/163-0
+00:12:11.681 --> 00:12:16.126
+<v Rang-3, F.J. (Franka)>Yeah, something like that.
+And then you can have for each of the</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/163-1
+00:12:16.126 --> 00:12:19.477
+<v Rang-3, F.J. (Franka)>models,
+you can have a distribution over all the</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/161-0
+00:12:19.121 --> 00:12:19.441
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/163-2
+00:12:19.477 --> 00:12:23.921
+<v Rang-3, F.J. (Franka)>relevant genes that you defined.
+And then you can take the mean.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/162-0
+00:12:22.161 --> 00:12:23.761
+<v Paul>Okay, so you can define maybe.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/170-0
+00:12:25.041 --> 00:12:28.492
+<v Rang-3, F.J. (Franka)>Yeah, yeah,
+I think it's a bit safer because</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/164-0
+00:12:25.681 --> 00:12:26.081
+<v Paul>So.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/170-1
+00:12:28.492 --> 00:12:34.550
+<v Rang-3, F.J. (Franka)>otherwise your evaluation is very much
+dependent on how well you can infer the</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/165-0
+00:12:34.441 --> 00:12:34.801
+<v Paul>Mm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/170-2
+00:12:34.550 --> 00:12:38.614
+<v Rang-3, F.J. (Franka)>cell type.
+I think if you go directly from the gene,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/166-0
+00:12:35.681 --> 00:12:36.161
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/170-3
+00:12:38.614 --> 00:12:41.681
+<v Rang-3, F.J. (Franka)>it's more interpretable. And then we can</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/167-0
+00:12:38.721 --> 00:12:39.241
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/168-0
+00:12:40.241 --> 00:12:40.721
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/169-0
+00:12:42.881 --> 00:12:43.121
+<v Paul>M.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/175-0
+00:12:44.801 --> 00:12:48.363
+<v Rang-3, F.J. (Franka)>either ask us or maybe we can do it
+ourselves,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/175-1
+00:12:48.363 --> 00:12:54.500
+<v Rang-3, F.J. (Franka)>actually use an established tool for cell
+type identification that will give you</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/171-0
+00:12:52.081 --> 00:12:52.561
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/175-2
+00:12:54.500 --> 00:12:59.198
+<v Rang-3, F.J. (Franka)>labels to work with.
+I think otherwise you risk that you sink</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/172-0
+00:12:54.961 --> 00:12:56.481
+<v Paul>Okay, yes, sounds good.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/175-3
+00:12:59.198 --> 00:13:03.441
+<v Rang-3, F.J. (Franka)>a lot of time into trying to make this
+better, which is</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/173-0
+00:12:59.921 --> 00:13:00.401
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/174-0
+00:13:01.601 --> 00:13:02.481
+<v Paul>Yeah, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/176-0
+00:13:03.921 --> 00:13:05.361
+<v Rang-3, F.J. (Franka)>Yeah, guaranteed, not that easy.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/177-0
+00:13:05.921 --> 00:13:06.321
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/178-0
+00:13:07.241 --> 00:13:07.361
+<v Rang-3, F.J. (Franka)>Um...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/180-0
+00:13:08.721 --> 00:13:11.638
+<v Paul>Okay, yeah, sure. Sounds good.
+So he's more looking at the clusters</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/180-1
+00:13:11.638 --> 00:13:13.912
+<v Paul>themselves, right?
+And having like a distribution of</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/180-2
+00:13:13.912 --> 00:13:15.885
+<v Paul>expression of the clusters and based on
+that,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/180-3
+00:13:15.885 --> 00:13:17.601
+<v Paul>trying to assign like the most probable.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/179-0
+00:13:16.001 --> 00:13:16.481
+<v Rang-3, F.J. (Franka)>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/183-0
+00:13:19.361 --> 00:13:26.752
+<v Rang-3, F.J. (Franka)>Yeah, or just even, because all your,
+you now have a clustering metric that's</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/183-1
+00:13:26.752 --> 00:13:32.533
+<v Rang-3, F.J. (Franka)>based on the feature space that was used
+for the clustering,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/181-0
+00:13:27.241 --> 00:13:27.361
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/183-2
+00:13:32.533 --> 00:13:38.881
+<v Rang-3, F.J. (Franka)>but you could also compute the clustering
+metrics using always the</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/182-0
+00:13:32.601 --> 00:13:33.081
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/187-0
+00:13:39.201 --> 00:13:43.099
+<v Rang-3, F.J. (Franka)>predefined gene express, like genes,
+cell type genes.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/184-0
+00:13:42.161 --> 00:13:42.561
+<v Paul>No.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/187-1
+00:13:43.099 --> 00:13:48.658
+<v Rang-3, F.J. (Franka)>And then you use the same features to
+define a clustering metric for all the</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/185-0
+00:13:43.681 --> 00:13:43.961
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/187-2
+00:13:48.658 --> 00:13:52.989
+<v Rang-3, F.J. (Franka)>different embeddings,
+which I think will make it also a bit</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/187-3
+00:13:52.989 --> 00:13:57.681
+<v Rang-3, F.J. (Franka)>more comparable, right?
+Because then it's not only are they more</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/186-0
+00:13:54.681 --> 00:13:55.201
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/189-0
+00:13:58.161 --> 00:14:03.509
+<v Rang-3, F.J. (Franka)>well defined or more separate in their
+own feature space,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/189-1
+00:14:03.509 --> 00:14:10.976
+<v Rang-3, F.J. (Franka)>but are they also more well defined when
+we look at gene expression space across</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/188-0
+00:14:09.201 --> 00:14:10.201
+<v Paul>Mhm, mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/189-2
+00:14:10.976 --> 00:14:13.281
+<v Rang-3, F.J. (Franka)>all all embedding spaces?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/190-0
+00:14:14.641 --> 00:14:16.401
+<v Paul>Okay, perfect. Yeah, sounds good.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/191-0
+00:14:17.841 --> 00:14:21.986
+<v Paul>Yeah, sounds good. No, actually,
+it's way better, actually, because, yeah,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/191-1
+00:14:21.986 --> 00:14:25.688
+<v Paul>but when I've seen this, it was like,
+okay, maybe, maybe we could,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/191-2
+00:14:25.688 --> 00:14:28.561
+<v Paul>we shouldn't trust,
+or we shouldn't do it this way.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/196-0
+00:14:28.001 --> 00:14:31.986
+<v Rang-3, F.J. (Franka)>Yeah, it's pretty difficult stuff.
+And then, you know,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/196-1
+00:14:31.986 --> 00:14:37.275
+<v Rang-3, F.J. (Franka)>once you have the cell type labels,
+you technically want to also kind of</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/192-0
+00:14:32.641 --> 00:14:33.041
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/193-0
+00:14:36.081 --> 00:14:36.441
+<v Paul>Beautiful.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/196-2
+00:14:37.275 --> 00:14:42.781
+<v Rang-3, F.J. (Franka)>explore them in a bit more depth to
+validate how reliable they are. It's a,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/194-0
+00:14:38.081 --> 00:14:38.561
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/195-0
+00:14:42.321 --> 00:14:44.081
+<v Paul>Yeah, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/196-3
+00:14:42.781 --> 00:14:47.272
+<v Rang-3, F.J. (Franka)>it could, for example,
+be that you get low scores because the</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/196-4
+00:14:47.272 --> 00:14:48.721
+<v Rang-3, F.J. (Franka)>marker genes that...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/201-0
+00:14:48.961 --> 00:14:54.868
+<v Rang-3, F.J. (Franka)>that that paper uses to identify tumor
+cells are just not a very high quality in</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/197-0
+00:14:52.681 --> 00:14:53.161
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/201-1
+00:14:54.868 --> 00:14:59.463
+<v Rang-3, F.J. (Franka)>our data set, for example.
+So then it becomes immediately very</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/198-0
+00:14:55.441 --> 00:14:55.841
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/199-0
+00:14:57.121 --> 00:14:57.521
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/200-0
+00:14:59.281 --> 00:14:59.681
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/201-2
+00:14:59.463 --> 00:15:02.161
+<v Rang-3, F.J. (Franka)>difficult. Yeah, I'm thinking what's.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/202-0
+00:15:04.841 --> 00:15:11.934
+<v Rang-3, F.J. (Franka)>What's easiest? After this meeting,
+I'll send Christian a message to ask him</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/202-1
+00:15:11.934 --> 00:15:19.119
+<v Rang-3, F.J. (Franka)>to run some cell typing tools on this
+data set so that you have semi-reliable</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/202-2
+00:15:19.119 --> 00:15:20.961
+<v Rang-3, F.J. (Franka)>labels to work with.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/203-0
+00:15:20.081 --> 00:15:25.361
+<v Paul>All right, I know, OK. OK. Sounds good.
+Thanks. That is great.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/204-0
+00:15:26.921 --> 00:15:29.041
+<v Paul>That's great, so yeah, so...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/208-0
+00:15:31.761 --> 00:15:36.147
+<v Paul>This is the same with no probabilities.
+And yeah,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/205-0
+00:15:34.761 --> 00:15:34.921
+<v Rang-3, F.J. (Franka)>M.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/208-1
+00:15:36.147 --> 00:15:42.988
+<v Paul>so then I was just normalizing all the
+scores, doing like a geometrical mean,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/208-2
+00:15:42.988 --> 00:15:49.653
+<v Paul>penalizing also if we have too much
+anonymous cells and just having like an</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/206-0
+00:15:47.641 --> 00:15:48.121
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/208-3
+00:15:49.653 --> 00:15:50.881
+<v Paul>overall score.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/207-0
+00:15:51.361 --> 00:15:51.841
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/209-0
+00:15:51.761 --> 00:15:55.601
+<v Paul>So this is just the same,
+but in terms of the overall score.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/210-0
+00:15:56.801 --> 00:15:59.961
+<v Paul>And then I started doing, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/211-0
+00:15:57.241 --> 00:16:00.941
+<v Rang-3, F.J. (Franka)>OK,
+so your new spire seems to be the best,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/211-1
+00:16:00.941 --> 00:16:01.361
+<v Rang-3, F.J. (Franka)>yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/214-0
+00:16:01.601 --> 00:16:04.569
+<v Paul>Yeah, yeah, so it's the same pattern,
+right? First,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/214-1
+00:16:04.569 --> 00:16:07.709
+<v Paul>the morphological embeddings,
+then combined, then RNA,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/212-0
+00:16:05.481 --> 00:16:05.801
+<v Rang-3, F.J. (Franka)>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/214-2
+00:16:07.709 --> 00:16:11.476
+<v Paul>new spire is doing best,
+so everything makes sense in this sense,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/213-0
+00:16:08.241 --> 00:16:08.521
+<v Rang-3, F.J. (Franka)>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/214-3
+00:16:11.476 --> 00:16:11.761
+<v Paul>so...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/216-0
+00:16:13.361 --> 00:16:17.715
+<v Paul>It's coherent somehow.
+And then I was doing the sweeping,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/216-1
+00:16:17.715 --> 00:16:23.570
+<v Paul>like you remember what you said in the
+meeting, the first presentation I did,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/216-2
+00:16:23.570 --> 00:16:29.576
+<v Paul>like maybe it's better to sweep between
+resolution in Leiden and just have like</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/215-0
+00:16:24.321 --> 00:16:24.801
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/216-3
+00:16:29.576 --> 00:16:30.401
+<v Paul>an average.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/217-0
+00:16:32.001 --> 00:16:33.441
+<v Paul>Performance, right?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/218-0
+00:16:34.161 --> 00:16:34.761
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/219-0
+00:16:35.281 --> 00:16:38.721
+<v Paul>So,
+this is then this is this plot is just</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/219-1
+00:16:38.721 --> 00:16:44.801
+<v Paul>showing the anonymous cells. So,
+in this in this analysis, I'm showing you.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/223-0
+00:16:46.081 --> 00:16:48.701
+<v Paul>Actually,
+all the cells were assigned to 1 cell</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/223-1
+00:16:48.701 --> 00:16:52.905
+<v Paul>type because I just put the threshold
+very low of the probability. It was 0.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/223-2
+00:16:52.905 --> 00:16:56.780
+<v Paul>01 because I saw how where the
+probabilities are and I was like, okay,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/220-0
+00:16:53.401 --> 00:16:53.881
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/223-3
+00:16:56.780 --> 00:17:01.202
+<v Paul>we need to lower it and just let's see
+what happens if I just put it close to 0.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/221-0
+00:16:59.521 --> 00:16:59.801
+<v Rang-3, F.J. (Franka)>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/223-4
+00:17:01.202 --> 00:17:03.658
+<v Paul>Of course, if you put it like close to 0.
+5,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/223-5
+00:17:03.658 --> 00:17:05.841
+<v Paul>you will get like maybe 80% of the cells</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/224-0
+00:17:05.921 --> 00:17:09.127
+<v Paul>non-unassigned, only anonymous.
+So I was like, okay,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/222-0
+00:17:07.841 --> 00:17:08.321
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/224-1
+00:17:09.127 --> 00:17:13.059
+<v Paul>maybe to show to Franka,
+maybe it's better to just assign all of</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/224-2
+00:17:13.059 --> 00:17:13.361
+<v Paul>them.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/226-0
+00:17:15.201 --> 00:17:19.175
+<v Paul>And then the same, right?
+I have the two metrics,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/226-1
+00:17:19.175 --> 00:17:24.261
+<v Paul>clustering and purity,
+and then both combined across the light,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/226-2
+00:17:24.261 --> 00:17:27.281
+<v Paul>and this is the both combined metrics.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/225-0
+00:17:27.721 --> 00:17:28.321
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/227-0
+00:17:28.881 --> 00:17:31.121
+<v Paul>Across the different light and
+resolutions.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/228-0
+00:17:31.681 --> 00:17:31.801
+<v Rang-3, F.J. (Franka)>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/229-0
+00:17:33.321 --> 00:17:34.401
+<v Paul>And yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/231-0
+00:17:34.401 --> 00:17:39.731
+<v Rang-3, F.J. (Franka)>Do you, could you also plot the same,
+but instead of having the lighter</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/230-0
+00:17:38.201 --> 00:17:38.401
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/231-1
+00:17:39.731 --> 00:17:42.321
+<v Rang-3, F.J. (Franka)>resolution, the number of clusters?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/232-0
+00:17:43.041 --> 00:17:45.841
+<v Paul>Sure, I don't have it here, but yeah,
+of course.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/233-0
+00:17:43.121 --> 00:17:48.801
+<v Rang-3, F.J. (Franka)>Or is that, uh, yeah, yeah, yeah,
+it's just I, because I don't...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/236-0
+00:17:50.961 --> 00:17:57.144
+<v Rang-3, F.J. (Franka)>have an intuitive understanding of the
+difference between a later resolution of</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/234-0
+00:17:53.681 --> 00:17:54.081
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/236-1
+00:17:57.144 --> 00:18:01.162
+<v Rang-3, F.J. (Franka)>one or two,
+and that's a bit easier to understand 5</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/235-0
+00:18:00.201 --> 00:18:00.641
+<v Paul>Again.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/236-2
+00:18:01.162 --> 00:18:02.321
+<v Rang-3, F.J. (Franka)>or 10 clusters.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/237-0
+00:18:02.721 --> 00:18:04.561
+<v Paul>Sure, I've done this before.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/239-0
+00:18:03.801 --> 00:18:08.759
+<v Rang-3, F.J. (Franka)>And I'm also curious because the,
+I don't know if they kind of fracture</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/239-1
+00:18:08.759 --> 00:18:13.441
+<v Rang-3, F.J. (Franka)>into the same number of clusters at the
+same resolution now, right?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/238-0
+00:18:10.481 --> 00:18:10.801
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/242-0
+00:18:13.761 --> 00:18:18.163
+<v Paul>No, so I've done these plots before,
+then I just took them out.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/240-0
+00:18:16.321 --> 00:18:16.481
+<v Rang-3, F.J. (Franka)>M.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/242-1
+00:18:18.163 --> 00:18:23.184
+<v Paul>But before I remember doing it,
+and some of them were just continuing up</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/242-2
+00:18:23.184 --> 00:18:26.554
+<v Paul>to like, I don't know, 15, 20 clusters or,
+yeah,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/242-3
+00:18:26.554 --> 00:18:29.855
+<v Paul>and some of them were just staying at 7,
+8 max.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/241-0
+00:18:29.841 --> 00:18:30.241
+<v Rang-3, F.J. (Franka)>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/242-4
+00:18:29.855 --> 00:18:32.881
+<v Paul>So it was really depending on the
+modality.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/245-0
+00:18:32.161 --> 00:18:34.712
+<v Rang-3, F.J. (Franka)>Yeah, yeah,
+maybe you can just do it side by side on</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/245-1
+00:18:34.712 --> 00:18:36.877
+<v Rang-3, F.J. (Franka)>the left,
+the later resolution on the right,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/243-0
+00:18:36.081 --> 00:18:36.481
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/245-2
+00:18:36.877 --> 00:18:38.561
+<v Rang-3, F.J. (Franka)>the number of clusters, and then...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/244-0
+00:18:38.161 --> 00:18:38.681
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/246-0
+00:18:40.401 --> 00:18:40.801
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/247-0
+00:18:40.841 --> 00:18:42.401
+<v Rang-3, F.J. (Franka)>Can see what plot.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/248-0
+00:18:44.161 --> 00:18:46.481
+<v Rang-3, F.J. (Franka)>is the most informative for us.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/249-0
+00:18:47.081 --> 00:18:47.441
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/254-0
+00:18:48.601 --> 00:18:53.801
+<v Paul>Yeah, and from this plot, actually,
+of course, we cannot conclude to anything,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/254-1
+00:18:53.801 --> 00:18:59.265
+<v Paul>and I have to redo it, because if I don't,
+if we agree not to use this, of course,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/251-0
+00:18:57.801 --> 00:18:58.401
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/254-2
+00:18:59.265 --> 00:19:04.070
+<v Paul>this is not that meaningful now,
+but it's still a bit interesting to see</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/252-0
+00:19:00.961 --> 00:19:01.441
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/254-3
+00:19:04.070 --> 00:19:07.361
+<v Paul>how, for example,
+RNA metrics collapse over time.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/253-0
+00:19:08.041 --> 00:19:08.521
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/255-0
+00:19:08.081 --> 00:19:11.697
+<v Paul>Then you have like different three
+different groups, very established, right?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/255-1
+00:19:11.697 --> 00:19:13.041
+<v Paul>You have the RNA, RNA plus...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/256-0
+00:19:13.961 --> 00:19:16.279
+<v Paul>Embeddings,
+and then the embeddings themselves,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/256-1
+00:19:16.279 --> 00:19:17.921
+<v Paul>and you really see the difference.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/262-0
+00:19:16.721 --> 00:19:21.532
+<v Rang-3, F.J. (Franka)>Yeah, they stabilize to a similar,
+similar score. Yeah, yeah. Yeah,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/257-0
+00:19:21.121 --> 00:19:21.561
+<v Paul>Soon.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/262-1
+00:19:21.532 --> 00:19:25.282
+<v Rang-3, F.J. (Franka)>I think you can,
+if you could repeat these analyses,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/262-2
+00:19:25.282 --> 00:19:29.597
+<v Rang-3, F.J. (Franka)>but more using the,
+like the individual genes or the average</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/258-0
+00:19:29.521 --> 00:19:29.841
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/262-3
+00:19:29.597 --> 00:19:34.196
+<v Rang-3, F.J. (Franka)>performance over the genes.
+And then you can do the same for the</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/259-0
+00:19:32.481 --> 00:19:32.721
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/262-4
+00:19:34.196 --> 00:19:37.521
+<v Rang-3, F.J. (Franka)>protein markers that are also in the
+metadata.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/260-0
+00:19:36.081 --> 00:19:36.321
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/261-0
+00:19:38.081 --> 00:19:38.481
+<v Paul>Right.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/267-0
+00:19:39.281 --> 00:19:44.811
+<v Rang-3, F.J. (Franka)>Those are especially nice because they
+are not used for any of these clustering,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/263-0
+00:19:43.281 --> 00:19:43.681
+<v Paul>Right.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/267-1
+00:19:44.811 --> 00:19:48.361
+<v Rang-3, F.J. (Franka)>so we can take a bit as an independent
+measurement.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/265-0
+00:19:46.401 --> 00:19:46.881
+<v Paul>Right.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/266-0
+00:19:49.281 --> 00:19:49.681
+<v Paul>Right.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/268-0
+00:19:50.241 --> 00:19:50.521
+<v Rang-3, F.J. (Franka)>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/269-0
+00:19:51.041 --> 00:19:51.441
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/271-0
+00:19:52.721 --> 00:19:54.793
+<v Paul>So,
+just computing like a kind of like a</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/271-1
+00:19:54.793 --> 00:19:58.077
+<v Paul>purity, right? Based on that,
+like the purity of protein markers</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/270-0
+00:19:57.441 --> 00:19:58.961
+<v Rang-3, F.J. (Franka)>Yeah, I.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/271-2
+00:19:58.077 --> 00:19:59.441
+<v Paul>expression and purity of...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/272-0
+00:20:00.481 --> 00:20:03.201
+<v Rang-3, F.J. (Franka)>Yeah, yeah, exactly. I don't know.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/273-0
+00:20:04.161 --> 00:20:07.921
+<v Rang-3, F.J. (Franka)>Off the top of my head,
+what like the best single numerical.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/275-0
+00:20:10.681 --> 00:20:14.001
+<v Rang-3, F.J. (Franka)>Like value might be perhaps a...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/274-0
+00:20:13.321 --> 00:20:13.801
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/276-0
+00:20:14.961 --> 00:20:17.361
+<v Rang-3, F.J. (Franka)>something like a syllabus score or...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/277-0
+00:20:17.841 --> 00:20:18.201
+<v Paul>No.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/281-0
+00:20:19.641 --> 00:20:23.536
+<v Rang-3, F.J. (Franka)>Yeah,
+the biggest difference between the mean</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/278-0
+00:20:19.921 --> 00:20:20.441
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/281-1
+00:20:23.536 --> 00:20:29.293
+<v Rang-3, F.J. (Franka)>expression and the highest,
+the cluster with the highest expression</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/279-0
+00:20:25.761 --> 00:20:27.521
+<v Paul>.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/281-2
+00:20:29.293 --> 00:20:33.441
+<v Rang-3, F.J. (Franka)>or something. Yeah, something like that.
+Or the.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/280-0
+00:20:29.761 --> 00:20:29.921
+<v Paul>M.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/284-0
+00:20:32.641 --> 00:20:36.861
+<v Paul>Yeah, I will, I will, I will check,
+let's see what's best.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/282-0
+00:20:35.201 --> 00:20:35.441
+<v Rang-3, F.J. (Franka)>Right.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/284-1
+00:20:36.861 --> 00:20:40.293
+<v Paul>We'll also have a chat with ChatGPT about
+this,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/283-0
+00:20:39.601 --> 00:20:40.081
+<v Rang-3, F.J. (Franka)>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/284-2
+00:20:40.293 --> 00:20:45.872
+<v Paul>like to see which is which are the best
+ways of doing this, but that's great,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/285-0
+00:20:43.361 --> 00:20:47.801
+<v Rang-3, F.J. (Franka)>Yeah, yeah, exactly, exactly.
+I think that's nice, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/284-3
+00:20:45.872 --> 00:20:46.801
+<v Paul>that's great.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/287-0
+00:20:47.961 --> 00:20:50.856
+<v Paul>That's great. And yeah,
+and now I'm just waiting for this</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/287-1
+00:20:50.856 --> 00:20:53.201
+<v Paul>analysis,
+which is like with all of the cells.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/286-0
+00:20:51.441 --> 00:20:51.841
+<v Rang-3, F.J. (Franka)>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/289-0
+00:20:53.841 --> 00:20:57.036
+<v Rang-3, F.J. (Franka)>Yeah,
+do you happen to have like embedding</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/289-1
+00:20:57.036 --> 00:21:02.013
+<v Rang-3, F.J. (Franka)>plots of all of new maps of all the
+different representations now?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/288-0
+00:20:58.081 --> 00:20:58.641
+<v Paul>No.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/289-2
+00:21:02.013 --> 00:21:03.721
+<v Rang-3, F.J. (Franka)>I'm very curious, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/290-0
+00:21:02.161 --> 00:21:06.001
+<v Paul>No, I didn't in this one. I didn't do it.
+I will do it for the next one.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/291-0
+00:21:06.481 --> 00:21:06.881
+<v Rang-3, F.J. (Franka)>That.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/292-0
+00:21:07.681 --> 00:21:08.081
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/297-0
+00:21:08.241 --> 00:21:12.487
+<v Rang-3, F.J. (Franka)>Yeah, I think that would be nice.
+And then also,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/293-0
+00:21:09.161 --> 00:21:09.481
+<v Paul>And...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/294-0
+00:21:10.721 --> 00:21:11.201
+<v Paul>KPM.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/297-1
+00:21:12.487 --> 00:21:17.338
+<v Rang-3, F.J. (Franka)>I'm still curious to see also for a
+couple of clusters,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/295-0
+00:21:16.721 --> 00:21:20.241
+<v Paul>Ah, yeah, right, yeah, right. Good,
+good point, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/297-2
+00:21:17.338 --> 00:21:23.836
+<v Rang-3, F.J. (Franka)>example cells and yeah, yeah, yeah.
+And if you're doing the evaluation for</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/296-0
+00:21:21.641 --> 00:21:22.161
+<v Paul>Perfect.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/297-3
+00:21:23.836 --> 00:21:28.081
+<v Rang-3, F.J. (Franka)>the genes,
+I think you could probably also start</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/302-0
+00:21:28.401 --> 00:21:33.424
+<v Rang-3, F.J. (Franka)>adding in the handcrafted features,
+like because probably it's the exact same,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/298-0
+00:21:31.001 --> 00:21:31.841
+<v Paul>Yeah. Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/302-1
+00:21:33.424 --> 00:21:38.891
+<v Rang-3, F.J. (Franka)>but just a different variable to throw in.
+I think it will be very nice. Yeah, great.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/299-0
+00:21:35.441 --> 00:21:36.721
+<v Paul>Yeah, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/300-0
+00:21:38.801 --> 00:21:39.921
+<v Paul>Okay, great.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/302-2
+00:21:38.891 --> 00:21:43.087
+<v Rang-3, F.J. (Franka)>You made great progress.
+Impressive that you managed to implement</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/302-3
+00:21:43.087 --> 00:21:45.121
+<v Rang-3, F.J. (Franka)>so many of the different models.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/301-0
+00:21:45.841 --> 00:21:46.241
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/303-0
+00:21:46.081 --> 00:21:50.935
+<v Rang-3, F.J. (Franka)>and already set up a nice version of the
+evaluation pipeline.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/303-1
+00:21:50.935 --> 00:21:53.361
+<v Rang-3, F.J. (Franka)>Now we can just expand on that.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/304-0
+00:21:53.681 --> 00:21:59.015
+<v Paul>Yeah, of course. Of course, I'll try.
+Well, next week we have the retreat,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/304-1
+00:21:59.015 --> 00:21:59.441
+<v Paul>right?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/306-0
+00:21:59.601 --> 00:22:02.961
+<v Rang-3, F.J. (Franka)>Yeah, yeah,
+next week there's only a Monday and</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/305-0
+00:22:00.521 --> 00:22:00.721
+<v Paul>What?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/306-1
+00:22:02.961 --> 00:22:03.521
+<v Rang-3, F.J. (Franka)>Tuesday.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/307-0
+00:22:04.081 --> 00:22:04.241
+<v Paul>A.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/308-0
+00:22:05.761 --> 00:22:08.670
+<v Paul>Okay,
+so maybe the next one I will be able to</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/308-1
+00:22:08.670 --> 00:22:09.681
+<v Paul>show you better.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/311-0
+00:22:09.521 --> 00:22:14.602
+<v Rang-3, F.J. (Franka)>Yeah, yeah, so after the retreat,
+I'm on holiday for two weeks.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/309-0
+00:22:10.801 --> 00:22:11.681
+<v Paul>Progress.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/311-1
+00:22:14.602 --> 00:22:19.761
+<v Rang-3, F.J. (Franka)>So there's essentially 2 weeks and two
+days now before I'm back.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/310-0
+00:22:15.121 --> 00:22:15.681
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/312-0
+00:22:20.641 --> 00:22:23.507
+<v Paul>So, when are you leaving?
+Because I'm also leaving to Mallorca,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/312-1
+00:22:23.507 --> 00:22:25.521
+<v Paul>as I said,
+like I'm going back home as well.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/313-0
+00:22:26.721 --> 00:22:28.721
+<v Rang-3, F.J. (Franka)>Uh, J, when was it?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/314-0
+00:22:29.361 --> 00:22:32.161
+<v Paul>So me,
+I'm going from the 16th to the 24th.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/315-0
+00:22:33.281 --> 00:22:35.201
+<v Rang-3, F.J. (Franka)>Ah, okay, of May.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/316-0
+00:22:35.841 --> 00:22:36.321
+<v Paul>Yes.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/321-0
+00:22:36.801 --> 00:22:41.965
+<v Rang-3, F.J. (Franka)>Oh, okay, then, okay, well,
+I'm going from the 11th till the 24th.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/321-1
+00:22:41.965 --> 00:22:48.362
+<v Rang-3, F.J. (Franka)>So then there's only one week after the
+retreat where you are working and I'm not.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/317-0
+00:22:42.001 --> 00:22:42.241
+<v Paul>To.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/318-0
+00:22:43.921 --> 00:22:44.721
+<v Paul>It's perfect.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/321-2
+00:22:48.362 --> 00:22:53.141
+<v Rang-3, F.J. (Franka)>So you're on, okay,
+so you only essentially have one week and</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/319-0
+00:22:49.041 --> 00:22:49.841
+<v Paul>Oh, it's great.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/321-3
+00:22:53.141 --> 00:22:55.761
+<v Rang-3, F.J. (Franka)>two days and then we're both back.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/320-0
+00:22:54.481 --> 00:22:54.801
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/322-0
+00:22:56.561 --> 00:22:57.961
+<v Paul>Yeah, right. Perfect.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/324-0
+00:22:57.041 --> 00:23:01.521
+<v Rang-3, F.J. (Franka)>Also,
+beware the Monday after you get back,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/324-1
+00:23:01.521 --> 00:23:04.881
+<v Rang-3, F.J. (Franka)>I believe, is a national holiday.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/323-0
+00:23:02.241 --> 00:23:02.721
+<v Paul>Yeah?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/325-0
+00:23:06.321 --> 00:23:06.961
+<v Paul>The 25th.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/327-0
+00:23:07.521 --> 00:23:11.877
+<v Rang-3, F.J. (Franka)>The 25th, it might be a national holiday.
+So I think that's off just for your</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/326-0
+00:23:10.401 --> 00:23:10.641
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/327-1
+00:23:11.877 --> 00:23:14.669
+<v Rang-3, F.J. (Franka)>information,
+know that you come to the office and</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/327-2
+00:23:14.669 --> 00:23:15.841
+<v Rang-3, F.J. (Franka)>there's no one there.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/329-0
+00:23:16.001 --> 00:23:17.881
+<v Paul>Okay, okay, thanks. Perfect.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/328-0
+00:23:17.241 --> 00:23:17.521
+<v Rang-3, F.J. (Franka)>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/330-0
+00:23:19.481 --> 00:23:20.641
+<v Paul>Great, so let's see.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/333-0
+00:23:20.001 --> 00:23:24.886
+<v Rang-3, F.J. (Franka)>Yeah, let's see. Okay,
+so then for next time, yeah,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/331-0
+00:23:22.161 --> 00:23:22.481
+<v Paul>So, the...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/333-1
+00:23:24.886 --> 00:23:30.241
+<v Rang-3, F.J. (Franka)>you can translate these metrics to the
+gene and protein.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/332-0
+00:23:26.641 --> 00:23:27.761
+<v Paul>So, write it down, maybe.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/334-0
+00:23:33.601 --> 00:23:34.641
+<v Rang-3, F.J. (Franka)>Yeah, features.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/335-0
+00:23:36.641 --> 00:23:40.801
+<v Rang-3, F.J. (Franka)>And let's look at some new map and some
+and the handcrafted features.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/336-0
+00:23:41.961 --> 00:23:42.321
+<v Rang-3, F.J. (Franka)>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/338-0
+00:23:46.881 --> 00:23:52.561
+<v Paul>Uh, some images of OKI for clustering.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/337-0
+00:23:51.561 --> 00:23:51.921
+<v Rang-3, F.J. (Franka)>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/341-0
+00:23:53.121 --> 00:23:56.434
+<v Rang-3, F.J. (Franka)>Yeah,
+and the UMAP visualization of the</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/339-0
+00:23:53.801 --> 00:23:54.721
+<v Paul>What else?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/341-1
+00:23:56.434 --> 00:23:57.841
+<v Rang-3, F.J. (Franka)>clustering, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/340-0
+00:23:56.561 --> 00:23:57.721
+<v Paul>Are you maps?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/348-0
+00:23:58.761 --> 00:24:02.465
+<v Rang-3, F.J. (Franka)>Yeah. I mean,
+try to work on it in an order that makes</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/342-0
+00:23:59.081 --> 00:23:59.321
+<v Paul>I'll.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/348-1
+00:24:02.465 --> 00:24:06.707
+<v Rang-3, F.J. (Franka)>sense to you, right?
+It's not nice to completely switch around</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/343-0
+00:24:03.921 --> 00:24:04.321
+<v Paul>Young.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/348-2
+00:24:06.707 --> 00:24:09.871
+<v Rang-3, F.J. (Franka)>all the time.
+If you're now in the validation,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/344-0
+00:24:06.801 --> 00:24:07.281
+<v Paul>True.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/348-3
+00:24:09.871 --> 00:24:15.325
+<v Rang-3, F.J. (Franka)>I would suggest to 1st focus on that and
+bring that to a place that you're happy</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/345-0
+00:24:12.801 --> 00:24:13.281
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/348-4
+00:24:15.325 --> 00:24:18.490
+<v Rang-3, F.J. (Franka)>with.
+And then maybe go back to the U maps and</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/346-0
+00:24:16.041 --> 00:24:16.481
+<v Paul>OK.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/348-5
+00:24:18.490 --> 00:24:18.961
+<v Rang-3, F.J. (Franka)>images.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/347-0
+00:24:19.961 --> 00:24:20.241
+<v Paul>Mm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/350-0
+00:24:20.601 --> 00:24:23.880
+<v Rang-3, F.J. (Franka)>Whatever order works for you,
+you also don't have to have it all</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/350-1
+00:24:23.880 --> 00:24:26.956
+<v Rang-3, F.J. (Franka)>complete by next time,
+but I think these are essentially the</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/349-0
+00:24:26.081 --> 00:24:26.561
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/350-2
+00:24:26.956 --> 00:24:28.721
+<v Rang-3, F.J. (Franka)>next steps, like you, you're right.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/351-0
+00:24:28.801 --> 00:24:31.041
+<v Paul>Okay, okay, sounds good.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/352-0
+00:24:33.321 --> 00:24:33.841
+<v Paul>Sounds good.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/354-0
+00:24:36.481 --> 00:24:41.311
+<v Paul>And also, another thing I have to,
+I have another deliver,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/354-1
+00:24:41.311 --> 00:24:47.041
+<v Paul>so I have to deliver again the the
+document of my thesis on May 12th.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/353-0
+00:24:44.241 --> 00:24:44.721
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/355-0
+00:24:48.001 --> 00:24:48.401
+<v Rang-3, F.J. (Franka)>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/356-0
+00:24:48.241 --> 00:24:52.611
+<v Paul>So there I have to show some preliminary
+results. So I just wanted to ask you,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/356-1
+00:24:52.611 --> 00:24:55.266
+<v Paul>like,
+should we ask for permission this time or</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/356-2
+00:24:55.266 --> 00:24:57.201
+<v Paul>not? Or these plots are not very...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/357-0
+00:24:58.481 --> 00:25:00.001
+<v Paul>Like, I can share it.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/360-0
+00:24:58.881 --> 00:25:05.075
+<v Rang-3, F.J. (Franka)>It's an internal document, right?
+It's not a public presentation or no,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/358-0
+00:25:04.081 --> 00:25:05.681
+<v Paul>No, no.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/360-1
+00:25:05.075 --> 00:25:06.881
+<v Rang-3, F.J. (Franka)>it's fine. It's fine.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/359-0
+00:25:07.521 --> 00:25:08.001
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/361-0
+00:25:08.801 --> 00:25:08.961
+<v Rang-3, F.J. (Franka)>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/362-0
+00:25:09.201 --> 00:25:13.390
+<v Paul>Yeah, I will just show some, like,
+maybe just this kind of like analysis,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/362-1
+00:25:13.390 --> 00:25:15.201
+<v Paul>right, like these kind of plots.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/366-0
+00:25:14.561 --> 00:25:17.878
+<v Rang-3, F.J. (Franka)>Exactly,
+like if you could make a nice schematic</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/366-1
+00:25:17.878 --> 00:25:23.361
+<v Rang-3, F.J. (Franka)>overview of the different parts of your
+project and then you can show a little a</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/363-0
+00:25:18.761 --> 00:25:19.201
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/366-2
+00:25:23.361 --> 00:25:28.371
+<v Rang-3, F.J. (Franka)>little result for each of them.
+I think there it might be nice to have to</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/364-0
+00:25:25.961 --> 00:25:26.641
+<v Paul>Perfect.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/366-3
+00:25:28.371 --> 00:25:31.823
+<v Rang-3, F.J. (Franka)>you map something very visual and some
+nice. Yeah,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/365-0
+00:25:28.921 --> 00:25:29.121
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/366-4
+00:25:31.823 --> 00:25:33.921
+<v Rang-3, F.J. (Franka)>I think it's nice to have like.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/370-0
+00:25:34.161 --> 00:25:40.381
+<v Rang-3, F.J. (Franka)>the U map and then for like three
+different cluster you showed 3 cells so</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/367-0
+00:25:39.841 --> 00:25:40.801
+<v Paul>Yeah, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/370-1
+00:25:40.381 --> 00:25:46.181
+<v Rang-3, F.J. (Franka)>that it's kind of intuitive what people
+are looking at. Great. Yeah,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/368-0
+00:25:42.641 --> 00:25:42.961
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/369-0
+00:25:45.201 --> 00:25:45.521
+<v Paul>Read.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/370-2
+00:25:46.181 --> 00:25:52.401
+<v Rang-3, F.J. (Franka)>the 12th of May you said, right?
+Do I need to sign something for that or?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/372-0
+00:25:52.321 --> 00:25:56.801
+<v Paul>No, no, no, nothing, nothing yet,
+at least I was not asked for.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/371-0
+00:25:53.561 --> 00:25:53.841
+<v Rang-3, F.J. (Franka)>But.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/375-0
+00:25:56.961 --> 00:26:00.641
+<v Rang-3, F.J. (Franka)>Okay, yeah, feel free to share it with me,
+then uh...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/373-0
+00:25:58.321 --> 00:25:58.601
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/374-0
+00:26:00.161 --> 00:26:00.641
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/376-0
+00:26:01.761 --> 00:26:05.661
+<v Paul>Sure,
+and also the last thing Irene told me,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/376-1
+00:26:05.661 --> 00:26:06.961
+<v Paul>you know Irene?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/377-0
+00:26:07.401 --> 00:26:07.961
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/379-0
+00:26:08.241 --> 00:26:11.582
+<v Paul>They extended the period,
+so it was like until this Friday,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/379-1
+00:26:11.582 --> 00:26:15.201
+<v Paul>the last day for the scholarship,
+but they extended it one week.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/378-0
+00:26:13.361 --> 00:26:13.841
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/382-0
+00:26:15.921 --> 00:26:20.133
+<v Rang-3, F.J. (Franka)>Ohh, that's nice.
+The the we don't like you sent the new</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/380-0
+00:26:17.601 --> 00:26:17.721
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/382-1
+00:26:20.133 --> 00:26:26.043
+<v Rang-3, F.J. (Franka)>version right and or the signed document
+and now we're just waiting for the for</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/381-0
+00:26:22.241 --> 00:26:22.721
+<v Paul>So.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/382-2
+00:26:26.043 --> 00:26:28.481
+<v Rang-3, F.J. (Franka)>them to agree or disagree on the.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/384-0
+00:26:29.521 --> 00:26:34.299
+<v Paul>No, so, so yeah,
+so they sent us the first version.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/384-1
+00:26:34.299 --> 00:26:40.730
+<v Paul>PMC did some comments, right?
+And now my uni did some comments again,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/383-0
+00:26:36.881 --> 00:26:37.361
+<v Rang-3, F.J. (Franka)>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/384-2
+00:26:40.730 --> 00:26:43.761
+<v Paul>and now PMC has a document again.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/385-0
+00:26:44.481 --> 00:26:46.401
+<v Rang-3, F.J. (Franka)>Oh, they send it directly to the PMC?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/387-0
+00:26:47.281 --> 00:26:50.563
+<v Paul>I think so.
+That's what the internet told me that</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/387-1
+00:26:50.563 --> 00:26:55.879
+<v Paul>they are just, so they iterated again.
+So now PMC is the one who has to iterate,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/386-0
+00:26:51.521 --> 00:26:52.001
+<v Rang-3, F.J. (Franka)>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/388-0
+00:26:55.761 --> 00:26:59.521
+<v Rang-3, F.J. (Franka)>Okay, because I didn't see anything,
+but that's fine if...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/387-2
+00:26:55.879 --> 00:26:58.241
+<v Paul>so they extend the deadline for one.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/390-0
+00:27:00.161 --> 00:27:03.298
+<v Paul>Maybe they just contacted directly to
+each other. I don't know.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/389-0
+00:27:02.161 --> 00:27:04.361
+<v Rang-3, F.J. (Franka)>Okay, okay, good.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/390-1
+00:27:03.298 --> 00:27:05.601
+<v Paul>Because I didn't see it neither.
+I had to ask.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/391-0
+00:27:07.041 --> 00:27:09.921
+<v Rang-3, F.J. (Franka)>Let me see if I, if I missed something,
+because...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/393-0
+00:27:10.241 --> 00:27:15.409
+<v Paul>No, I don't think so. Well, maybe you,
+but me, I didn't receive anything.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/392-0
+00:27:11.361 --> 00:27:11.921
+<v Rang-3, F.J. (Franka)>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/393-1
+00:27:15.409 --> 00:27:18.481
+<v Paul>I had to ask.
+So now let's see how it goes.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/395-0
+00:27:18.241 --> 00:27:23.010
+<v Rang-3, F.J. (Franka)>Okay, let's see.
+I will send an email to this Jeroen guy</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/395-1
+00:27:23.010 --> 00:27:29.201
+<v Rang-3, F.J. (Franka)>to ask if it came back to him,
+not that now it's with someone else. Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/394-0
+00:27:24.081 --> 00:27:24.561
+<v Paul>Oh yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/397-0
+00:27:27.361 --> 00:27:30.561
+<v Paul>To someone else, yeah, yeah,
+that would be nice, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/396-0
+00:27:30.921 --> 00:27:31.201
+<v Rang-3, F.J. (Franka)>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/398-0
+00:27:33.041 --> 00:27:33.441
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/402-0
+00:27:34.321 --> 00:27:37.561
+<v Rang-3, F.J. (Franka)>Okay, fingers crossed so that it works.
+But do you know,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/399-0
+00:27:34.481 --> 00:27:35.281
+<v Paul>Okay, great.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/402-1
+00:27:37.561 --> 00:27:42.221
+<v Rang-3, F.J. (Franka)>did Irene say whether they did a lot of
+comments or if it was small things? Okay,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/400-0
+00:27:40.561 --> 00:27:41.201
+<v Paul>Don't know.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/402-2
+00:27:42.221 --> 00:27:44.721
+<v Rang-3, F.J. (Franka)>we're going to see.
+The smaller the better.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/401-0
+00:27:42.561 --> 00:27:43.281
+<v Paul>I don't know.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/404-0
+00:27:45.441 --> 00:27:49.342
+<v Paul>Let's see how it goes,
+and if we don't manage to do it,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/403-0
+00:27:47.121 --> 00:27:48.041
+<v Rang-3, F.J. (Franka)>No, no.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/404-1
+00:27:49.342 --> 00:27:51.361
+<v Paul>no problem, but yeah, just...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/405-0
+00:27:50.641 --> 00:27:53.064
+<v Rang-3, F.J. (Franka)>No, it's, I mean,
+it's quite a bit of money, right?</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/405-1
+00:27:53.064 --> 00:27:54.321
+<v Rang-3, F.J. (Franka)>So let's hope it works out.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/406-0
+00:27:54.641 --> 00:27:57.321
+<v Paul>Yeah, yeah, but you see, like, Indian.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/407-0
+00:27:59.001 --> 00:28:02.557
+<v Paul>Everything is for random.
+Sometimes you just cannot manage to do it</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/407-1
+00:28:02.557 --> 00:28:06.321
+<v Paul>and it's fine. But if we manage it,
+it's better. But if we don't, okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/412-0
+00:28:04.041 --> 00:28:09.317
+<v Rang-3, F.J. (Franka)>Yeah, it's better. Okay.
+I will send Jeroen an email after our</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/412-1
+00:28:09.317 --> 00:28:13.671
+<v Rang-3, F.J. (Franka)>meeting. Yeah,
+I also wanted to say I'm now working</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/408-0
+00:28:10.401 --> 00:28:11.521
+<v Paul>Okay, thank you.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/412-2
+00:28:13.671 --> 00:28:20.286
+<v Rang-3, F.J. (Franka)>today on collecting some other data sets
+that have this spatial proteomics and</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/409-0
+00:28:18.401 --> 00:28:18.961
+<v Paul>Nice.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/412-3
+00:28:20.286 --> 00:28:22.881
+<v Rang-3, F.J. (Franka)>hopefully annotation. So I have</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/410-0
+00:28:20.961 --> 00:28:21.521
+<v Paul>Oh yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/414-0
+00:28:22.921 --> 00:28:29.121
+<v Rang-3, F.J. (Franka)>Two data sets in mind,
+I can share with you.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/411-0
+00:28:23.401 --> 00:28:23.681
+<v Paul>Mm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/413-0
+00:28:28.961 --> 00:28:29.641
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/415-0
+00:28:30.801 --> 00:28:33.041
+<v Rang-3, F.J. (Franka)>So, one is from...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/416-0
+00:28:42.761 --> 00:28:43.241
+<v Paul>Mmh.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/417-0
+00:28:43.321 --> 00:28:43.801
+<v Rang-3, F.J. (Franka)>Um...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/418-0
+00:28:45.201 --> 00:28:45.881
+<v Rang-3, F.J. (Franka)>The show.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/423-0
+00:28:47.241 --> 00:28:52.541
+<v Rang-3, F.J. (Franka)>So it's from the manufacturer of the
+cosmics themselves,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/423-1
+00:28:52.541 --> 00:28:59.886
+<v Rang-3, F.J. (Franka)>and it's in principle a nice data set,
+but I already found out that they don't</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/420-0
+00:28:54.441 --> 00:28:54.681
+<v Paul>Ohh.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/423-2
+00:28:59.886 --> 00:29:04.441
+<v Rang-3, F.J. (Franka)>include any cell type annotations
+themselves. So</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/421-0
+00:29:00.761 --> 00:29:01.561
+<v Paul>Yeah, that is.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/422-0
+00:29:05.401 --> 00:29:05.561
+<v Paul>M.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/427-0
+00:29:05.721 --> 00:29:08.831
+<v Rang-3, F.J. (Franka)>If we really want a label-based
+evaluation,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/427-1
+00:29:08.831 --> 00:29:14.344
+<v Rang-3, F.J. (Franka)>then we would again need to jump through
+some hoops to define our own labels,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/424-0
+00:29:12.201 --> 00:29:12.441
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/427-2
+00:29:14.344 --> 00:29:18.655
+<v Rang-3, F.J. (Franka)>which is kind of what I want to avoid.
+But they do have six,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/425-0
+00:29:15.841 --> 00:29:16.121
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/427-3
+00:29:18.655 --> 00:29:24.521
+<v Rang-3, F.J. (Franka)>so they have the spatial transcriptomics,
+and then they have 64 protein stainings.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/426-0
+00:29:21.281 --> 00:29:21.761
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/432-0
+00:29:25.001 --> 00:29:31.080
+<v Rang-3, F.J. (Franka)>on top of that. So those would be, yeah,
+quite, like if this,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/428-0
+00:29:30.201 --> 00:29:30.601
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/432-1
+00:29:31.080 --> 00:29:39.121
+<v Rang-3, F.J. (Franka)>if you now play around with using genes
+or proteins to define clustering metrics,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/429-0
+00:29:38.681 --> 00:29:39.641
+<v Paul>Yeah, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/432-2
+00:29:39.121 --> 00:29:44.121
+<v Rang-3, F.J. (Franka)>if that works out nicely,
+then maybe this data set</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/430-0
+00:29:41.081 --> 00:29:41.481
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/431-0
+00:29:43.721 --> 00:29:44.041
+<v Paul>No.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/435-0
+00:29:44.201 --> 00:29:50.089
+<v Rang-3, F.J. (Franka)>could be nice. However,
+there's also another data set that</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/433-0
+00:29:45.841 --> 00:29:46.321
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/435-1
+00:29:50.089 --> 00:29:53.881
+<v Rang-3, F.J. (Franka)>Christian pointed me to words. Let me.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/434-0
+00:29:53.601 --> 00:29:54.081
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/436-0
+00:29:55.041 --> 00:29:56.201
+<v Rang-3, F.J. (Franka)>Sent you.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/437-0
+00:30:02.761 --> 00:30:07.081
+<v Rang-3, F.J. (Franka)>I was just about to read the paper. Oh,
+it's a horrible long link.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/438-0
+00:30:07.881 --> 00:30:08.121
+<v Paul>Hmm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/439-0
+00:30:09.561 --> 00:30:11.321
+<v Rang-3, F.J. (Franka)>I think there is also a shorter link.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/440-0
+00:30:10.241 --> 00:30:10.841
+<v Paul>Oh, wow.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/441-0
+00:30:13.241 --> 00:30:15.721
+<v Rang-3, F.J. (Franka)>Let me get you the shorter.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/442-0
+00:30:18.681 --> 00:30:20.361
+<v Paul>It's not even working, this one.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/443-0
+00:30:20.481 --> 00:30:22.281
+<v Rang-3, F.J. (Franka)>Let me edit it.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/444-0
+00:30:23.081 --> 00:30:26.921
+<v Paul>I think it's not working. Let's see. No,
+it's not working.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/445-0
+00:30:27.481 --> 00:30:29.801
+<v Rang-3, F.J. (Franka)>Yeah, I don't know why it's such a, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/446-0
+00:30:31.081 --> 00:30:31.561
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/449-0
+00:30:31.161 --> 00:30:34.641
+<v Rang-3, F.J. (Franka)>This one I think is the right link and it
+also looks better. Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/447-0
+00:30:32.841 --> 00:30:33.081
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/448-0
+00:30:34.241 --> 00:30:35.321
+<v Paul>This one is an example.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/451-0
+00:30:36.361 --> 00:30:43.566
+<v Rang-3, F.J. (Franka)>So this is a paper that describes a
+general workflow on how to combine</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/451-1
+00:30:43.566 --> 00:30:50.465
+<v Rang-3, F.J. (Franka)>spatial transcriptomics and spatial
+proteomics. And as one example,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/450-0
+00:30:48.241 --> 00:30:48.521
+<v Paul>Mm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/451-2
+00:30:50.465 --> 00:30:54.321
+<v Rang-3, F.J. (Franka)>they have on the same slide, codex and</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/453-0
+00:30:54.481 --> 00:30:58.302
+<v Rang-3, F.J. (Franka)>Cosmic, so that's figure 6. In the right,
+top right corner,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/453-1
+00:30:58.302 --> 00:31:02.441
+<v Rang-3, F.J. (Franka)>you can see which figure it is.
+It says that's figure one, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/452-0
+00:31:00.641 --> 00:31:02.201
+<v Paul>Ohh yeah, right.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/456-0
+00:31:02.521 --> 00:31:02.641
+<v Rang-3, F.J. (Franka)>And</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/454-0
+00:31:03.801 --> 00:31:05.801
+<v Paul>Figure 6, this one.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/458-0
+00:31:05.561 --> 00:31:08.903
+<v Rang-3, F.J. (Franka)>Yeah, yeah, so I'm still,
+so it's a bit of a,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/458-1
+00:31:08.903 --> 00:31:13.844
+<v Rang-3, F.J. (Franka)>the figures are a bit chaotic,
+but here there is in the pink and A,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/455-0
+00:31:11.401 --> 00:31:11.721
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/458-2
+00:31:13.844 --> 00:31:18.058
+<v Rang-3, F.J. (Franka)>the pink box single cell in depth cosmics,
+codex cosmics.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/458-3
+00:31:18.058 --> 00:31:24.161
+<v Rang-3, F.J. (Franka)>So that's the two different technologies.
+There are also multiple cores, I believe.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/457-0
+00:31:18.361 --> 00:31:18.841
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/462-0
+00:31:25.401 --> 00:31:30.314
+<v Rang-3, F.J. (Franka)>And there they do have cell type
+annotations based on the spatial</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/462-1
+00:31:30.314 --> 00:31:34.556
+<v Rang-3, F.J. (Franka)>proteomics, so not the transcriptomics.
+And that's good,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/459-0
+00:31:33.721 --> 00:31:34.041
+<v Paul>Ohh.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/462-2
+00:31:34.556 --> 00:31:38.427
+<v Rang-3, F.J. (Franka)>because then it's a kind of independent
+annotation.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/460-0
+00:31:37.841 --> 00:31:38.481
+<v Paul>Mm-hmm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/462-3
+00:31:38.427 --> 00:31:43.041
+<v Rang-3, F.J. (Franka)>And they have also the data available for
+download. It's just</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/463-0
+00:31:43.161 --> 00:31:44.441
+<v Rang-3, F.J. (Franka)>all in a format.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/461-0
+00:31:43.881 --> 00:31:44.441
+<v Paul>Ohh.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/468-0
+00:31:47.241 --> 00:31:52.620
+<v Rang-3, F.J. (Franka)>that I'm not super familiar with,
+but it seems well documented,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/464-0
+00:31:51.801 --> 00:31:53.201
+<v Paul>Okay, let's just put it down.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/468-1
+00:31:52.620 --> 00:31:57.494
+<v Rang-3, F.J. (Franka)>it seems reasonable.
+So I hope that with some plot codes,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/465-0
+00:31:55.481 --> 00:31:56.001
+<v Paul>Yeah, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/468-2
+00:31:57.494 --> 00:32:02.284
+<v Rang-3, F.J. (Franka)>it won't be a lot of effort to make it 1
+unified object.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/466-0
+00:31:58.521 --> 00:31:58.921
+<v Paul>Sure.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/467-0
+00:32:01.361 --> 00:32:01.641
+<v Paul>Sure.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/468-3
+00:32:02.284 --> 00:32:05.561
+<v Rang-3, F.J. (Franka)>So I will also read this paper today to</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/470-0
+00:32:05.641 --> 00:32:10.841
+<v Rang-3, F.J. (Franka)>understand a bit better what's happening.
+But that could then be a nice...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/469-0
+00:32:07.641 --> 00:32:07.881
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/473-0
+00:32:13.561 --> 00:32:17.401
+<v Rang-3, F.J. (Franka)>Yeah,
+a nice toy data set to actually have some</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/471-0
+00:32:16.681 --> 00:32:17.801
+<v Paul>Holiday, yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/473-1
+00:32:17.401 --> 00:32:21.881
+<v Rang-3, F.J. (Franka)>labels validate,
+and then there you can also compare if</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/473-2
+00:32:21.881 --> 00:32:26.041
+<v Rang-3, F.J. (Franka)>you have protein and gene-based
+clustering metrics,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/473-3
+00:32:26.041 --> 00:32:31.161
+<v Rang-3, F.J. (Franka)>you can see how they compare to
+label-based clustering metrics.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/472-0
+00:32:30.601 --> 00:32:30.881
+<v Paul>Yeah.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/476-0
+00:32:33.001 --> 00:32:36.352
+<v Rang-3, F.J. (Franka)>So hopefully I will get that still in
+summer,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/474-0
+00:32:36.281 --> 00:32:36.961
+<v Paul>Mm-hmm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/476-1
+00:32:36.352 --> 00:32:42.397
+<v Rang-3, F.J. (Franka)>in a rough shape before I go on holiday.
+And then you can play around with that as</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/475-0
+00:32:40.081 --> 00:32:40.521
+<v Paul>KPM.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/476-2
+00:32:42.397 --> 00:32:42.761
+<v Rang-3, F.J. (Franka)>well.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/477-0
+00:32:43.241 --> 00:32:44.201
+<v Paul>Sounds amazing.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/478-0
+00:32:45.281 --> 00:32:45.961
+<v Paul>Sounds very good.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/479-0
+00:32:49.241 --> 00:32:49.801
+<v Rang-3, F.J. (Franka)>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/480-0
+00:32:50.201 --> 00:32:51.001
+<v Paul>Okay, great.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/481-0
+00:32:53.001 --> 00:32:53.641
+<v Paul>Perfect.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/482-0
+00:32:53.241 --> 00:32:55.081
+<v Rang-3, F.J. (Franka)>Okay, I think that's...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/483-0
+00:32:54.481 --> 00:32:55.481
+<v Paul>It's nothing else.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/485-0
+00:32:56.441 --> 00:32:58.041
+<v Rang-3, F.J. (Franka)>No, I don't think so.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/484-0
+00:32:58.841 --> 00:32:59.721
+<v Paul>From my side.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/486-0
+00:33:01.001 --> 00:33:05.561
+<v Rang-3, F.J. (Franka)>I suggest that in the week when we're
+both back.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/489-0
+00:33:07.321 --> 00:33:14.091
+<v Rang-3, F.J. (Franka)>May, you start in March, April, May,
+so then you're a little bit over two</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/489-1
+00:33:14.091 --> 00:33:18.574
+<v Rang-3, F.J. (Franka)>months in.
+We should plan an interim assessment,</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/489-2
+00:33:18.574 --> 00:33:25.161
+<v Rang-3, F.J. (Franka)>which is common for internships that are
+run by the Utrecht University.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/487-0
+00:33:19.441 --> 00:33:20.481
+<v Paul>Mhm, mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/488-0
+00:33:25.641 --> 00:33:26.041
+<v Paul>Okay.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/490-0
+00:33:27.401 --> 00:33:29.721
+<v Rang-3, F.J. (Franka)>And maybe we can...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/491-0
+00:33:31.961 --> 00:33:33.241
+<v Rang-3, F.J. (Franka)>Yeah, we just...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/493-0
+00:33:34.201 --> 00:33:38.441
+<v Rang-3, F.J. (Franka)>Sit down again, see where you are, uh,
+and maybe it's then...</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/492-0
+00:33:36.401 --> 00:33:36.881
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/495-0
+00:33:39.321 --> 00:33:43.683
+<v Rang-3, F.J. (Franka)>Maybe then we have enough insight to kind
+of really set the goals for the remainder</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/495-1
+00:33:43.683 --> 00:33:47.890
+<v Rang-3, F.J. (Franka)>of your internship to kind of see what
+kind of products we would like to get out</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/495-2
+00:33:47.890 --> 00:33:48.201
+<v Rang-3, F.J. (Franka)>of it.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/494-0
+00:33:48.881 --> 00:33:49.321
+<v Paul>Mmh.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/496-0
+00:33:51.081 --> 00:33:54.282
+<v Rang-3, F.J. (Franka)>But yeah,
+we can do that when we're both back in</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/496-1
+00:33:54.282 --> 00:33:56.241
+<v Rang-3, F.J. (Franka)>its life and it's a bit nicer.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/497-0
+00:33:56.881 --> 00:33:57.801
+<v Paul>Perfect. Sounds good.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/500-0
+00:33:58.921 --> 00:34:03.187
+<v Rang-3, F.J. (Franka)>Okay, perfect.
+Then I will send a message to Christian</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/498-0
+00:33:59.321 --> 00:33:59.801
+<v Paul>Very good.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/500-1
+00:34:03.187 --> 00:34:09.081
+<v Rang-3, F.J. (Franka)>and I will send the email to Jeroen and
+hopefully everything goes smoothly.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/499-0
+00:34:06.641 --> 00:34:07.241
+<v Paul>Mhm.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/501-0
+00:34:11.041 --> 00:34:11.481
+<v Paul>Let's see.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/503-0
+00:34:12.201 --> 00:34:15.321
+<v Rang-3, F.J. (Franka)>Yes. Okay. Well, I'll see you next week.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/502-0
+00:34:12.641 --> 00:34:14.521
+<v Paul>Let's see. Very good.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/504-0
+00:34:15.561 --> 00:34:17.001
+<v Paul>Perfect. Thank you so much.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/505-0
+00:34:16.441 --> 00:34:18.921
+<v Rang-3, F.J. (Franka)>Have a nice weekend. Bye-bye.</v>
+
+153f11af-3eef-4dd7-a503-246f05cb3175/506-0
+00:34:18.161 --> 00:34:19.721
+<v Paul>Same for you, ciao.</v>
