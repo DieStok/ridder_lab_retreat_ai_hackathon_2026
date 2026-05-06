@@ -1,0 +1,91 @@
+# sources.yaml — declarative spec for scripts/regenerate_references.py
+#
+# Each top-level entry corresponds to one file inside ../references/.
+# - `output`: target filename (relative to ../references/)
+# - `applies_to`: human-readable string for the attribution header
+# - `single_source` (optional): fetch one URL, write it as the body
+# - `stitched_sources` (optional): fetch multiple URLs and concatenate them
+#                                  with a routing preamble
+#
+# When stitched_sources is used, the script writes:
+#   1. The shared attribution header
+#   2. The routing preamble (read verbatim from `routing_preamble_path`)
+#   3. Each section in order, separated by `---` and prefixed with the
+#      section's title and source-URL line
+#
+# Use the regenerator with:
+#     python scripts/regenerate_references.py             # rewrite all files
+#     python scripts/regenerate_references.py --dry-run   # show what would change
+#     python scripts/regenerate_references.py --check     # CI mode: error if drift
+
+outputs:
+
+  # -------------------------------------------------------------------------
+  # 1. Anthropic / Claude prompting best practices
+  # -------------------------------------------------------------------------
+  - output: Claude_prompting_best_practices_04_05_2026.md
+    applies_to: "Claude Opus 4.7, Claude Opus 4.6, Claude Sonnet 4.6, Claude Haiku 4.5"
+    single_source:
+      url: "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md"
+      # The Anthropic page is published as raw markdown at this .md URL,
+      # so we can use it directly without HTML extraction.
+      content_type: markdown
+
+  # -------------------------------------------------------------------------
+  # 2. OpenAI / ChatGPT / Codex prompting best practices (stitched)
+  # -------------------------------------------------------------------------
+  - output: ChatGPT_Codex_prompting_best_practices_04_05_2026.md
+    applies_to: "GPT-5.5, GPT-5.4 (and -mini, -nano), GPT-5.3-codex, plus general OpenAI prompting"
+    stitched_sources:
+      # The model-specific prompt-guidance pages all return one HTML page with
+      # three tabs (gpt-5.5 / gpt-5.4 / gpt-5.3-codex). Fetching any of the three
+      # URLs returns the same content with a different default-active tab.
+      # We fetch each separately so the regenerator can detect drift in any tab
+      # and so each section is independently addressable.
+      - id: general
+        title: "§1. General prompt engineering"
+        url: "https://developers.openai.com/api/docs/guides/prompt-engineering"
+        # Extract main article content from HTML (not the full page chrome).
+        content_type: html
+        # Optional: comma-separated list of CSS-style markers used by the
+        # extractor to find the main content region. The script falls back to
+        # whole-page extraction if these aren't found.
+        extract_markers: ["# Prompt engineering"]
+      - id: gpt55
+        title: "§2. GPT-5.5 prompting guide"
+        url: "https://developers.openai.com/api/docs/guides/prompt-guidance?model=gpt-5.5"
+        content_type: html
+        extract_markers: ["GPT-5.5", "## GPT-5.5 prompting guide"]
+        section_only: gpt-5.5
+      - id: gpt54
+        title: "§3. GPT-5.4 prompting guide"
+        url: "https://developers.openai.com/api/docs/guides/prompt-guidance?model=gpt-5.4"
+        content_type: html
+        extract_markers: ["GPT-5.4", "## GPT-5.4 prompting guide"]
+        section_only: gpt-5.4
+      - id: codex
+        title: "§4. GPT-5.3 Codex prompting guide"
+        url: "https://developers.openai.com/api/docs/guides/prompt-guidance?model=gpt-5.3-codex"
+        content_type: html
+        extract_markers: ["GPT-5.3 Codex", "## GPT-5.3 Codex prompting guide"]
+        section_only: gpt-5.3-codex
+      - id: latest_model
+        title: "§5. Using GPT-5.5 (supplementary, API-level)"
+        url: "https://developers.openai.com/api/docs/guides/latest-model"
+        content_type: html
+        extract_markers: ["# Using GPT-5.5", "Using GPT-5.5"]
+
+# Notes for maintainers:
+#
+# - All URLs above are public documentation. The script uses a polite
+#   User-Agent string and respects rate limits.
+#
+# - The `section_only` field tells the script to attempt to extract just one
+#   model tab from the prompt-guidance page (the page contains all three
+#   tabs but each URL has a different active default). If extraction fails,
+#   the script falls back to the whole-page content for that fetch — diff
+#   the resulting output against the previous version manually.
+#
+# - The fetch-date in the file's attribution header and in the filename is
+#   set automatically by the script at run time. To rename files when the
+#   date rolls over, also update SKILL.md's reference paths.
