@@ -8,15 +8,17 @@
 
 # Ridder Lab AI Hackathon — Spring 2026 Retreat
 
-Welcome. This folder is the playground for the lab retreat. Each team picks an automation idea, hacks on it for the duration of the retreat, and ships their work into `submissions/team_<your_name>/`. Refer to the [brainstorm idea doc](./BRAINSTORM_lab_automation_ideas.md) to find ideas that we pre-generated and the ideas that we have just come up with.
+Welcome. This folder is the playground for the lab retreat. Each team picks an automation idea, hacks on it for 50 minutes, and ships their work into `submissions/team_<your_name>/`. Refer to the [brainstorm idea doc](./BRAINSTORM_lab_automation_ideas.md) to find ideas that we pre-generated and the ideas that we have just come up with.
 
 The brainstorm document has more details, but TL;DR the hackathon:
-1. You clone this repo (ideally the top-level ridder_lab_ai_automation repo if you want context for any AI coding agents)
+1. You clone this repo (ideally the top-level ridder_lab_ai_automation repo if you want context for any AI coding agents; see below)
 2. You work with your team in a folder within `submissions`, e.g. `submissions/Spanish_are_best_team_NO_CUBANS` or something similarly innocuous.
-3. You produce i) a markdown document detailing exactly: a) the problem you intend to solve; b) why that is a problem and how LLM agents or other automation could solve this (partly); c) a proposed architecture/workflow/idea of how to implement this; d) any references or tool docs that could be useful for further work. ; ii) an initial implementation, in so far as you can get that in ±50 minutes with the help of your teammates and your LLM bot of choice.
+3. You produce i) a markdown document detailing exactly: a) the problem you intend to solve; b) why that is a problem and how LLM agents or other automation could solve this (partly); c) a proposed architecture/workflow/idea of how to implement this; d) any references or tool docs that could be useful for further work. [Work by filling out the TEMPLATE.md](./submissions/TEMPLATE.md) ; ii) an initial implementation, in so far as you can get that in ±50 minutes with the help of your teammates and your LLM agent of choice.
 4. Starting sources on LLM reviews, scientific agent/AI workflows, tools, etc. can be found in [additional_information_and_resources](./additional_information_and_resources). These are almost certainly relevant, so add them to any LLM chats or agents and ask if there's anything in there.
 
-Note that it's good to check that we're not reinventing the wheel, so if there are tools that we should just start using given the ideas in the [brainstorm idea doc](./BRAINSTORM_lab_automation_ideas.md), this is great:  write-up on what to use, how, and where is also useful! Something you should think about: is the solution something we will run on our local laptops, is it something we will run on the hpc (e.g. code analysis, but no internet access allowed because that's a security nightmare), or something that will interact with Slack (and should perhaps live as a bot on a cloud VM)? Note this in the document. 
+Note that it's good to check that we're not reinventing the wheel, so if there are tools that we should just start using given the ideas in the [brainstorm idea doc](./BRAINSTORM_lab_automation_ideas.md), this is a valuable find as well: a write-up on what to use, how, and when is the best possible quick win!
+
+Note 2: think about whether the solution is something we would run on our local laptops, is it something we would run on the hpc (e.g. code analysis, but no internet access allowed because that's a security nightmare), or something that would interact with Slack (and should perhaps live as a bot on a cloud VM)? Note this in the document. 
 
 ## 10-minute start
 
@@ -27,35 +29,33 @@ Note that it's good to check that we're not reinventing the wheel, so if there a
 git clone --recurse-submodules https://github.com/DieStok/ridder_lab_ai_automation.git
 cd ridder_lab_ai_automation/hackathon
 
-# 2. Sync the shared dev environment. This installs every common dependency
-#    (Slack, LLM clients, LangGraph, web/PDF parsing, data tools) into a
-#    single .venv at hackathon/.venv. uv handles caching so this is fast
-#    after the first run.
-#    NOTE: you can of course get started researching without this. This is only for implementation!
-uv sync
+# 2. Pick a problem from BRAINSTORM_lab_automation_ideas.md
 
-# 3. Pick a problem from BRAINSTORM_lab_automation_ideas.md
-
-# 4. Make your team's working directory.
+# 3. Make your team's working directory.
 git checkout -b team/<your_team>
 mkdir submissions/team_<your_team>
 cp submissions/TEMPLATE.md submissions/team_<your_team>/PROPOSAL.md
 cd submissions/team_<your_team>
 
-# 5. (a) If you're building a Slack bot:
-cp -r ../../../automation_building_blocks/slack_app_skeleton/* .
-cp .env.example .env       # then fill in your tokens
-# Note: slack_app_skeleton has its own pyproject.toml. You can either
-# `uv sync` inside your submission for an isolated venv, or — for the
-# retreat — just use the shared hackathon/.venv at the parent level
-# and skip your own pyproject.
+# 4. Start filling out the TEMPLATE.md that you just renamed PROPOSAL.md with your team!
+#    You can do this by brainstorming, asking LLMs for tips, making svg images, etc.
+#    Don't forget to look at hackathon/additional_information_and_resources for some starting information!
+#    YOU REALISTICALLY WILL SPEND MOST TIME IN THIS STEP!
 
-# 5. (b) If you're building something else:
-uv init                    # fresh pyproject in your team dir
-# ... or just write Python files and use the shared hackathon/.venv
+# 5. Start hacking something together! Use your favourite LLM agents, either in the browser or on your laptop.
+#    You can use the included basic uv virtual environment with the command below this comment block.
+#    It installs dependencies for:
+#    Slack, LLM clients, LangGraph, web/PDF parsing, and some common data tools into a
+#    single .venv at hackathon/.venv. 
+#    NOTE: you can of course get started researching without this. This is only for implementation!
+uv sync
+#activate the venv
+source ../hackathon/.venv/bin/activate
+# If you don't have uv/don't know what it is:
+curl -LsSf https://astral.sh/uv/install.sh | sh # And see: https://docs.astral.sh/uv/getting-started/installation/ 
 
-# 6. Iterate with your coding agent. Push your branch when you have
-#    something to share.
+
+# 6. Iterate with your coding agent. Push your branch at the end. Tell Dieter whose e-mail to add to allow you to actually commit and push. 
 git add .
 git commit -m "[team_<your_team>] first cut"
 git push origin team/<your_team>
