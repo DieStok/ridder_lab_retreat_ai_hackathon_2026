@@ -51,9 +51,19 @@ Ideas are numbered. Please list which one your team is working on.
 9. Journal Club Enhancement: for each paper, have LLM agents do any of the following: i) go through an adversarial review of the findings, ii) do a thorough comparison of the code/data versus the methods and reported results and flag any issues, iii) make interactive visualizations or per-figure diagrams of what code paths were used to make it, what is properly mentioned in the methods/code and what is unclear/unknown, etc. iv) see if there are missing papers that should have been cited. 
 The list goes on-and-on. In the not-so distant future the LLM may be listening in on the journal club and make tweaked visualizations on the fly when we want to know what would have happened if the authors'd used a slightly different method, with interactive notebooks like marimo recapitulating the paper figures, changing them when asked, and on-demand question answering about exact input data shape and type, train-val-test splits, hyperparameters, brainstorming about next steps, etc. 
 
-10. To be added live during retreat 
+10. Summaries of everyone's recent work and post on the internal group website (e.g. pull info from HPC)
 
-11. To be added live during retreat 
+11. Joining existing projects: Agent that can generate an introductory notebook on ongoing projects; provide guided intro
 
-12. etc.
+12. Jeroen-LLM: Automated generation of weekly reports of your work, which are shared with the Jeroen-LLM, who can give general feedback and match people based on their current interests/work. ---> Extension: Jeroen-LLM listens to all the SIGs and can also match people up in this way.
+
+13. Journal Club: Set up skill / prompt to perform a first evaluation of the paper and pulls relevant resources
+
+14. Lab meeting presentation review: Reformatting lab meeting slides to PMC house style, add a "goals" slide if missing, provide feedback on structure and format of the slides. --> Summary can be shared with the chair, who discusses further with the presenters
+
+15. LLM SIG idea digestion: uses transcript/recording and summarizes idea and people's stances, 
+
+16. Wet-lab support: Automated form filling during experiments based on live audio
+
+17. Meeting notifications to slack / signa / whatsapp on upcoming meetings, reminder to book a room etc
 
