@@ -78,6 +78,56 @@ def normalize_for_tts(text: str) -> str:
     return text
 
 
+# --- Spoken rendering of deterministic recommendations ---------------------
+
+def flag_to_spoken(flag: str) -> str:
+    """Turn an sbatch flag like '--cpus-per-task=2' into natural English."""
+    # Drop inline shell comments and surrounding backticks/whitespace.
+    f = flag.split("#", 1)[0].strip().strip("`").strip()
+
+    m = re.match(r"--cpus-per-task=(\d+)", f)
+    if m:
+        n = int(m.group(1))
+        return f"{n} CPU{'s' if n != 1 else ''} per task"
+
+    m = re.match(r"--mem=(\d+)\s*G", f)
+    if m:
+        return f"{m.group(1)} gigabytes of memory"
+
+    m = re.match(r"--time=(\d+):(\d+):\d+", f)
+    if m:
+        hh, mm = int(m.group(1)), int(m.group(2))
+        parts: list[str] = []
+        if hh:
+            parts.append(f"{hh} hour{'s' if hh != 1 else ''}")
+        if mm:
+            parts.append(f"{mm} minute{'s' if mm != 1 else ''}")
+        return (" and ".join(parts) + " of walltime") if parts else f
+
+    m = re.match(r"--gres=gpu:(\d+)", f)
+    if m:
+        n = int(m.group(1))
+        return f"{n} GPU{'s' if n != 1 else ''}"
+
+    # Free-form advice (segfault wording, etc.) — pass through.
+    return f
+
+
+def recommendations_to_spoken(recommendations) -> str:
+    """Render a list of analyze.Recommendation into a spoken paragraph.
+
+    Returns empty string if the list is empty (clean users skip the section).
+    """
+    if not recommendations:
+        return ""
+    sentences = ["For next time:"]
+    for r in recommendations:
+        job = r.job_name.replace("_", " ")
+        flag = flag_to_spoken(r.suggested_flag)
+        sentences.append(f"On {job}, {r.issue}. Try {flag}.")
+    return " ".join(sentences)
+
+
 # ---------------------------------------------------------------- macOS `say`
 
 def say_available() -> bool:

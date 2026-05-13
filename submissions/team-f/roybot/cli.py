@@ -110,13 +110,17 @@ def main(argv: list[str] | None = None) -> int:
         else:
             print(f"[roybot] wrote audio: {audio_path}", file=sys.stderr)
 
-        # 5b. Per-user roast audio (one clip per lab member).
+        # 5b. Per-user roast + spoken recommendations (one clip per lab member).
         if audio_path is not None and not args.skip_per_user_audio:
             for user, roast in reports.per_user_roast.items():
                 # Drop any "[LLM fallback — ...]" debug header so the voice doesn't read it.
                 spoken = roast
                 if spoken.startswith("[LLM fallback —"):
                     spoken = spoken.split("\n", 1)[-1]
+                # Append the deterministic recommendations so the clip is also actionable.
+                recs_spoken = tts.recommendations_to_spoken(stats[user].recommendations)
+                if recs_spoken:
+                    spoken = spoken.rstrip() + "\n\n" + recs_spoken
                 try:
                     user_audio = tts.speak(
                         spoken,

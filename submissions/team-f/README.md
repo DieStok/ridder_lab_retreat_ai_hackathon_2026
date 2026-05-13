@@ -48,8 +48,11 @@ out/
 └── stats.json              raw per-user numbers
 ```
 
-`say` produces `.aiff`; Piper produces `.wav`. Pass `--skip-per-user-audio`
-if you only want the lab stand-up clip.
+`say` produces `.aiff`; Piper produces `.wav`. Each per-user clip plays the
+roast then a spoken version of the deterministic recommendations
+(`--cpus-per-task=2` becomes "2 CPUs per task", `--mem=16G` becomes
+"16 gigabytes of memory", etc.). Pass `--skip-per-user-audio` if you only
+want the lab stand-up.
 
 ## Getting real sacct data
 
