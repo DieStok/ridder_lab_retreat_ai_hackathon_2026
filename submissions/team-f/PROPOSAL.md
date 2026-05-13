@@ -58,10 +58,12 @@ roybot.llm          — local Ollama (qwen2.5:14b by default)
 roybot.tts          — engine = say | piper
                       • acronym spelling: CPU → "C P U", CO₂ → "C O two", kWh → "kilowatt hours"
                       • voices: Daniel (say), en_GB-northern_english_male (piper, recommended)
+                      • one audio per user (the roast) + one for the lab standup
         │
         ▼
 out/                — markdown reports, stats.json,
-                      standup.txt, standup_spoken.txt, standup.{aiff,wav}
+                      standup.txt, standup_spoken.txt, standup.{aiff,wav},
+                      user_<name>.{aiff,wav} (one per lab member)
         │
         ▼
 (optional) Slack post: text + audio attachment for the stand-up slide
@@ -110,6 +112,7 @@ uv run python -m roybot --sacct dump.txt --with-llm --with-audio     # on real s
 - two-prompt LLM pipeline (serious + roast) on local Ollama
 - lab-wide stand-up monologue
 - two TTS engines (`say` and Piper), with acronym normalisation so the voice doesn't say "kuh-poo"
+- per-user roast audio (one .wav per lab member) plus the lab-wide stand-up clip
 - optional Slack post + audio upload
 - `scripts/collect_sacct.sh`: a small shell script Roy can drop in a submit-node crontab to produce a weekly sacct dump (atomic write, timestamped output, env-configurable account / users / lookback window). One-line crontab example included.
 

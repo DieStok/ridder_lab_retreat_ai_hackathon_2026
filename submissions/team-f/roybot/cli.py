@@ -37,6 +37,8 @@ def _parser() -> argparse.ArgumentParser:
     p.add_argument("--rate", type=int, default=None, help="Words per minute (say engine only).")
     p.add_argument("--piper-model", default=None,
                    help="Path to a Piper .onnx voice model. Falls back to $PIPER_VOICE_MODEL or ./models/*.onnx.")
+    p.add_argument("--skip-per-user-audio", action="store_true",
+                   help="With --with-audio, generate only the lab stand-up; skip per-user roast clips.")
     p.add_argument("--slack", action="store_true", help="Post the stand-up to Slack (needs SLACK_BOT_TOKEN + SLACK_CHANNEL_ID).")
     p.add_argument("--no-fallback", action="store_true", help="Fail loudly if the LLM is unreachable.")
     return p
@@ -107,6 +109,28 @@ def main(argv: list[str] | None = None) -> int:
             print(f"[roybot] {args.engine} engine not available — skipping audio", file=sys.stderr)
         else:
             print(f"[roybot] wrote audio: {audio_path}", file=sys.stderr)
+
+        # 5b. Per-user roast audio (one clip per lab member).
+        if audio_path is not None and not args.skip_per_user_audio:
+            for user, roast in reports.per_user_roast.items():
+                # Drop any "[LLM fallback — ...]" debug header so the voice doesn't read it.
+                spoken = roast
+                if spoken.startswith("[LLM fallback —"):
+                    spoken = spoken.split("\n", 1)[-1]
+                try:
+                    user_audio = tts.speak(
+                        spoken,
+                        args.out / f"user_{user}",
+                        engine=args.engine,
+                        voice=args.voice,
+                        rate=args.rate,
+                        piper_model=args.piper_model,
+                    )
+                except (FileNotFoundError, RuntimeError) as e:
+                    print(f"[roybot] per-user audio for {user} failed: {e}", file=sys.stderr)
+                    continue
+                if user_audio is not None:
+                    print(f"[roybot] wrote audio: {user_audio}", file=sys.stderr)
 
     # 6. Slack.
     if args.slack:

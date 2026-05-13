@@ -40,15 +40,16 @@ Outputs land in `./out/`:
 
 ```
 out/
-├── user_roy.md
-├── user_merel.md
-├── user_claudio.md
-├── user_sander.md
-├── user_lisa.md
-├── standup.txt
-├── standup.aiff       (only with --with-audio)
-└── stats.json
+├── user_<name>.md          per-user markdown report  (one per lab member)
+├── user_<name>.wav         per-user roast clip       (with --with-audio)
+├── standup.txt             lab stand-up monologue (text)
+├── standup_spoken.txt      same, post acronym normalisation (what the TTS heard)
+├── standup.wav             lab stand-up monologue (audio)
+└── stats.json              raw per-user numbers
 ```
+
+`say` produces `.aiff`; Piper produces `.wav`. Pass `--skip-per-user-audio`
+if you only want the lab stand-up clip.
 
 ## Getting real sacct data
 
