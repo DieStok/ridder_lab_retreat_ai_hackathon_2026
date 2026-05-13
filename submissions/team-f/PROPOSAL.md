@@ -46,7 +46,8 @@ roybot.data         — parse rows into typed Jobs
         │
         ▼
 roybot.analyze      — per-user stats: CPU/GPU/RAM hours,
-                      efficiency, overprovision flags, kWh, CO₂
+                      efficiency, overprovision flags, kWh, CO₂,
+                      concrete next-time sbatch flags per flagged job
         │
         ▼
 roybot.llm          — local Ollama (qwen2.5:14b by default)
@@ -109,6 +110,7 @@ uv run python -m roybot --sacct dump.txt --with-llm --with-audio     # on real s
 - per-user efficiency stats (CPU / mem / walltime, seff-style)
 - kWh + kg CO₂ estimates using NL grid intensity
 - overprovision flags + "worst offender" selection
+- deterministic per-job recommendations (`--cpus-per-task=N`, `--mem=NG`, `--time=HH:MM:00`) sized at ~1.3× actual usage; rendered into a "Recommendations for next time" section in the markdown report and fed to the LLM so it quotes the exact flag instead of guessing
 - two-prompt LLM pipeline (serious + roast) on local Ollama
 - lab-wide stand-up monologue
 - two TTS engines (`say` and Piper), with acronym normalisation so the voice doesn't say "kuh-poo"

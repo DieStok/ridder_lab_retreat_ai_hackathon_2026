@@ -33,6 +33,17 @@ class Flag:
 
 
 @dataclass
+class Recommendation:
+    job_id: str
+    job_name: str
+    issue: str               # what went wrong, in plain English
+    suggested_flag: str      # the concrete sbatch flag to use next time, e.g. "--cpus-per-task=2"
+
+    def to_dict(self) -> dict:
+        return self.__dict__
+
+
+@dataclass
 class UserStats:
     user: str
     n_jobs: int = 0
@@ -49,6 +60,7 @@ class UserStats:
     kg_co2: float = 0.0
     flags: list[Flag] = field(default_factory=list)
     worst_offender: Flag | None = None
+    recommendations: list[Recommendation] = field(default_factory=list)
 
     def to_dict(self) -> dict:
         return {
@@ -67,6 +79,7 @@ class UserStats:
             "kg_co2": round(self.kg_co2, 2),
             "flags": [f.__dict__ for f in self.flags],
             "worst_offender": self.worst_offender.__dict__ if self.worst_offender else None,
+            "recommendations": [r.to_dict() for r in self.recommendations],
         }
 
 
@@ -75,6 +88,63 @@ def _job_kwh(job: Job) -> float:
     cpu_w = job.alloc_cpus * CPU_TDP_W_PER_CORE
     gpu_w = job.n_gpus * GPU_TDP_W
     return (cpu_w + gpu_w) * hours * PUE / 1000.0
+
+
+def _recommend_for_job(job: Job) -> list[Recommendation]:
+    """Concrete next-time sbatch flags for an overprovisioned job.
+
+    Sizing rule: aim for ~75% utilisation, i.e. request ~1.3x of what the
+    job actually used. Clamp to sensible minima.
+    """
+    out: list[Recommendation] = []
+
+    if job.alloc_cpus > 1 and job.cpu_efficiency < LOW_CPU_EFF and job.elapsed_sec >= MIN_JOB_SEC_FOR_FLAG:
+        # Effective cores used ≈ cpu_efficiency × alloc_cpus. Round up + give headroom.
+        used = max(1, int(round(job.cpu_efficiency * job.alloc_cpus * 1.3)))
+        out.append(Recommendation(
+            job_id=job.job_id,
+            job_name=job.job_name,
+            issue=f"asked for {job.alloc_cpus} CPUs, used {int(job.cpu_efficiency * 100)}%",
+            suggested_flag=f"--cpus-per-task={used}",
+        ))
+
+    mem_eff = job.mem_efficiency
+    if (mem_eff is not None and mem_eff < LOW_MEM_EFF
+            and job.req_mem_mb and job.max_rss_mb and job.elapsed_sec >= MIN_JOB_SEC_FOR_FLAG):
+        # Suggest ~1.3x peak RSS, rounded up to nearest GB, minimum 1 GB.
+        suggested_gb = max(1, int(-(-job.max_rss_mb * 1.3 // 1024)))   # ceil division
+        out.append(Recommendation(
+            job_id=job.job_id,
+            job_name=job.job_name,
+            issue=f"asked for {job.req_mem_mb // 1024} GB RAM, peaked at {job.max_rss_mb // 1024} GB ({int(mem_eff * 100)}%)",
+            suggested_flag=f"--mem={suggested_gb}G",
+        ))
+
+    time_eff = job.time_efficiency
+    if (time_eff is not None and time_eff < LOW_TIME_EFF
+            and job.timelimit_sec and job.timelimit_sec > 3600
+            and job.elapsed_sec >= MIN_JOB_SEC_FOR_FLAG):
+        # 1.5x elapsed, rounded up to the next 15 minutes, minimum 30 min.
+        target = max(1800, int(job.elapsed_sec * 1.5))
+        target = ((target + 899) // 900) * 900    # round up to 15-min step
+        hh, rem = divmod(target, 3600)
+        mm = rem // 60
+        out.append(Recommendation(
+            job_id=job.job_id,
+            job_name=job.job_name,
+            issue=f"asked for {job.timelimit_sec // 3600}h walltime, used {int(time_eff * 100)}%",
+            suggested_flag=f"--time={hh:02d}:{mm:02d}:00",
+        ))
+
+    if job.exit_code.startswith("139"):
+        out.append(Recommendation(
+            job_id=job.job_id,
+            job_name=job.job_name,
+            issue="segfault (exit 139)",
+            suggested_flag="reproduce on a small input first, then rerun under `valgrind` or with `ulimit -c unlimited` to capture a core dump",
+        ))
+
+    return out
 
 
 def _flag_job(job: Job) -> list[Flag]:
@@ -135,6 +205,7 @@ def aggregate(jobs: list[Job]) -> dict[str, UserStats]:
             if j.time_efficiency is not None:
                 time_effs.append(j.time_efficiency)
             s.flags.extend(_flag_job(j))
+            s.recommendations.extend(_recommend_for_job(j))
 
         s.avg_cpu_eff = mean(cpu_effs) if cpu_effs else 0.0
         s.avg_mem_eff = mean(mem_effs) if mem_effs else None

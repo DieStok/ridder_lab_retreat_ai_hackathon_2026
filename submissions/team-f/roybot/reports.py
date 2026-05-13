@@ -49,6 +49,13 @@ class GeneratedReports:
 
 
 def _user_md(user: str, stats: UserStats, serious: str, roast: str) -> str:
+    recs_section = "_Nothing to fix — efficient as it gets._"
+    if stats.recommendations:
+        recs_section = "\n".join(
+            f"- **{r.job_name}** (job {r.job_id}): {r.issue} → `{r.suggested_flag}`"
+            for r in stats.recommendations
+        )
+
     return (
         f"# {user} — weekly HPC report\n\n"
         f"## At a glance\n\n"
@@ -61,9 +68,8 @@ def _user_md(user: str, stats: UserStats, serious: str, roast: str) -> str:
         + f"\n- Energy: **{stats.kwh:.2f} kWh** ≈ **{stats.kg_co2:.2f} kg CO₂**\n\n"
         f"## Serious report\n\n{serious}\n\n"
         f"## Roy says\n\n> {roast}\n\n"
-        f"## Flags\n\n"
-        + ("\n".join(f"- `{f.kind}` job {f.job_id} ({f.job_name}): {f.detail}" for f in stats.flags) or "_None — nice._")
-        + "\n"
+        f"## Recommendations for next time\n\n"
+        f"{recs_section}\n"
     )
 
 

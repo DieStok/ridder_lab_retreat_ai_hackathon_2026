@@ -104,6 +104,23 @@ Per user we sum these and flag any job below the efficiency thresholds in
 `analyze.py` (CPU < 30%, mem < 25%, walltime < 20%). The "worst offender" of
 each user is what the roast prompt is told to focus on.
 
+### Next-time recommendations
+
+For every flagged job we compute a concrete `sbatch` flag to use next time,
+sized at ~1.3× the actual usage:
+
+| Issue | Suggested flag |
+|---|---|
+| CPU efficiency < 30% | `--cpus-per-task=<ceil(used_cpus × 1.3)>` |
+| Memory peak < 25% of request | `--mem=<ceil(peak_GB × 1.3)>G` |
+| Walltime usage < 20% | `--time=<ceil(elapsed × 1.5 to nearest 15 min)>` |
+| Segfault (exit 139) | "reproduce on a small input, then `valgrind`" |
+
+These appear in a dedicated **"Recommendations for next time"** section of
+each user's markdown report. They are also passed to the LLM in JSON so the
+spoken serious report quotes the exact flag (rather than the model inventing
+its own number).
+
 > The power numbers are ballparks — pick your fight with the team on Slack.
 > CPU/GPU TDP and Netherlands grid intensity are constants at the top of
 > `analyze.py`; tweak them if Utrecht publishes real numbers.
