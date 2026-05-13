@@ -64,6 +64,9 @@ _ACRONYM_SUBS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"\bGB\b"),    "gigabytes"),
     (re.compile(r"\bMB\b"),    "megabytes"),
     (re.compile(r"\bTB\b"),    "terabytes"),
+    # Tool names the TTS gets wrong. `\b` boundaries don't apply because
+    # these often appear inside underscored job names (e.g. `jupyter_zombie`).
+    (re.compile(r"jupyter", re.IGNORECASE), "jupiter"),
     # `sbatch`, `seff`, etc. — read literally is fine; leave them.
 ]
 
