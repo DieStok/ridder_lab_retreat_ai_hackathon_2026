@@ -115,7 +115,7 @@ uv run python -m roybot --sacct dump.txt --with-llm --with-audio     # on real s
 - two-prompt LLM pipeline (serious + roast) on local Ollama
 - lab-wide stand-up monologue
 - two TTS engines (`say` and Piper), with acronym normalisation so the voice doesn't say "kuh-poo"
-- per-user audio (one .wav per lab member): roast + spoken recommendations (`--cpus-per-task=2` → "2 CPUs per task" etc.), plus the lab-wide stand-up clip
+- per-user roast audio (one short clip per lab member) plus the lab-wide stand-up clip — the actionable tips live in the per-user markdown report, not the audio
 - optional Slack post + audio upload
 - `scripts/collect_sacct.sh`: a small shell script Roy can drop in a submit-node crontab to produce a weekly sacct dump (atomic write, timestamped output, env-configurable account / users / lookback window). One-line crontab example included.
 

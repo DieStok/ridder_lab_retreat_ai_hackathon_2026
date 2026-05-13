@@ -48,11 +48,11 @@ out/
 └── stats.json              raw per-user numbers
 ```
 
-`say` produces `.aiff`; Piper produces `.wav`. Each per-user clip plays the
-roast then a spoken version of the deterministic recommendations
-(`--cpus-per-task=2` becomes "2 CPUs per task", `--mem=16G` becomes
-"16 gigabytes of memory", etc.). Pass `--skip-per-user-audio` if you only
-want the lab stand-up.
+`say` produces `.aiff`; Piper produces `.wav`. Each per-user clip contains
+just the roast — the actionable `--cpus-per-task=…`, `--mem=…`, etc.
+recommendations live in the per-user markdown report (`user_<name>.md`),
+which is the personalised message you can send to each lab member.
+Pass `--skip-per-user-audio` if you only want the lab stand-up clip.
 
 ## Getting real sacct data
 
