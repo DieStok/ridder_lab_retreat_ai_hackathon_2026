@@ -144,6 +144,33 @@ def _recommend_for_job(job: Job) -> list[Recommendation]:
             suggested_flag="reproduce on a small input first, then rerun under `valgrind` or with `ulimit -c unlimited` to capture a core dump",
         ))
 
+    # GPU recommendations. We don't have real GPU utilisation here — plain
+    # sacct can't see it; jobstats / DCGM are needed for that. What we CAN do
+    # is flag multi-GPU jobs that died early (clearly wasted) or where the
+    # CPU was idle most of the time (the data loader is starving the GPUs).
+    if job.n_gpus >= 2:
+        died_early = (
+            job.state in ("CANCELLED", "FAILED")
+            and 50 <= job.elapsed_sec < 1800
+        )
+        if died_early:
+            out.append(Recommendation(
+                job_id=job.job_id,
+                job_name=job.job_name,
+                issue=f"{job.n_gpus} GPUs allocated but {job.state.lower()} after {job.elapsed_sec // 60} min",
+                suggested_flag="--gres=gpu:1   # confirm the workload runs before claiming the rest",
+            ))
+        elif job.cpu_efficiency < LOW_CPU_EFF and job.elapsed_sec >= MIN_JOB_SEC_FOR_FLAG:
+            # CPU is idle most of the time → the data loader is the bottleneck,
+            # extra GPUs are sitting idle waiting for batches. Halve as a probe.
+            suggested = max(1, job.n_gpus // 2)
+            out.append(Recommendation(
+                job_id=job.job_id,
+                job_name=job.job_name,
+                issue=f"{job.n_gpus} GPUs but only {int(job.cpu_efficiency * 100)}% CPU eff — data loader likely starving them",
+                suggested_flag=f"--gres=gpu:{suggested}   # or profile the loader; real GPU util needs jobstats",
+            ))
+
     return out
 
 
@@ -166,6 +193,18 @@ def _flag_job(job: Job) -> list[Flag]:
             flags.append(Flag(
                 job.job_id, job.job_name, "time_overprov",
                 f"asked for {job.timelimit_sec // 3600}h walltime, finished in {int(time_eff * 100)}%"
+            ))
+    if job.n_gpus >= 2:
+        if (job.state in ("CANCELLED", "FAILED")
+                and 50 <= job.elapsed_sec < 1800):
+            flags.append(Flag(
+                job.job_id, job.job_name, "gpu_overprov",
+                f"{job.n_gpus} GPUs allocated, {job.state.lower()} after {job.elapsed_sec // 60} min"
+            ))
+        elif job.cpu_efficiency < LOW_CPU_EFF and job.elapsed_sec >= MIN_JOB_SEC_FOR_FLAG:
+            flags.append(Flag(
+                job.job_id, job.job_name, "gpu_overprov",
+                f"{job.n_gpus} GPUs with {int(job.cpu_efficiency * 100)}% CPU eff (likely loader-starved)"
             ))
     if job.state == "TIMEOUT":
         flags.append(Flag(job.job_id, job.job_name, "killed", "ran out of walltime"))
@@ -213,7 +252,8 @@ def aggregate(jobs: list[Job]) -> dict[str, UserStats]:
         s.kg_co2 = s.kwh * GRID_KGCO2_PER_KWH
 
         # "Worst offender" = most egregious flag, used to focus the roast.
-        ranked = {"segfault": 4, "killed": 3, "mem_overprov": 2, "cpu_overprov": 1, "time_overprov": 1}
+        # GPU waste ranked equal to "killed" because each idle GPU is ~400 W of carbon.
+        ranked = {"segfault": 4, "gpu_overprov": 3, "killed": 3, "mem_overprov": 2, "cpu_overprov": 1, "time_overprov": 1}
         if s.flags:
             s.worst_offender = max(s.flags, key=lambda f: ranked.get(f.kind, 0))
 

@@ -114,7 +114,18 @@ sized at ~1.3× the actual usage:
 | CPU efficiency < 30% | `--cpus-per-task=<ceil(used_cpus × 1.3)>` |
 | Memory peak < 25% of request | `--mem=<ceil(peak_GB × 1.3)>G` |
 | Walltime usage < 20% | `--time=<ceil(elapsed × 1.5 to nearest 15 min)>` |
+| Multi-GPU job died early (cancelled / failed < 30 min) | `--gres=gpu:1` ("test small first") |
+| Multi-GPU job with CPU eff < 30% | `--gres=gpu:<n_gpus // 2>` ("data loader is starving them") |
 | Segfault (exit 139) | "reproduce on a small input, then `valgrind`" |
+
+> ⚠️ **GPU recommendations are heuristic.** Plain `sacct` doesn't expose
+> per-job GPU utilisation — we can only see how many GPUs were allocated,
+> not whether they were busy. The rules above use circumstantial evidence
+> (early death, CPU-starved feeders) which catches the obvious waste but
+> misses the "asked for 8 GPUs, used 1 of them at 100%" case. If Utrecht
+> installs Princeton's [`jobstats`](https://princetonuniversity.github.io/jobstats/)
+> or NVIDIA DCGM exporters, the rules in `analyze.py:_recommend_for_job`
+> can be tightened to use real numbers.
 
 These appear in a dedicated **"Recommendations for next time"** section of
 each user's markdown report. They are also passed to the LLM in JSON so the

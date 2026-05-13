@@ -110,7 +110,8 @@ uv run python -m roybot --sacct dump.txt --with-llm --with-audio     # on real s
 - per-user efficiency stats (CPU / mem / walltime, seff-style)
 - kWh + kg CO₂ estimates using NL grid intensity
 - overprovision flags + "worst offender" selection
-- deterministic per-job recommendations (`--cpus-per-task=N`, `--mem=NG`, `--time=HH:MM:00`) sized at ~1.3× actual usage; rendered into a "Recommendations for next time" section in the markdown report and fed to the LLM so it quotes the exact flag instead of guessing
+- deterministic per-job recommendations (`--cpus-per-task=N`, `--mem=NG`, `--time=HH:MM:00`, `--gres=gpu:N`) sized at ~1.3× actual usage; rendered into a "Recommendations for next time" section in the markdown report and fed to the LLM so it quotes the exact flag instead of guessing
+- heuristic GPU advice (when multi-GPU jobs die early, or CPU efficiency is low enough that the loader is probably starving the GPUs) — real GPU utilisation still requires jobstats / DCGM server-side
 - two-prompt LLM pipeline (serious + roast) on local Ollama
 - lab-wide stand-up monologue
 - two TTS engines (`say` and Piper), with acronym normalisation so the voice doesn't say "kuh-poo"
@@ -121,5 +122,5 @@ uv run python -m roybot --sacct dump.txt --with-llm --with-audio     # on real s
 ### What's stubbed / still TODO
 - **End-to-end scheduling.** `collect_sacct.sh` produces the dump on schedule; the LLM + audio + Slack-post side still has to run somewhere with internet access (per the parent `AGENTS.md`, that's not the submit node). Likely a small cloud VM or systemd timer — recipes are in `automation_building_blocks/deployment_recipes/`. For the retreat demo we just run that part by hand from a laptop.
 - **Cron line not yet installed.** `scripts/crontab.example` is ready to paste but nobody has put it on `hpcs05` / `hpcs06` yet — Roy needs to do that on his cluster account.
-- **GPU efficiency.** Approximated from job state today (e.g. "1 GPU allocated, 1 hour of walltime → 1 GPU-hour"). True GPU utilisation needs `jobstats` or DCGM exporters server-side.
+- **Real GPU utilisation.** We have heuristic GPU recommendations (early death + CPU-starved feeders) but we cannot see whether each allocated GPU was actually busy. True per-job GPU util needs `jobstats` or DCGM exporters server-side. When Utrecht installs either, `analyze.py:_recommend_for_job` can be tightened from heuristics to real numbers.
 - **Slack posting.** Code works but never tested with real tokens — needs a Slack app installed in the lab workspace.
