@@ -1,0 +1,6 @@
+JobID|User|JobName|Partition|State|AllocCPUS|ReqMem|Timelimit|ElapsedRaw|CPUTimeRaw|MaxRSS|ReqTRES|AllocTRES|ExitCode
+200001|roy|sacct_audit|cpu|COMPLETED|2|8G|01:00:00|2700|4800|6200M|cpu=2,mem=8G|cpu=2,mem=8G|0:0
+200002|merel|train_diffusion|gpu|COMPLETED|16|128G|1-00:00:00|43200|80000|42000M|cpu=16,mem=128G,gres/gpu=8|cpu=16,mem=128G,gres/gpu=8|0:0
+200003|merel|debug_run|gpu|CANCELLED|16|128G|1-00:00:00|600|480|12000M|cpu=16,mem=128G,gres/gpu=8|cpu=16,mem=128G,gres/gpu=8|0:15
+200004|claudio|rna_pipeline|cpu|COMPLETED|8|500G|2-00:00:00|86400|144000|9500M|cpu=8,mem=500G|cpu=8,mem=500G|0:0
+200005|sander|fit_glm|cpu|FAILED|4|16G|02:00:00|120|240|2000M|cpu=4,mem=16G|cpu=4,mem=16G|139:0
