@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Admin - Lab Memory Atlas{% endblock %}
+{% block content %}
+<section class="page-header">
+  <p class="eyebrow">Admin</p>
+  <h1>Atlas control room</h1>
+  <p class="lede">Edit lab members, groups, memberships, and meeting-derived content. Archive keeps records recoverable.</p>
+</section>
+
+<section class="admin-grid">
+  <a class="admin-tile" href="/admin/people">
+    <strong>{{ admin.counts.people }}</strong>
+    <span>People</span>
+    <small>{{ admin.counts.archived_people }} archived</small>
+  </a>
+  <a class="admin-tile" href="/admin/groups">
+    <strong>{{ admin.counts.projects }}</strong>
+    <span>Groups</span>
+    <small>{{ admin.counts.archived_projects }} archived</small>
+  </a>
+  <a class="admin-tile" href="/admin/content">
+    <strong>{{ admin.counts.reviews }}</strong>
+    <span>Review items</span>
+    <small>{{ admin.counts.actions }} actions</small>
+  </a>
+  <a class="admin-tile" href="/admin/people">
+    <strong>{{ admin.global_supervisors|length }}</strong>
+    <span>Global supervisors</span>
+    <small>{{ admin.orphan_phds|length }} PhDs need postdoc supervisor links</small>
+  </a>
+</section>
+
+<section class="admin-section">
+  <div class="admin-section-head">
+    <h2>Supervision hierarchy</h2>
+    <a class="ghost-link" href="/admin/people">Edit people</a>
+  </div>
+  <div class="hierarchy-strip">
+    {% for person in admin.global_supervisors %}
+    <article>
+      <span class="type-pill">Global</span>
+      <strong>{{ person.name }}</strong>
+      <small>{{ person.role }}</small>
+    </article>
+    {% endfor %}
+    {% if admin.orphan_phds %}
+    <article class="warning-panel">
+      <strong>Missing postdoc supervisor</strong>
+      <small>{{ admin.orphan_phds|map(attribute='name')|join(', ') }}</small>
+    </article>
+    {% endif %}
+  </div>
+</section>
+
+<section class="admin-section">
+  <div class="admin-section-head">
+    <h2>Recent admin activity</h2>
+  </div>
+  <div class="admin-list">
+    {% for event in admin.activity %}
+    <article class="admin-row">
+      <div>
+        <strong>{{ event.label }}</strong>
+        <p>{{ event.detail }}</p>
+      </div>
+      <small>{{ event.created_at }}</small>
+    </article>
+    {% else %}
+    <div class="empty-state"><h2>No activity yet</h2></div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

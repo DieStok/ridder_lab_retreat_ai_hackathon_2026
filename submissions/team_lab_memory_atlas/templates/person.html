@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}{{ person.name }} - Lab Memory Atlas{% endblock %}
+{% block content %}
+<section class="profile-layout">
+  <div class="profile-main">
+    <p class="eyebrow">{{ person.role }}</p>
+    <h1>{{ person.name }}</h1>
+    <p class="lede">{{ person.intro }}</p>
+    <div class="profile-meta-row">
+      {% if person.is_global_supervisor %}<span class="type-pill">PI / global supervisor</span>{% endif %}
+      {% for supervisor in person.pi_supervisors %}<span class="type-pill">PI: {{ supervisor }}</span>{% endfor %}
+      {% for supervisor in person.supervisors %}<span class="badge">Supervisor: {{ supervisor }}</span>{% endfor %}
+      {% if person.supervisees %}<span class="badge">Supervises {{ person.supervisees|length }}</span>{% endif %}
+    </div>
+    <div class="chip-row large">
+      {% for topic in person.topics %}
+      <span>{{ topic }}</span>
+      {% endfor %}
+    </div>
+    <section>
+      <h2>Recent updates</h2>
+      <ul class="clean-list">
+        {% for update in person.recent_updates %}
+        <li>{{ update }}</li>
+        {% else %}
+        <li>No approved meeting updates yet.</li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section>
+      <h2>Open challenges</h2>
+      <ul class="clean-list">
+        {% for challenge in person.challenges %}
+        <li>{{ challenge }}</li>
+        {% else %}
+        <li>No approved challenges yet.</li>
+        {% endfor %}
+      </ul>
+    </section>
+  </div>
+  <aside class="profile-side">
+    <h2>Suggested helpers</h2>
+    <ul class="clean-list">
+      {% for helper in person.helpers %}
+      <li>{{ helper }}</li>
+      {% else %}
+      <li>No strong overlap yet.</li>
+      {% endfor %}
+    </ul>
+    <h2>Supervision</h2>
+    <ul class="clean-list">
+      {% if person.pi_supervisors %}
+      <li>PI supervisor: {{ person.pi_supervisors|join(', ') }}</li>
+      {% endif %}
+      {% if person.supervisors %}
+      <li>Supervisors: {{ person.supervisors|join(', ') }}</li>
+      {% endif %}
+      {% if person.supervisees %}
+      <li>Supervises: {{ person.supervisees|join(', ') }}</li>
+      {% endif %}
+      {% if person.is_global_supervisor %}
+      <li>Can view action plans across the lab.</li>
+      {% endif %}
+      {% if not person.pi_supervisors and not person.supervisors and not person.supervisees and not person.is_global_supervisor %}
+      <li>No supervisor links assigned yet.</li>
+      {% endif %}
+    </ul>
+    <h2>Approved actions</h2>
+    <ul class="clean-list">
+      {% for action in person.actions %}
+      <li>{{ action.title }} <span class="muted">({{ action.status.replace('_', ' ') }})</span></li>
+      {% else %}
+      {% if not member_logged_in and not admin_logged_in %}
+      <li>Sign in to see private action plans.</li>
+      {% else %}
+      <li>No visible approved actions.</li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </aside>
+</section>
+{% endblock %}

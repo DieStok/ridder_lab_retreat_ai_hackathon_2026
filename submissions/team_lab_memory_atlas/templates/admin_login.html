@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Admin Login - Lab Memory Atlas{% endblock %}
+{% block content %}
+<section class="page-header">
+  <p class="eyebrow">Admin</p>
+  <h1>Admin login</h1>
+  <p class="lede">Protected editing for people, groups, memberships, meetings, actions, and review items.</p>
+</section>
+
+<form class="form-panel compact-form" action="/admin/login" method="post">
+  {% if not password_configured %}
+  <div class="warning-panel">
+    <h2>Password not configured</h2>
+    <p>Add `LAB_ATLAS_ADMIN_PASSWORD` to `.env`, then restart the app.</p>
+  </div>
+  {% endif %}
+  {% if error %}
+  <p class="form-error">{{ error }}</p>
+  {% endif %}
+  <label>
+    <span>Admin password</span>
+    <input name="password" type="password" autocomplete="current-password" required>
+  </label>
+  <button class="primary-button" type="submit" {% if not password_configured %}disabled{% endif %}>Log in</button>
+</form>
+{% endblock %}

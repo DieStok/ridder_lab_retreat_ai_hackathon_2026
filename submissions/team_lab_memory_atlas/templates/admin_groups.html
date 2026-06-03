@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Admin Groups - Lab Memory Atlas{% endblock %}
+{% block content %}
+<section class="page-header">
+  <p class="eyebrow">Admin</p>
+  <h1>Groups</h1>
+  <p class="lede">Manage SIGs, themes, and capability groups.</p>
+  <a class="primary-link" href="/admin/groups/new">Add group</a>
+</section>
+
+<section class="admin-list">
+  {% for group in admin.projects %}
+  <article class="admin-row {{ 'archived' if group.archived else '' }}">
+    <div>
+      <h2>{{ group.label }}</h2>
+      <p>{{ group.kind }} · {{ admin.members_by_project[group.id]|length }} members</p>
+      <div class="chip-row">
+        {% for keyword in group.keywords[:6] %}<span>{{ keyword }}</span>{% endfor %}
+        {% if group.archived %}<span>archived</span>{% endif %}
+      </div>
+    </div>
+    <div class="admin-actions">
+      <a class="ghost-link" href="/admin/groups/{{ group.id }}/edit">Edit</a>
+      {% if group.archived %}
+      <form action="/admin/groups/{{ group.id }}/restore" method="post"><button class="ghost-button" type="submit">Restore</button></form>
+      {% else %}
+      <form action="/admin/groups/{{ group.id }}/archive" method="post"><button class="ghost-button" type="submit">Archive</button></form>
+      {% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</section>
+{% endblock %}

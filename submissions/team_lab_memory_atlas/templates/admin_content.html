@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}Admin Content - Lab Memory Atlas{% endblock %}
+{% block content %}
+<section class="page-header">
+  <p class="eyebrow">Admin</p>
+  <h1>Content</h1>
+  <p class="lede">Edit or archive meeting-derived records without touching raw JSON.</p>
+</section>
+
+<section class="admin-section">
+  <h2>Meetings</h2>
+  <div class="admin-list">
+    {% for meeting in admin.meetings %}
+    <article class="admin-row {{ 'archived' if meeting.archived else '' }}">
+      <form class="admin-edit-form" action="/admin/meetings/{{ meeting.id }}/edit" method="post">
+        <input name="title" value="{{ meeting.title }}">
+        <select name="meeting_type">{% for item in meeting_types %}<option value="{{ item }}" {% if item == meeting.meeting_type %}selected{% endif %}>{{ item }}</option>{% endfor %}</select>
+        <input name="meeting_date" type="date" value="{{ meeting.meeting_date or '' }}">
+        <textarea name="summary" rows="2">{{ meeting.summary }}</textarea>
+        <label class="check-line"><input name="sensitive" type="checkbox" value="true" {% if meeting.sensitive %}checked{% endif %}><span>Sensitive</span></label>
+        <button class="primary-button" type="submit">Save</button>
+      </form>
+      {% if meeting.archived %}
+      <form action="/admin/meetings/{{ meeting.id }}/restore" method="post"><button class="ghost-button" type="submit">Restore</button></form>
+      {% else %}
+      <form action="/admin/meetings/{{ meeting.id }}/archive" method="post"><button class="ghost-button" type="submit">Archive</button></form>
+      {% endif %}
+    </article>
+    {% else %}<div class="empty-state"><h2>No meetings</h2></div>{% endfor %}
+  </div>
+</section>
+
+<section class="admin-section">
+  <h2>Actions</h2>
+  <div class="admin-list">
+    {% for action in admin.actions %}
+    <article class="admin-row {{ 'archived' if action.archived else '' }}">
+      <form class="admin-edit-form" action="/admin/actions/{{ action.id }}/edit" method="post">
+        <input name="title" value="{{ action.title }}">
+        <select name="owner_id">
+          <option value="">Unassigned</option>
+          {% for person in admin.people %}
+          <option value="{{ person.id }}" {% if person.id == action.owner_id %}selected{% endif %}>{{ person.name }}</option>
+          {% endfor %}
+        </select>
+        <select name="status">{% for item in action_statuses %}<option value="{{ item }}" {% if item == action.status %}selected{% endif %}>{{ item }}</option>{% endfor %}</select>
+        <select name="review_status">{% for item in review_statuses %}<option value="{{ item }}" {% if item == action.review_status %}selected{% endif %}>{{ item }}</option>{% endfor %}</select>
+        <small class="viewer-line">Visible to: {{ admin.action_viewers[action.id]|join(', ') if admin.action_viewers[action.id] else 'admin only until owner is assigned' }}</small>
+        <button class="primary-button" type="submit">Save</button>
+      </form>
+      {% if action.archived %}
+      <form action="/admin/actions/{{ action.id }}/restore" method="post"><button class="ghost-button" type="submit">Restore</button></form>
+      {% else %}
+      <form action="/admin/actions/{{ action.id }}/archive" method="post"><button class="ghost-button" type="submit">Archive</button></form>
+      {% endif %}
+    </article>
+    {% else %}<div class="empty-state"><h2>No actions</h2></div>{% endfor %}
+  </div>
+</section>
+
+<section class="admin-section">
+  <h2>Literature questions</h2>
+  <div class="admin-list">
+    {% for item in admin.literature_questions %}
+    <article class="admin-row {{ 'archived' if item.archived else '' }}">
+      <form class="admin-edit-form" action="/admin/literature/{{ item.id }}/edit" method="post">
+        <input name="question" value="{{ item.question }}">
+        <input name="search_prompt" value="{{ item.search_prompt }}">
+        <select name="review_status">{% for status in review_statuses %}<option value="{{ status }}" {% if status == item.review_status %}selected{% endif %}>{{ status }}</option>{% endfor %}</select>
+        <button class="primary-button" type="submit">Save</button>
+      </form>
+      {% if item.archived %}
+      <form action="/admin/literature_questions/{{ item.id }}/restore" method="post"><button class="ghost-button" type="submit">Restore</button></form>
+      {% else %}
+      <form action="/admin/literature_questions/{{ item.id }}/archive" method="post"><button class="ghost-button" type="submit">Archive</button></form>
+      {% endif %}
+    </article>
+    {% else %}<div class="empty-state"><h2>No literature questions</h2></div>{% endfor %}
+  </div>
+</section>
+
+<section class="admin-section">
+  <h2>Review items</h2>
+  <div class="admin-list">
+    {% for item in admin.review_items %}
+    <article class="admin-row {{ 'archived' if item.archived else '' }}">
+      <form class="admin-edit-form" action="/admin/reviews/{{ item.id }}/edit" method="post">
+        <input name="title" value="{{ item.title }}">
+        <textarea name="proposed_text" rows="2">{{ item.proposed_text }}</textarea>
+        <select name="status">{% for status in review_statuses %}<option value="{{ status }}" {% if status == item.status %}selected{% endif %}>{{ status }}</option>{% endfor %}</select>
+        <button class="primary-button" type="submit">Save</button>
+      </form>
+      {% if item.archived %}
+      <form action="/admin/review_items/{{ item.id }}/restore" method="post"><button class="ghost-button" type="submit">Restore</button></form>
+      {% else %}
+      <form action="/admin/review_items/{{ item.id }}/archive" method="post"><button class="ghost-button" type="submit">Archive</button></form>
+      {% endif %}
+    </article>
+    {% else %}<div class="empty-state"><h2>No review items</h2></div>{% endfor %}
+  </div>
+</section>
+{% endblock %}

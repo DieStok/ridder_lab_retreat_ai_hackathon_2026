@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Import - Lab Memory Atlas{% endblock %}
+{% block content %}
+<section class="page-header">
+  <p class="eyebrow">Import</p>
+  <h1>Add a meeting transcript</h1>
+  <p class="lede">Upload VTT or plain text. The app creates draft updates for review before anything changes in the atlas.</p>
+</section>
+
+<form class="form-panel" action="/import" method="post" enctype="multipart/form-data">
+  <label>
+    <span>Meeting title</span>
+    <input name="title" type="text" placeholder="Spatial SIG - May update" required>
+  </label>
+  <label>
+    <span>Meeting type</span>
+    <select name="meeting_type">
+      {% for meeting_type in meeting_types %}
+      <option value="{{ meeting_type }}">{{ meeting_type.replace('_', ' ') }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>
+    <span>Date</span>
+    <input name="meeting_date" type="date">
+  </label>
+  <label>
+    <span>Transcript</span>
+    <input name="transcript" type="file" accept=".vtt,.txt,.md,text/plain" required>
+  </label>
+  <label class="check-line">
+    <input name="sensitive" type="checkbox" value="true">
+    <span>Mark as sensitive</span>
+  </label>
+  <button class="primary-button" type="submit">Create draft updates</button>
+</form>
+{% endblock %}

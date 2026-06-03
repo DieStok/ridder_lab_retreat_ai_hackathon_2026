@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Admin People - Lab Memory Atlas{% endblock %}
+{% block content %}
+<section class="page-header">
+  <p class="eyebrow">Admin</p>
+  <h1>People</h1>
+  <p class="lede">Add, edit, archive, and restore lab members.</p>
+  <a class="primary-link" href="/admin/people/new">Add person</a>
+</section>
+
+<section class="admin-list">
+  {% for person in admin.people %}
+  <article class="admin-row {{ 'archived' if person.archived else '' }}">
+    <div>
+      <h2>{{ person.name }}</h2>
+      <p>
+        {{ person.role }} · {{ person.projects|length }} groups
+        {% if person.login_enabled %} · login enabled{% endif %}
+        {% if person.is_global_supervisor %} · global supervisor{% endif %}
+      </p>
+      {% set supervisors = admin.supervisor_names[person.id] %}
+      {% set supervisees = admin.supervisee_names[person.id] %}
+      {% if supervisors or supervisees %}
+      <p class="admin-subline">
+        {% if supervisors %}Supervisors: {{ supervisors|join(', ') }}{% endif %}
+        {% if supervisors and supervisees %} · {% endif %}
+        {% if supervisees %}Supervises: {{ supervisees|join(', ') }}{% endif %}
+      </p>
+      {% endif %}
+      <div class="chip-row">
+        {% for topic in person.topics[:6] %}<span>{{ topic }}</span>{% endfor %}
+        {% if person.archived %}<span>archived</span>{% endif %}
+      </div>
+    </div>
+    <div class="admin-actions">
+      <a class="ghost-link" href="/admin/people/{{ person.id }}/edit">Edit</a>
+      {% if person.archived %}
+      <form action="/admin/people/{{ person.id }}/restore" method="post"><button class="ghost-button" type="submit">Restore</button></form>
+      {% else %}
+      <form action="/admin/people/{{ person.id }}/archive" method="post"><button class="ghost-button" type="submit">Archive</button></form>
+      {% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</section>
+{% endblock %}

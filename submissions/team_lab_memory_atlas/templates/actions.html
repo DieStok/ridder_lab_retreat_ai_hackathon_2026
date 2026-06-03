@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}Actions - Lab Memory Atlas{% endblock %}
+{% block content %}
+<section class="page-header">
+  <p class="eyebrow">Actions</p>
+  <h1>Prioritized follow-up work</h1>
+  <p class="lede">Approved action items ordered by importance, effort, uncertainty, and risk/reward.</p>
+</section>
+
+<section class="table-list">
+  {% for action in view.actions %}
+  <article class="action-row">
+    <div>
+      <span class="score">{{ action.priority_score }}</span>
+    </div>
+    <div>
+      <h2>{{ action.title }}</h2>
+      <p class="action-owner">Owner: {{ action.owner_name }}</p>
+      <p>{{ action.evidence }}</p>
+      <div class="metric-row">
+        <span>importance {{ action.importance }}/5</span>
+        <span>time {{ action.estimated_time }}/5</span>
+        <span>uncertainty {{ action.uncertainty }}/5</span>
+        <span>risk/reward {{ action.risk_reward }}/5</span>
+      </div>
+    </div>
+    <form action="/actions/{{ action.id }}/status" method="post">
+      <select name="status">
+        {% for status in statuses %}
+        <option value="{{ status }}" {{ "selected" if status == action.status else "" }}>{{ status.replace('_', ' ') }}</option>
+        {% endfor %}
+      </select>
+      <button class="ghost-button" type="submit">Update</button>
+    </form>
+  </article>
+  {% else %}
+  <div class="empty-state">
+    {% if not member_logged_in and not admin_logged_in %}
+    <h2>Private actions require login</h2>
+    <p>Sign in to see tasks assigned to you or to people you supervise.</p>
+    <a class="primary-link" href="/login">Member login</a>
+    {% else %}
+    <h2>No visible action items</h2>
+    <p>There are no approved action items assigned to you or your supervisees.</p>
+    {% endif %}
+  </div>
+  {% endfor %}
+</section>
+
+<section class="page-header compact">
+  <p class="eyebrow">Literature follow-up</p>
+  <h1>Ranked questions</h1>
+</section>
+<section class="table-list">
+  {% for item in view.followups %}
+  <article class="action-row">
+    <div><span class="score">{{ item.priority_score }}</span></div>
+    <div>
+      <h2>{{ item.question }}</h2>
+      <p>Search prompt: {{ item.search_prompt }}</p>
+      <div class="metric-row">
+        <span>importance {{ item.importance }}/5</span>
+        <span>time {{ item.estimated_time }}/5</span>
+        <span>risk/reward {{ item.risk_reward }}/5</span>
+      </div>
+    </div>
+  </article>
+  {% else %}
+  <div class="empty-state">
+    <h2>No approved literature questions yet</h2>
+  </div>
+  {% endfor %}
+</section>
+{% endblock %}

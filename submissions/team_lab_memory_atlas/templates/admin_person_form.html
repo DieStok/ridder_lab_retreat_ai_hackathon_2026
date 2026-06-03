@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Edit Person' if person else 'Add Person' }} - Lab Memory Atlas{% endblock %}
+{% block content %}
+<section class="page-header">
+  <p class="eyebrow">Admin</p>
+  <h1>{{ 'Edit person' if person else 'Add person' }}</h1>
+</section>
+
+<form class="form-panel wide-form" action="{{ form_action }}" method="post">
+  <label><span>Name</span><input name="name" value="{{ person.name if person else '' }}" required></label>
+  <label><span>Role</span><input name="role" value="{{ person.role if person else 'Lab member' }}"></label>
+  <fieldset class="checkbox-grid compact-checkbox-grid">
+    <legend>Access</legend>
+    <label>
+      <input type="checkbox" name="login_enabled" value="true" {% if person and person.login_enabled %}checked{% endif %}>
+      <span>Enable member login</span>
+    </label>
+    <label>
+      <input type="checkbox" name="is_global_supervisor" value="true" {% if person and person.is_global_supervisor %}checked{% endif %}>
+      <span>Global supervisor</span>
+    </label>
+  </fieldset>
+  <label>
+    <span>{{ 'Reset member password/PIN' if person else 'Member password/PIN' }}</span>
+    <input name="member_password" type="password" autocomplete="new-password" placeholder="{{ 'Leave blank to keep existing password' if person else 'Required before this member can log in' }}">
+  </label>
+  <label><span>Intro</span><textarea name="intro" rows="4">{{ person.intro if person else '' }}</textarea></label>
+  <label><span>Source URL</span><input name="source_url" value="{{ person.source_url if person else 'https://www.deridderlab.nl/' }}"></label>
+  <label><span>Topics</span><textarea name="topics" rows="3">{{ person.topics|join('\n') if person else '' }}</textarea></label>
+  <label><span>Methods</span><textarea name="methods" rows="3">{{ person.methods|join('\n') if person else '' }}</textarea></label>
+  <label><span>Challenges</span><textarea name="challenges" rows="3">{{ person.challenges|join('\n') if person else '' }}</textarea></label>
+  <label><span>Recent updates</span><textarea name="recent_updates" rows="4">{{ person.recent_updates|join('\n') if person else '' }}</textarea></label>
+
+  <fieldset class="checkbox-grid">
+    <legend>Supervisors</legend>
+    {% for candidate in admin.people %}
+    {% if not person or candidate.id != person.id %}
+    <label class="{{ 'archived-option' if candidate.archived else '' }}">
+      <input type="checkbox" name="supervisor_ids" value="{{ candidate.id }}" {% if person and candidate.id in person.supervisor_ids %}checked{% endif %}>
+      <span>{{ candidate.name }}{% if candidate.is_global_supervisor %} · PI/global{% endif %}{% if candidate.archived %} (archived){% endif %}</span>
+    </label>
+    {% endif %}
+    {% endfor %}
+  </fieldset>
+
+  <fieldset class="checkbox-grid">
+    <legend>Groups</legend>
+    {% for group in admin.projects %}
+    <label class="{{ 'archived-option' if group.archived else '' }}">
+      <input type="checkbox" name="project_ids" value="{{ group.id }}" {% if person and group.id in person.projects %}checked{% endif %}>
+      <span>{{ group.label }}{% if group.archived %} (archived){% endif %}</span>
+    </label>
+    {% endfor %}
+  </fieldset>
+  <div class="button-row">
+    <button class="primary-button" type="submit">Save person</button>
+    <a class="ghost-link" href="/admin/people">Cancel</a>
+  </div>
+</form>
+{% endblock %}

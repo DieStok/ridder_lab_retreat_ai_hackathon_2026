@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% block title %}{{ project.label }} - Lab Memory Atlas{% endblock %}
+{% block content %}
+<section class="project-hero">
+  <div>
+    <p class="eyebrow">{{ project.kind }}</p>
+    <h1>{{ project.label }}</h1>
+    <p class="lede">{{ project.description or 'Project context will be filled from admin notes and approved meeting memory.' }}</p>
+    <div class="chip-row large">
+      {% for keyword in project.keywords %}
+      <span>{{ keyword }}</span>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="project-stat-panel" aria-label="Project status">
+    <span><strong>{{ counts.members }}</strong> people</span>
+    <span><strong>{{ counts.progress }}</strong> progress signals</span>
+    <span><strong>{{ counts.actions }}</strong> visible actions</span>
+    <span><strong>{{ counts.followups }}</strong> literature leads</span>
+  </div>
+</section>
+
+<section class="project-dossier">
+  <div class="project-main">
+    <section class="brief-deck" aria-label="Project brief slides">
+      {% for slide in slides %}
+      <article class="brief-slide">
+        <span>{{ '%02d'|format(loop.index) }} · {{ slide.kicker }}</span>
+        <h2>{{ slide.title }}</h2>
+        <p>{{ slide.body }}</p>
+      </article>
+      {% endfor %}
+    </section>
+
+    <section class="project-section">
+      <div class="admin-section-head">
+        <h2>Progress</h2>
+        <span class="muted">{{ progress|length }} signals</span>
+      </div>
+      <div class="progress-list">
+        {% for item in progress %}
+        <article>
+          <span class="type-pill">{{ item.kind }}</span>
+          <div>
+            <strong>{{ item.label }}</strong>
+            <p>{{ item.detail }}</p>
+          </div>
+        </article>
+        {% else %}
+        <div class="empty-state">
+          <h2>No approved progress yet</h2>
+          <p>Import and approve meeting updates to build the project history.</p>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="admin-section-head">
+        <h2>Action plans</h2>
+        <span class="muted">private visibility applied</span>
+      </div>
+      <div class="table-list">
+        {% for action in actions %}
+        <article class="action-row compact-action-row">
+          <div><span class="score">{{ action.priority_score }}</span></div>
+          <div>
+            <h3>{{ action.title }}</h3>
+            <p class="action-owner">Owner: {{ action.owner_name }}</p>
+            <div class="metric-row">
+              <span>{{ action.status.replace('_', ' ') }}</span>
+              <span>importance {{ action.importance }}/5</span>
+              <span>time {{ action.estimated_time }}/5</span>
+              <span>risk/reward {{ action.risk_reward }}/5</span>
+            </div>
+          </div>
+        </article>
+        {% else %}
+        <div class="empty-state">
+          {% if not member_logged_in and not admin_logged_in %}
+          <h2>Private actions require login</h2>
+          <p>Sign in to see project tasks assigned to you or people you supervise.</p>
+          <a class="primary-link" href="/login">Member login</a>
+          {% else %}
+          <h2>No visible project actions</h2>
+          <p>No approved action items are visible for your current role.</p>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="admin-section-head">
+        <h2>Meeting memory</h2>
+        <span class="muted">{{ meetings|length }} meetings</span>
+      </div>
+      <div class="meeting-list">
+        {% for meeting in meetings %}
+        <article class="meeting-card">
+          <div class="meeting-top">
+            <span class="type-pill">{{ meeting.meeting_type.replace('_', ' ') }}</span>
+            {% if meeting.sensitive %}<span class="sensitive-pill">Sensitive</span>{% endif %}
+          </div>
+          <h3>{{ meeting.title }}</h3>
+          <p>{{ meeting.summary }}</p>
+          <div class="metric-row">
+            <span>{{ meeting.decisions|length }} decisions</span>
+            <span>{{ meeting.open_questions|length }} questions</span>
+            <span>{{ meeting.speaker_ids|length }} speakers</span>
+          </div>
+        </article>
+        {% else %}
+        <div class="empty-state"><h2>No meetings linked yet</h2></div>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+
+  <aside class="project-side">
+    <section class="profile-side unsticky">
+      <h2>People</h2>
+      <ul class="clean-list">
+        {% for person in members %}
+        <li><a href="/people/{{ person.id }}">{{ person.name }}</a> <span class="muted">({{ person.role }})</span></li>
+        {% else %}
+        <li>No members linked yet.</li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="profile-side unsticky">
+      <h2>Open challenges</h2>
+      <ul class="clean-list">
+        {% for challenge in open_challenges %}
+        <li>{{ challenge }}</li>
+        {% else %}
+        <li>No open challenges recorded yet.</li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="profile-side unsticky">
+      <h2>Literature follow-up</h2>
+      <ul class="clean-list">
+        {% for item in followups %}
+        <li>{{ item.question }} <span class="muted">({{ item.priority_score }})</span></li>
+        {% else %}
+        <li>No literature leads linked yet.</li>
+        {% endfor %}
+      </ul>
+    </section>
+  </aside>
+</section>
+{% endblock %}

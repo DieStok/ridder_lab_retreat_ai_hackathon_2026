@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}Atlas - Lab Memory Atlas{% endblock %}
+{% block content %}
+<section class="topline" aria-labelledby="atlas-title">
+  <div>
+    <p class="eyebrow">De Ridder Lab</p>
+    <h1 id="atlas-title">People and project map</h1>
+    <p class="lede">Browse current expertise, project themes, open challenges, and follow-up work from approved lab memory.</p>
+  </div>
+  <div class="stat-strip" aria-label="Atlas status">
+    <span><strong>{{ view.counts.people }}</strong> people</span>
+    <span><strong>{{ view.counts.projects }}</strong> groups</span>
+    <span><strong>{{ view.counts.pending_reviews }}</strong> drafts</span>
+  </div>
+</section>
+
+<section class="workspace">
+  <div class="map-panel" aria-label="People map">
+    <div class="toolbar">
+      <label class="search-box">
+        <span>Search</span>
+        <input id="atlas-search" type="search" placeholder="person, method, project, challenge">
+      </label>
+      <button class="ghost-button" id="clear-filter" type="button">Clear</button>
+    </div>
+
+    <div class="project-rail" aria-label="Project filters">
+      {% for project in view.projects %}
+      <button class="project-node" type="button" data-project="{{ project.id }}">
+        <span>{{ project.label }}</span>
+        <small>{{ project.people|length }} people</small>
+      </button>
+      {% endfor %}
+    </div>
+
+    <div class="people-grid" id="people-grid">
+      {% for person in view.people %}
+      <article class="person-card" tabindex="0" data-person-id="{{ person.id }}" data-search="{{ (person.name ~ ' ' ~ person.role ~ ' ' ~ person.topics|join(' ') ~ ' ' ~ person.project_labels|join(' ') ~ ' ' ~ person.challenges|join(' '))|lower }}" data-projects="{{ person.projects|join(' ') }}">
+        <div class="person-card-head">
+          <div>
+            <h2>{{ person.name }}</h2>
+            <p>{{ person.role }}</p>
+          </div>
+          {% if person.action_count %}
+          <span class="badge">{{ person.action_count }} open</span>
+          {% endif %}
+        </div>
+        <div class="chip-row">
+          {% for topic in person.topics[:4] %}
+          <span>{{ topic }}</span>
+          {% endfor %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+
+  <aside class="inspector" id="person-inspector" aria-label="Selected person">
+    <p class="eyebrow">Selected profile</p>
+    <h2 id="inspector-name">Select a lab member</h2>
+    <p id="inspector-role" class="muted">Use search or the project filters to inspect current context.</p>
+    <div id="inspector-body" class="inspector-body"></div>
+  </aside>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>window.ATLAS_STATE = {{ state_json | safe }};</script>
+<script src="{{ url_for('static', path='app.js') }}"></script>
+{% endblock %}

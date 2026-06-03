@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Meetings - Lab Memory Atlas{% endblock %}
+{% block content %}
+<section class="page-header">
+  <p class="eyebrow">Meetings</p>
+  <h1>Meeting memory</h1>
+  <p class="lede">Imported meetings and their extracted discussion signals.</p>
+</section>
+
+<section class="meeting-list">
+  {% for meeting in view.meetings %}
+  <article class="meeting-card">
+    <div class="meeting-top">
+      <span class="type-pill">{{ meeting.meeting_type.replace('_', ' ') }}</span>
+      {% if meeting.sensitive %}<span class="sensitive-pill">Sensitive</span>{% endif %}
+    </div>
+    <h2>{{ meeting.title }}</h2>
+    <p>{{ meeting.summary }}</p>
+    <div class="metric-row">
+      <span>{{ meeting.decisions|length }} decisions</span>
+      <span>{{ meeting.open_questions|length }} questions</span>
+      <span>{{ meeting.speaker_ids|length }} speakers</span>
+    </div>
+  </article>
+  {% else %}
+  <div class="empty-state">
+    <h2>No meetings imported</h2>
+    <p>Add a transcript to begin building lab memory.</p>
+    <a class="primary-link" href="/upload">Import transcript</a>
+  </div>
+  {% endfor %}
+</section>
+{% endblock %}
