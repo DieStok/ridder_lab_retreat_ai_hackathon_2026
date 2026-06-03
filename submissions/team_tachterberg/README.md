@@ -20,6 +20,17 @@ Two components, both already built:
 
 ---
 
+## Two skills
+
+| Command | What it does |
+|---------|-------------|
+| `/onboard` | Guides a **new member** through an existing project guide interactively |
+| `/create-guide` | Interviews a **project owner** and writes onboarding notebooks for their project |
+
+The typical flow: a project owner runs `/create-guide` once. Every new team member after that runs `/onboard`.
+
+---
+
 ## Installation
 
 ### Prerequisites
