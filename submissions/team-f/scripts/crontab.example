@@ -1,0 +1,9 @@
+# Example crontab line for an HPC submit node (e.g. hpcs05 / hpcs06).
+# Run `crontab -e` and paste this line, adjusting paths to your install.
+#
+# Schedule: every Monday at 08:00 local time, dump last 7 days of SLURM
+# accounting data for the `compgen` account.
+#
+# Cron's PATH is minimal, so use absolute paths everywhere.
+
+0 8 * * MON SACCT_DAYS=7 SACCT_ACCOUNT=compgen SACCT_OUT_DIR=/hpc/compgen/projects/lab_ai_automation/roybot/dumps /hpc/compgen/projects/lab_ai_automation/hackathon/submissions/team-f/scripts/collect_sacct.sh >> /hpc/compgen/projects/lab_ai_automation/roybot/logs/collect_sacct.log 2>&1 # roybot-collect

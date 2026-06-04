@@ -1,0 +1,24 @@
+# Local secrets and venvs
+.env
+.venv/
+
+# Pipeline outputs
+out/
+
+# Piper voice .onnx files — too big for git, see README for download URLs
+models/
+
+# Audio
+*.aiff
+*.wav
+*.mp3
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Personal demo run sheet — local only, not for the repo
+DEMO.md
