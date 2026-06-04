@@ -1,5 +1,9 @@
 # Team F — Roy-bot
 
+<p align="center">
+  <img src="roboroy.png" alt="RoboRoy — the HPC babysitter" width="320">
+</p>
+
 The HPC babysitter for the De Ridder Lab. Reads SLURM `sacct` output, computes
 per-user efficiency / overprovisioning / CO₂, then asks a local LLM to write
 two reports per lab member (one serious, one roast) and a 30-second lab
@@ -167,11 +171,15 @@ uv pip install --python .venv/bin/python ollama python-dotenv piper-tts
 .venv/bin/python -m piper.download_voices en_GB-northern_english_male-medium \
     --download-dir models           # ~63 MB .onnx + .json into models/ (gitignored)
 
-# 2. submit the pipeline (defaults to gemma4:26b on a 79 GB A100 MIG slice)
-sbatch scripts/run_roboroy.sbatch
-#   MODEL=qwen3.5:27b sbatch scripts/run_roboroy.sbatch     # override the model
+# 2. one-time: fetch the gguf-parser binary used for GPU routing
+./scripts/setup_gguf_parser.sh
 
-# 3. outputs land under out/<user>/  (per-user roast .md + .wav, standup, stats.json)
+# 3. submit the pipeline — auto-routes the model to the smallest GPU that fits
+./scripts/submit_roboroy.sh                       # MODEL=qwen3.5:9b, CTX=8192
+#   MODEL=gemma4:26b ./scripts/submit_roboroy.sh  # any pulled model; routing is automatic
+#   MODEL=qwen3.5:27b CTX=max ./scripts/submit_roboroy.sh
+
+# 4. outputs land under out_<model>/<user>/  (per-user roast .md + .wav, standup, stats.json)
 ```
 
 ### How the Ollama wiring works (`scripts/ollama_hpc.sh`)
@@ -196,6 +204,41 @@ the subcommands; teardown is the caller's job (hence the `trap`).
 > `OLLAMA_CONTEXT_LENGTH` and per-request via roybot's `--num-ctx` (default
 > 8192). This is the belt-and-suspenders fix from geo_harmonizer's failure
 > taxonomy.
+
+### Automatic GPU routing (`scripts/submit_roboroy.sh`)
+
+Picking a GPU by hand is a guess, and the biggest A100 slices are heavily
+contended. Instead the launcher reads the model's **GGUF** and estimates its
+VRAM at the target context, then submits to the **smallest GPU tier that fits**.
+Ported from geo_harmonizer's auto-VRAM routing (a prebuilt
+[`gguf-parser-go`](https://github.com/gpustack/gguf-parser-go) binary — SWA-aware,
+reads the header offline, no GPU needed to estimate).
+
+```bash
+./scripts/setup_gguf_parser.sh                     # one-time fetch of the binary
+MODEL=gemma4:26b ./scripts/submit_roboroy.sh       # routes + submits
+
+# Just see the routing decision, don't submit:
+.venv/bin/python -m roybot.gpu_router --model gemma4:26b --ctx 8192
+#   gemma4:26b: ~14.43 GB raw (x1.3 -> 19 GB) @ ctx 8192 -> gpu_small (gpu:2g.20gb:1)
+```
+
+The tier table (ceilings ported from geo, `--gres` for this cluster):
+
+| effective VRAM | tier | `--gres` | GPU |
+|---|---|---|---|
+| ≤ 20 GB | `gpu_small` | `gpu:2g.20gb:1` | A100 MIG 20 GB (usually idle) |
+| ≤ 24 GB | `gpu_large` | `gpu:quadro_rtx_6000:1` | RTX 6000 24 GB |
+| ≤ 79 GB | `gpu_extra_large` | `gpu:7g.79gb:1` | A100 MIG 79 GB (contended) |
+| > 79 GB | — | refuses to submit | — |
+
+Context length is resolved from the GGUF's trained maximum (`--ctx max`) and
+capped so it never exceeds it. `gguf-parser` reports device VRAM excluding
+Ollama's runtime buffer, so the estimate is scaled by `ROBOROY_VRAM_HEADROOM`
+(default `1.3`) before routing — the safe direction is to round up a tier.
+At our 8 k context **every lab model fits `gpu_small`**, so routing keeps RoboRoy
+off the contended big GPUs entirely. `run_roboroy.sbatch` still runs standalone
+(its `#SBATCH` default is the 79 GB fallback) if you skip the launcher.
 
 ### Addressing someone by a title (`--rename`)
 

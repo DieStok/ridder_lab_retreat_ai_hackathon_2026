@@ -9,6 +9,9 @@ out_*/
 # Piper voice .onnx files — too big for git, see README for download URLs
 models/
 
+# Vendored gguf-parser-go binary — fetched by scripts/setup_gguf_parser.sh
+vendor_model_mem_tools/
+
 # Audio
 *.aiff
 *.wav

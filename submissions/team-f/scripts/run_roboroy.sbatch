@@ -2,9 +2,9 @@
 #SBATCH --job-name=roboroy_claude-code
 #SBATCH --account=compgen
 #SBATCH --partition=gpu
-# Pin a big-VRAM A100 MIG slice (79 GB) so a 26B model loads without OOM —
-# a 16 GB V100 would be too small. Override with e.g. --gres=gpu:1 + a smaller
-# MODEL if these are busy.
+# PREFER scripts/submit_roboroy.sh — it auto-routes any model to the smallest
+# GPU that fits (gguf-parser VRAM estimate) and overrides --gres below. The
+# 79 GB default here is only a safe fallback for a bare `sbatch run_roboroy.sbatch`.
 #SBATCH --gres=gpu:7g.79gb:1,tmpspace:10G
 #SBATCH --time=02:00:00
 #SBATCH --mem=32G
@@ -45,8 +45,10 @@ DIETER_NAME="Dieter - Herder of Claude Code"
 OUT_ROOT="${OUT_ROOT:-out}"
 REDUMP="${REDUMP:-1}"
 
-# Run from the submission dir regardless of where sbatch was invoked.
-cd "$(dirname "$0")/.."
+# Run from the submission dir. Inside an sbatch job $0 is a spooled copy, so
+# dirname $0 is useless — use the dir we were submitted from (the launcher
+# exports ROBOROY_DIR; bare `sbatch` from team-f falls back to SLURM_SUBMIT_DIR).
+cd "${ROBOROY_DIR:-${SLURM_SUBMIT_DIR:-$(dirname "$0")/..}}"
 TEAM_DIR="$PWD"
 mkdir -p logs "$OUT_ROOT"
 

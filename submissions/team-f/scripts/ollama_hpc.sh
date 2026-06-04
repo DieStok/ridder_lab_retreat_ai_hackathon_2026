@@ -77,10 +77,14 @@ cmd_serve_local() {
 
     info "starting ollama: bind=$host_bind client=$host_client models=$OLLAMA_MODELS_DIR ctx=${OLLAMA_CONTEXT_LENGTH:-default} warmup=${warmup_model:-none}"
     # nohup + setsid so the server outlives this script returning to the caller.
-    # OLLAMA_CONTEXT_LENGTH (if exported by the caller) is inherited here.
-    OLLAMA_HOME="$home" OLLAMA_HOST="$host_bind" OLLAMA_MODELS="$OLLAMA_MODELS_DIR" \
+    # Use `env` to set the per-server vars: a conditional ${var:+VAR=val} word
+    # is NOT honoured as a bash assignment-prefix (it gets run as a command),
+    # but env interprets every VAR=val argument. OLLAMA_CONTEXT_LENGTH (if
+    # exported by the caller) is inherited through env's passthrough.
+    nohup setsid env \
+        OLLAMA_HOME="$home" OLLAMA_HOST="$host_bind" OLLAMA_MODELS="$OLLAMA_MODELS_DIR" \
         ${keep_alive:+OLLAMA_KEEP_ALIVE="$keep_alive"} \
-        nohup setsid "$OLLAMA_BIN" serve >"$home/server.log" 2>&1 </dev/null &
+        "$OLLAMA_BIN" serve >"$home/server.log" 2>&1 </dev/null &
     local serve_pid=$!
     disown "$serve_pid" 2>/dev/null || true
 
