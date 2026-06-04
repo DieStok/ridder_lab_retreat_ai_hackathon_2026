@@ -5,7 +5,7 @@ Examples:
     uv run python -m roybot --mock --with-llm            # real reports via local Ollama
     uv run python -m roybot --sacct dump.txt --with-llm
     uv run python -m roybot --mock --with-llm --with-audio --voice Daniel
-    uv run python -m roybot --mock --with-llm --with-audio --slack
+    uv run python -m roybot --mock --with-llm --with-audio --voice Daniel
 """
 from __future__ import annotations
 
@@ -39,7 +39,6 @@ def _parser() -> argparse.ArgumentParser:
                    help="Path to a Piper .onnx voice model. Falls back to $PIPER_VOICE_MODEL or ./models/*.onnx.")
     p.add_argument("--skip-per-user-audio", action="store_true",
                    help="With --with-audio, generate only the lab stand-up; skip per-user roast clips.")
-    p.add_argument("--slack", action="store_true", help="Post the stand-up to Slack (needs SLACK_BOT_TOKEN + SLACK_CHANNEL_ID).")
     p.add_argument("--no-fallback", action="store_true", help="Fail loudly if the LLM is unreachable.")
     return p
 
@@ -132,16 +131,6 @@ def main(argv: list[str] | None = None) -> int:
                     continue
                 if user_audio is not None:
                     print(f"[roybot] wrote audio: {user_audio}", file=sys.stderr)
-
-    # 6. Slack.
-    if args.slack:
-        try:
-            from .slack_post import post_standup
-            r = post_standup(reports.standup, audio_path)
-            print(f"[roybot] posted to Slack: ts={r.get('ts')}", file=sys.stderr)
-        except Exception as e:
-            print(f"[roybot] Slack post failed: {e}", file=sys.stderr)
-            return 2
 
     # Final friendly summary on stdout (not stderr) for piping.
     print(str(args.out.resolve()))

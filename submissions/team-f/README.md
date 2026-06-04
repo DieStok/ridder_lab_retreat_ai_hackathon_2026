@@ -4,7 +4,7 @@ The HPC babysitter for the De Ridder Lab. Reads SLURM `sacct` output, computes
 per-user efficiency / overprovisioning / CO₂, then asks a local LLM to write
 two reports per lab member (one serious, one roast) and a 30-second lab
 stand-up monologue. Optionally reads the monologue aloud in a dry British
-voice via macOS `say` and posts it to Slack.
+voice via macOS `say` or Piper.
 
 > Double the Roy, double the fun.
 
@@ -18,7 +18,6 @@ voice via macOS `say` and posts it to Slack.
 | the real reports + jokes | the above, plus [Ollama](https://ollama.com) running with a model pulled |
 | audio (nice voice) | the above, plus a Piper voice model (one download) |
 | audio (zero setup) | a Mac — uses the built-in `say` command |
-| auto-post to Slack | a Slack app token + channel id in `.env` (see below) |
 
 **The 30-second version — proves it works with zero dependencies:**
 
@@ -82,7 +81,7 @@ can find the package. `uv run` walks up the tree to find the shared
 ```bash
 cd hackathon/submissions/team-f
 
-# Sanity check with the built-in mock dataset — no Ollama, no audio, no Slack.
+# Sanity check with the built-in mock dataset — no Ollama, no audio.
 uv run python -m roybot --mock
 
 # Same, but with the real LLM (needs Ollama running at $OLLAMA_BASE_URL).
@@ -93,9 +92,6 @@ uv run python -m roybot --mock --with-llm --with-audio --voice Daniel
 
 # On real data:
 uv run python -m roybot --sacct /path/to/dump.txt --with-llm --with-audio
-
-# Post the stand-up + audio to Slack (needs .env with bot token + channel id).
-uv run python -m roybot --mock --with-llm --with-audio --slack
 ```
 
 > If you'd rather invoke it from anywhere, run
@@ -152,11 +148,9 @@ every Monday at 08:00. Edit the paths and `crontab -e` it onto the submit
 node (`hpcs05` / `hpcs06`). The cron line is tagged `# roybot-collect` for
 easy lookup (`crontab -l | grep roybot-collect`).
 
-If you also want the LLM + audio + Slack post to run on the same schedule,
-that has to live somewhere with internet access — the parent `AGENTS.md`
-forbids long-lived internet-facing processes on submit nodes. See
-`automation_building_blocks/deployment_recipes/` for cloud-VM and systemd
-patterns. For the retreat demo we just run that part manually.
+If you also want the LLM + audio to run on the same schedule, that has to
+live somewhere with Ollama — the cluster compute nodes (via `sbatch`) or an
+off-cluster box. For the retreat demo we just run that part manually.
 
 ## What's actually computed
 
@@ -287,16 +281,13 @@ Full catalogue: https://github.com/rhasspy/piper/blob/master/VOICES.md.
 > Next `uv sync` from `hackathon/` removes it; re-run `uv pip install
 > piper-tts` if that happens.
 
-## Slack setup (optional)
+## Delivering the reports
 
-Create a Slack app, add `chat:write` and `files:write` bot scopes, install to
-the workspace, and copy the bot token. Then:
-
-```bash
-cp .env.example .env
-# fill in SLACK_BOT_TOKEN and SLACK_CHANNEL_ID
-uv run python -m roybot --mock --with-llm --with-audio --slack
-```
+RoboRoy writes files to `out/` — it doesn't post them anywhere. To get them to
+people, attach `out/user_<name>.md` to a DM/email per person, and drop
+`out/standup.txt` (or play `standup.wav`) at the Monday stand-up. Automating
+delivery (e.g. a weekly Slack post) is deliberately out of scope — see
+`ADOPTION.md` for the open decisions if the lab wants it.
 
 ## Layout
 
@@ -320,8 +311,7 @@ team-f/
     ├── llm.py           # Ollama wrapper with fallback
     ├── prompts.py       # serious / roast / standup prompts + fallbacks
     ├── reports.py       # markdown generation
-    ├── tts.py           # `say` + Piper wrappers, acronym normalisation
-    └── slack_post.py    # one-shot post to Slack
+    └── tts.py           # `say` + Piper wrappers, acronym normalisation
 ```
 
 ## Known limitations / future fun
@@ -329,15 +319,13 @@ team-f/
 - GPU efficiency is approximated from job state. Real GPU utilisation needs
   jobstats (Princeton's tool) or NVIDIA DCGM exporters running cluster-side.
   If Utrecht installs jobstats, swap `data.py` for a jobstats loader.
-- The Slack poster is one-shot, not a long-running listener. Wrap it in a
-  cron / SLURM cron recipe from `automation_building_blocks/deployment_recipes/`
-  to run it weekly.
+- Delivery is manual — RoboRoy writes files, you hand them out. No Slack/email
+  posting (see `ADOPTION.md` for why and what it would take).
 - The roast prompt assumes ≥ a 14B model. Smaller models will write a
   competent serious report but produce flat roasts. If you have to use a 7B
   model, raise the temperature in `llm.py`.
 
 ## Credits
 
-- Slack scaffolding pattern from `automation_building_blocks/slack_app_skeleton/`.
 - Inspired by [Princeton jobstats](https://princetonuniversity.github.io/jobstats/).
 - Roy is a national treasure.

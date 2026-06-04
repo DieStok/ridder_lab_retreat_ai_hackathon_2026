@@ -67,7 +67,7 @@ out/                — markdown reports, stats.json,
                       user_<name>.{aiff,wav} (one per lab member)
         │
         ▼
-(optional) Slack post: text + audio attachment for the stand-up slide
+hand out: per-user report to each member, standup clip at the meeting
 ```
 
 Tools we reuse:
@@ -75,7 +75,6 @@ Tools we reuse:
 - [`piper-tts`](https://github.com/rhasspy/piper) for natural-sounding local TTS
 - macOS `say` for the zero-install TTS fallback
 - [Princeton `jobstats`](https://princetonuniversity.github.io/jobstats/) — inspiration only. We use plain `sacct` so it works on Utrecht's cluster today. If jobstats gets installed there later, swap `roybot/data.py` for a jobstats loader.
-- `slack-sdk` for optional posting
 
 ## 4. References
 
@@ -116,11 +115,10 @@ uv run python -m roybot --sacct dump.txt --with-llm --with-audio     # on real s
 - lab-wide stand-up monologue
 - two TTS engines (`say` and Piper), with acronym normalisation so the voice doesn't say "kuh-poo"
 - per-user roast audio (one short clip per lab member) plus the lab-wide stand-up clip — the actionable tips live in the per-user markdown report, not the audio
-- optional Slack post + audio upload
 - `scripts/collect_sacct.sh`: a small shell script Roy can drop in a submit-node crontab to produce a weekly sacct dump (atomic write, timestamped output, env-configurable account / users / lookback window). One-line crontab example included.
 
 ### What's stubbed / still TODO
-- **End-to-end scheduling.** `collect_sacct.sh` produces the dump on schedule; the LLM + audio + Slack-post side still has to run somewhere with internet access (per the parent `AGENTS.md`, that's not the submit node). Likely a small cloud VM or systemd timer — recipes are in `automation_building_blocks/deployment_recipes/`. For the retreat demo we just run that part by hand from a laptop.
+- **End-to-end scheduling.** `collect_sacct.sh` produces the dump on schedule; the LLM + audio side still has to run somewhere with Ollama. For the retreat demo we just run that part by hand from a laptop (see `ADOPTION.md` for the manual-first → cron-later path).
 - **Cron line not yet installed.** `scripts/crontab.example` is ready to paste but nobody has put it on `hpcs05` / `hpcs06` yet — Roy needs to do that on his cluster account.
 - **Real GPU utilisation.** We have heuristic GPU recommendations (early death + CPU-starved feeders) but we cannot see whether each allocated GPU was actually busy. True per-job GPU util needs `jobstats` or DCGM exporters server-side. When Utrecht installs either, `analyze.py:_recommend_for_job` can be tightened from heuristics to real numbers.
-- **Slack posting.** Code works but never tested with real tokens — needs a Slack app installed in the lab workspace.
+- **Delivery is manual.** RoboRoy writes the reports to `out/`; handing them to people (DM, email, a weekly channel post) is not automated. Deliberately out of scope — `ADOPTION.md` covers what it would take.
