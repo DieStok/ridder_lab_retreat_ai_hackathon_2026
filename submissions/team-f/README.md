@@ -8,6 +8,71 @@ voice via macOS `say` and posts it to Slack.
 
 > Double the Roy, double the fun.
 
+## First run for a labmate (start here if you've never run this)
+
+**What you need, by how far you want to go:**
+
+| You want… | You need |
+|---|---|
+| just to see it work | Python 3.11+ and `uv`. Nothing else. |
+| the real reports + jokes | the above, plus [Ollama](https://ollama.com) running with a model pulled |
+| audio (nice voice) | the above, plus a Piper voice model (one download) |
+| audio (zero setup) | a Mac — uses the built-in `say` command |
+| auto-post to Slack | a Slack app token + channel id in `.env` (see below) |
+
+**The 30-second version — proves it works with zero dependencies:**
+
+```bash
+# 1. install uv (once, if you don't have it)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# 2. build the environment (once)
+cd ridder_lab_ai_automation/hackathon
+uv sync
+
+# 3. run it on the built-in fake lab
+cd submissions/team-f
+uv run python -m roybot --mock
+
+# 4. look at the output
+open out/standup.txt out/user_merel.md
+```
+
+That's it — no Ollama, no API keys, no internet. `--mock` ships a fake 5-person
+lab so you can see the whole pipeline immediately.
+
+**To get the actual LLM reports + roast**, start Ollama and pull the model once:
+
+```bash
+ollama serve &                 # if it isn't already running
+ollama pull qwen2.5:14b        # ~9 GB, one time
+uv run python -m roybot --mock --with-llm
+```
+
+**To add the good voice** (one-time, ~60 MB — see the [Piper section](#piper-local-open-source-much-more-natural)
+for the download commands):
+
+```bash
+uv pip install piper-tts
+uv run python -m roybot --mock --with-llm --with-audio \
+    --engine piper --piper-model models/en_GB-northern_english_male-medium.onnx
+open out/standup.wav
+```
+
+**On real lab data** instead of `--mock`, pull a week of `sacct` off the cluster
+(see [Getting real sacct data](#getting-real-sacct-data)) and pass `--sacct dump.txt`.
+
+> **Why `uv`?** It's the lab's standard package manager (see the monorepo
+> `AGENTS.md`). `uv sync` builds an isolated `.venv/` with the exact pinned
+> dependencies — no clashes with your system Python or conda. `uv run …` then
+> runs inside that venv automatically, so you never `activate` anything. It also
+> finds the shared `hackathon/.venv/` one level up, which is why `uv run` works
+> from inside `submissions/team-f/`.
+>
+> **One gotcha:** Piper is *not* in `uv sync` (we kept it out of the shared
+> `pyproject.toml`, which isn't ours to edit). If you use `--engine piper`, run
+> `uv pip install piper-tts` once. Using `--engine say` on a Mac needs nothing extra.
+
 ## Quick start
 
 Run from this directory (`hackathon/submissions/team-f/`) so `python -m roybot`
