@@ -48,15 +48,58 @@ Off-cluster box with internet + Ollama:
 **Why two machines?** The lab's HPC policy (parent `AGENTS.md`) forbids
 long-lived, internet-facing processes on submit nodes. So: collection runs *on*
 the cluster (cheap, no internet); the LLM + audio + posting run *off* the
-cluster (a laptop today, a small VM if we want it hands-off). The hand-off is the
-one piece still manual — a `scp`/rsync or a shared mount.
+cluster (a laptop today, a small VM if we want it hands-off).
+
+### Which users get pulled?
+
+You don't maintain a name list — you query by **SLURM account** and `sacct`
+returns whoever submitted jobs. The lab account is `compgen`, which is the
+default `collect_sacct.sh` uses. So a run automatically covers every current
+lab member who ran a job that week, including people who joined since; anyone
+who ran nothing simply gets no report. Three tiers, in order of precedence
+(`scripts/collect_sacct.sh`):
+
+```
+SACCT_USERS=roy,merel,claudio   →  --user=...        explicit list (debugging)
+SACCT_ACCOUNT=compgen           →  --accounts=compgen DEFAULT, the whole lab
+(neither set)                   →  -a                 entire cluster (don't)
+```
+
+One caveat: `sacct` reports the **SLURM login** (cluster username), which is
+what RoboRoy uses as the report key (`user_<login>.md`). To *deliver* a report
+to a person you need a `login → Slack handle / email` map — see next steps.
+
+### The hand-off (getting the dump off the cluster)
+
+The dump is written on the cluster but the report runs off it, so the file has
+to move. Pick by what infrastructure you already have:
+
+| Option | When to use it | Cost |
+|---|---|---|
+| **Manual SSH one-liner** | now, to start | zero setup |
+| **Shared mount** | if your laptop/VM already mounts `/hpc/compgen/...` | zero extra code — just point `SACCT_OUT_DIR` at the shared dir |
+| **scp / rsync** | hands-off, no shared mount | a small scheduled copy step |
+
+**Recommendation: start with the manual one-liner**, move to a shared mount
+only if/when you already have one. From a laptop that can SSH to the cluster:
+
+```bash
+ssh hpcs05 'bash /hpc/compgen/projects/lab_ai_automation/hackathon/submissions/team-f/scripts/collect_sacct.sh' > dump.txt
+uv run python -m roybot --sacct dump.txt --with-llm --with-audio \
+    --engine piper --piper-model models/en_GB-northern_english_male-medium.onnx
+```
+
+No cron, no daemon, no mount — run it Monday morning before standup. Graduate
+to cron + shared-mount/scp once the lab decides it wants it fully automated.
 
 ## What it costs to adopt
 
 - **Nothing in API spend** — Ollama + a local model, runs on a laptop or a lab GPU node.
-- **One-time setup:** cron line on a submit node (`scripts/crontab.example`), and a
-  place to run the report (laptop is fine to start).
-- **Ongoing:** zero human time once cronned, except Roy glancing at the standup.
+- **To start:** nothing — the manual SSH one-liner above runs from any laptop that
+  can reach the cluster and has Ollama.
+- **To make it hands-off:** a cron line on a submit node (`scripts/crontab.example`)
+  plus a hand-off mechanism; after that, zero human time except Roy glancing at the
+  standup.
 
 ## Honest limitations (so we adopt it with eyes open)
 
@@ -82,8 +125,9 @@ one piece still manual — a `scp`/rsync or a shared mount.
 
 ## Next steps if we say yes
 
-- [ ] Install `scripts/crontab.example` on hpcs05/06 (Roy)
-- [ ] Decide the hand-off mechanism (shared mount vs. scp)
+- [ ] Run the manual SSH one-liner once, before a standup, to prove it end-to-end
 - [ ] Map HPC usernames → Slack handles / emails for delivery
 - [ ] Pick a voice the lab can stand to hear weekly
-- [ ] (optional) Request `jobstats` from the HPC admins
+- [ ] *Only once we want it hands-off:* install `scripts/crontab.example` on
+      hpcs05/06 (Roy) + pick the hand-off (shared mount if one exists, else scp)
+- [ ] (optional) Request `jobstats`/DCGM from the HPC admins for real GPU numbers
