@@ -1,11 +1,11 @@
 """A built-in fake sacct dump with realistic over/underprovision patterns.
 
-Characters:
+Characters (fictional usage patterns, real lab names):
   - roy:     the admin. Modest, efficient. He knows what he's doing.
   - merel:   asks for 8 GPUs, uses 1. Multiple times.
   - claudio: gigantic memory requests, 2% used. Also leaves jobs idle.
-  - sander:  fine, mostly. Has one runaway segfault though.
-  - lisa:    timelimit hoarder — 7-day walltime, finishes in 20 min.
+  - dieter:  fine, mostly. Has one runaway segfault though.
+  - huub:    timelimit hoarder — 7-day walltime, finishes in 20 min.
 """
 from __future__ import annotations
 
@@ -65,28 +65,28 @@ MOCK_JOBS: list[Job] = [
         elapsed_sec=86400, cpu_time_sec=4 * 4000, max_rss_mb=8000, n_gpus=1,
         exit_code="0:0",
     ),
-    # sander — mostly fine
+    # dieter — mostly fine
     Job(
-        job_id="100009", user="sander", job_name="fit_glm", partition="cpu",
+        job_id="100009", user="dieter", job_name="fit_glm", partition="cpu",
         state="COMPLETED", alloc_cpus=4, req_mem_mb=16000, timelimit_sec=7200,
         elapsed_sec=6300, cpu_time_sec=4 * 5800, max_rss_mb=13000, n_gpus=0,
         exit_code="0:0",
     ),
     Job(
-        job_id="100010", user="sander", job_name="fit_glm", partition="cpu",
+        job_id="100010", user="dieter", job_name="fit_glm", partition="cpu",
         state="FAILED", alloc_cpus=4, req_mem_mb=16000, timelimit_sec=7200,
         elapsed_sec=120, cpu_time_sec=4 * 60, max_rss_mb=2000, n_gpus=0,
         exit_code="139:0",  # segfault
     ),
-    # lisa — wall-time padder
+    # huub — wall-time padder
     Job(
-        job_id="100011", user="lisa", job_name="quick_qc", partition="cpu",
+        job_id="100011", user="huub", job_name="quick_qc", partition="cpu",
         state="COMPLETED", alloc_cpus=2, req_mem_mb=8000, timelimit_sec=604800,
         elapsed_sec=1200, cpu_time_sec=2 * 1100, max_rss_mb=7000, n_gpus=0,
         exit_code="0:0",
     ),
     Job(
-        job_id="100012", user="lisa", job_name="quick_qc", partition="cpu",
+        job_id="100012", user="huub", job_name="quick_qc", partition="cpu",
         state="COMPLETED", alloc_cpus=2, req_mem_mb=8000, timelimit_sec=604800,
         elapsed_sec=900, cpu_time_sec=2 * 850, max_rss_mb=6800, n_gpus=0,
         exit_code="0:0",
