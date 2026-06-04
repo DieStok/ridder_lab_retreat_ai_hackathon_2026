@@ -1,0 +1,74 @@
+{
+  "lab_totals": {
+    "n_users": 1,
+    "total_cpu_hours": 67.0,
+    "total_gpu_hours": 1.8,
+    "total_kwh": 1.94,
+    "total_kg_co2": 0.52,
+    "biggest_emitter": "cfiorenzani"
+  },
+  "per_user": {
+    "cfiorenzani": {
+      "user": "cfiorenzani",
+      "name": "cfiorenzani",
+      "n_jobs": 35,
+      "n_failed": 12,
+      "n_cancelled": 0,
+      "n_timeout": 0,
+      "cpu_hours": 67.0,
+      "gpu_hours": 1.8,
+      "mem_gb_hours": 337.8,
+      "avg_cpu_eff": 1.0,
+      "avg_mem_eff": null,
+      "avg_time_eff": 0.1,
+      "kwh": 1.94,
+      "kg_co2": 0.52,
+      "flags": [
+        {
+          "job_id": "53400595",
+          "job_name": "bash",
+          "kind": "time_overprov",
+          "detail": "asked for 10h walltime, finished in 8%"
+        },
+        {
+          "job_id": "53401918",
+          "job_name": "bash",
+          "kind": "time_overprov",
+          "detail": "asked for 10h walltime, finished in 2%"
+        },
+        {
+          "job_id": "53609966",
+          "job_name": "parm_mutagenesis",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 11%"
+        }
+      ],
+      "worst_offender": {
+        "job_id": "53400595",
+        "job_name": "bash",
+        "kind": "time_overprov",
+        "detail": "asked for 10h walltime, finished in 8%"
+      },
+      "recommendations": [
+        {
+          "job_id": "53400595",
+          "job_name": "bash",
+          "issue": "asked for 10h walltime, used 8%",
+          "suggested_flag": "--time=01:30:00"
+        },
+        {
+          "job_id": "53401918",
+          "job_name": "bash",
+          "issue": "asked for 10h walltime, used 2%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53609966",
+          "job_name": "parm_mutagenesis",
+          "issue": "asked for 12h walltime, used 11%",
+          "suggested_flag": "--time=02:15:00"
+        }
+      ]
+    }
+  }
+}

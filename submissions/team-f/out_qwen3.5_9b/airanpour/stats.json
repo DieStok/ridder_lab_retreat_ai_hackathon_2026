@@ -1,0 +1,194 @@
+{
+  "lab_totals": {
+    "n_users": 1,
+    "total_cpu_hours": 504.2,
+    "total_gpu_hours": 50.2,
+    "total_kwh": 35.16,
+    "total_kg_co2": 9.49,
+    "biggest_emitter": "airanpour"
+  },
+  "per_user": {
+    "airanpour": {
+      "user": "airanpour",
+      "name": "airanpour",
+      "n_jobs": 21,
+      "n_failed": 3,
+      "n_cancelled": 0,
+      "n_timeout": 2,
+      "cpu_hours": 504.2,
+      "gpu_hours": 50.2,
+      "mem_gb_hours": 7381.9,
+      "avg_cpu_eff": 1.0,
+      "avg_mem_eff": null,
+      "avg_time_eff": 0.23,
+      "kwh": 35.16,
+      "kg_co2": 9.49,
+      "flags": [
+        {
+          "job_id": "53401760",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53608171",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53608780",
+          "job_name": "mnm_geo_medullo",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53609787",
+          "job_name": "mnm_geo_medullo_v2",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53611871",
+          "job_name": "mnm_hier_bilin_v2",
+          "kind": "time_overprov",
+          "detail": "asked for 24h walltime, finished in 8%"
+        },
+        {
+          "job_id": "53634746",
+          "job_name": "mnm_hier_bilin_v3e5",
+          "kind": "time_overprov",
+          "detail": "asked for 24h walltime, finished in 5%"
+        },
+        {
+          "job_id": "53636380",
+          "job_name": "mnm_hier_v5_heads",
+          "kind": "time_overprov",
+          "detail": "asked for 24h walltime, finished in 13%"
+        },
+        {
+          "job_id": "53796806",
+          "job_name": "mnm_hier_v6_factorized",
+          "kind": "time_overprov",
+          "detail": "asked for 18h walltime, finished in 11%"
+        },
+        {
+          "job_id": "53806128",
+          "job_name": "mnm_v5_once",
+          "kind": "time_overprov",
+          "detail": "asked for 24h walltime, finished in 13%"
+        },
+        {
+          "job_id": "53806171",
+          "job_name": "mnm_v6_once",
+          "kind": "time_overprov",
+          "detail": "asked for 18h walltime, finished in 11%"
+        },
+        {
+          "job_id": "53848344",
+          "job_name": "fig3_complete_v6",
+          "kind": "time_overprov",
+          "detail": "asked for 96h walltime, finished in 11%"
+        },
+        {
+          "job_id": "53886178",
+          "job_name": "fig3_complete_v6",
+          "kind": "time_overprov",
+          "detail": "asked for 96h walltime, finished in 4%"
+        },
+        {
+          "job_id": "53893447",
+          "job_name": "mnm_domain_shift",
+          "kind": "time_overprov",
+          "detail": "asked for 36h walltime, finished in 10%"
+        },
+        {
+          "job_id": "53896511",
+          "job_name": "fig3_sts_v6",
+          "kind": "time_overprov",
+          "detail": "asked for 72h walltime, finished in 1%"
+        }
+      ],
+      "worst_offender": {
+        "job_id": "53401760",
+        "job_name": "bash",
+        "kind": "killed",
+        "detail": "ran out of walltime"
+      },
+      "recommendations": [
+        {
+          "job_id": "53608780",
+          "job_name": "mnm_geo_medullo",
+          "issue": "asked for 12h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53609787",
+          "job_name": "mnm_geo_medullo_v2",
+          "issue": "asked for 12h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53611871",
+          "job_name": "mnm_hier_bilin_v2",
+          "issue": "asked for 24h walltime, used 8%",
+          "suggested_flag": "--time=03:00:00"
+        },
+        {
+          "job_id": "53634746",
+          "job_name": "mnm_hier_bilin_v3e5",
+          "issue": "asked for 24h walltime, used 5%",
+          "suggested_flag": "--time=02:15:00"
+        },
+        {
+          "job_id": "53636380",
+          "job_name": "mnm_hier_v5_heads",
+          "issue": "asked for 24h walltime, used 13%",
+          "suggested_flag": "--time=05:00:00"
+        },
+        {
+          "job_id": "53796806",
+          "job_name": "mnm_hier_v6_factorized",
+          "issue": "asked for 18h walltime, used 11%",
+          "suggested_flag": "--time=03:15:00"
+        },
+        {
+          "job_id": "53806128",
+          "job_name": "mnm_v5_once",
+          "issue": "asked for 24h walltime, used 13%",
+          "suggested_flag": "--time=05:00:00"
+        },
+        {
+          "job_id": "53806171",
+          "job_name": "mnm_v6_once",
+          "issue": "asked for 18h walltime, used 11%",
+          "suggested_flag": "--time=03:00:00"
+        },
+        {
+          "job_id": "53848344",
+          "job_name": "fig3_complete_v6",
+          "issue": "asked for 96h walltime, used 11%",
+          "suggested_flag": "--time=16:30:00"
+        },
+        {
+          "job_id": "53886178",
+          "job_name": "fig3_complete_v6",
+          "issue": "asked for 96h walltime, used 4%",
+          "suggested_flag": "--time=06:45:00"
+        },
+        {
+          "job_id": "53893447",
+          "job_name": "mnm_domain_shift",
+          "issue": "asked for 36h walltime, used 10%",
+          "suggested_flag": "--time=06:00:00"
+        },
+        {
+          "job_id": "53896511",
+          "job_name": "fig3_sts_v6",
+          "issue": "asked for 72h walltime, used 1%",
+          "suggested_flag": "--time=01:15:00"
+        }
+      ]
+    }
+  }
+}

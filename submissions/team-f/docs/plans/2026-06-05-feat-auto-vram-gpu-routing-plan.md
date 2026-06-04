@@ -1,7 +1,7 @@
 ---
 title: Auto VRAM/GPU-tier + context-length routing for RoboRoy
 type: feat
-status: active
+status: completed
 date: 2026-06-05
 scope: hackathon/submissions/team-f (roybot)
 branch: hackathon submodule `main`
@@ -172,29 +172,29 @@ module location. No absolute paths in `roybot/*.py`.
 ## Acceptance criteria
 
 ### Functional
-- [ ] `scripts/setup_gguf_parser.sh` fetches `gguf-parser` v0.24.0 to the vendor
+- [x] `scripts/setup_gguf_parser.sh` fetches `gguf-parser` v0.24.0 to the vendor
       dir and is a no-op when already present; binary is gitignored.
-- [ ] `python -m roybot.gpu_router --model qwen3.5:9b --ctx 8192` prints
+- [x] `python -m roybot.gpu_router --model qwen3.5:9b --ctx 8192` prints
       `--gres=gpu:2g.20gb:1` and `CTX=8192` (sbatch format) / valid JSON.
-- [ ] `gemma4:26b --ctx 8192` routes to `gpu_small` (proves the contention win).
-- [ ] Requesting `--ctx max` resolves to the GGUF's `maximumContextLength`; a
+- [x] `gemma4:26b --ctx 8192` routes to `gpu_small` (proves the contention win).
+- [x] Requesting `--ctx max` resolves to the GGUF's `maximumContextLength`; a
       `--ctx` above the max is **capped** to the max.
-- [ ] An impossibly large model/context (> 79 GB) exits non-zero **without**
+- [x] An impossibly large model/context (> 79 GB) exits non-zero **without**
       submitting.
-- [ ] `scripts/submit_roboroy.sh` submits `run_roboroy.sbatch` with the routed
+- [x] `scripts/submit_roboroy.sh` submits `run_roboroy.sbatch` with the routed
       `--gres` and resolved `CTX`, printing the routing decision.
-- [ ] `run_roboroy.sbatch` still runs standalone (regression).
+- [x] `run_roboroy.sbatch` still runs standalone (regression).
 
 ### Non-functional / quality
-- [ ] No hardcoded absolute paths in `roybot/*.py` (store via `OLLAMA_MODELS` +
+- [x] No hardcoded absolute paths in `roybot/*.py` (store via `OLLAMA_MODELS` +
       documented default).
-- [ ] geo_harmonizer attribution comment present in `model_memory.py`.
-- [ ] No new Python package deps (stdlib only); the only new dependency is the
+- [x] geo_harmonizer attribution comment present in `model_memory.py`.
+- [x] No new Python package deps (stdlib only); the only new dependency is the
       vendored binary, documented in README + `.env.example`.
-- [ ] Shared `hackathon/pyproject.toml` untouched.
-- [ ] `tests/test_roybot.py` covers tier mapping, context cap, and Ollama→GGUF
+- [x] Shared `hackathon/pyproject.toml` untouched.
+- [x] `tests/test_roybot.py` covers tier mapping, context cap, and Ollama→GGUF
       resolution; full suite passes.
-- [ ] README + `.env.example` updated in the same change set (repo rule #5).
+- [x] README + `.env.example` updated in the same change set (repo rule #5).
 
 ## Dependencies & risks
 

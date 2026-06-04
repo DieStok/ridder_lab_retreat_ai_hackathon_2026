@@ -1,0 +1,1412 @@
+{
+  "lab_totals": {
+    "n_users": 1,
+    "total_cpu_hours": 1246.3,
+    "total_gpu_hours": 29.1,
+    "total_kwh": 33.73,
+    "total_kg_co2": 9.11,
+    "biggest_emitter": "dstoker"
+  },
+  "per_user": {
+    "dstoker": {
+      "user": "dstoker",
+      "name": "Dieter - Herder of Claude Code",
+      "n_jobs": 685,
+      "n_failed": 321,
+      "n_cancelled": 0,
+      "n_timeout": 19,
+      "cpu_hours": 1246.3,
+      "gpu_hours": 29.1,
+      "mem_gb_hours": 4889.0,
+      "avg_cpu_eff": 0.8,
+      "avg_mem_eff": null,
+      "avg_time_eff": 0.04,
+      "kwh": 33.73,
+      "kg_co2": 9.11,
+      "flags": [
+        {
+          "job_id": "52360373",
+          "job_name": "phoenix-benchmark-reproduction",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53314310",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53357645",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53378509_0",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 2%"
+        },
+        {
+          "job_id": "53378509_1",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53378509_3",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 2%"
+        },
+        {
+          "job_id": "53378509_4",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53378509_5",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53378509_6",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 6%"
+        },
+        {
+          "job_id": "53378509_7",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 2%"
+        },
+        {
+          "job_id": "53378509_11",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 3%"
+        },
+        {
+          "job_id": "53378509_14",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 4%"
+        },
+        {
+          "job_id": "53378509_18",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53378509_19",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 4%"
+        },
+        {
+          "job_id": "53378509_22",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 3%"
+        },
+        {
+          "job_id": "53378509_24",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 10%"
+        },
+        {
+          "job_id": "53378509_26",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 2%"
+        },
+        {
+          "job_id": "53378509_27",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 4%"
+        },
+        {
+          "job_id": "53378509_28",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 2%"
+        },
+        {
+          "job_id": "53378509_34",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 3%"
+        },
+        {
+          "job_id": "53378509_37",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53378509_38",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 5%"
+        },
+        {
+          "job_id": "53378509_39",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53378550_0",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 4%"
+        },
+        {
+          "job_id": "53378550_1",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53378550_2",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 7%"
+        },
+        {
+          "job_id": "53378550_3",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 10%"
+        },
+        {
+          "job_id": "53378550_4",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 3%"
+        },
+        {
+          "job_id": "53378550_5",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 3%"
+        },
+        {
+          "job_id": "53378550_6",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 10%"
+        },
+        {
+          "job_id": "53378550_7",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 2%"
+        },
+        {
+          "job_id": "53378550_8",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53378550_15",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53378550_16",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 4%"
+        },
+        {
+          "job_id": "53378550_17",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 2%"
+        },
+        {
+          "job_id": "53378550_18",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 3%"
+        },
+        {
+          "job_id": "53378550_19",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53378550_20",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 5%"
+        },
+        {
+          "job_id": "53378550_21",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53378550_22",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 3%"
+        },
+        {
+          "job_id": "53378550_23",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 4%"
+        },
+        {
+          "job_id": "53378550_24",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 3%"
+        },
+        {
+          "job_id": "53378550_25",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53378550_26",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 7%"
+        },
+        {
+          "job_id": "53378550_27",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 2%"
+        },
+        {
+          "job_id": "53378550_29",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53378550_30",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 9%"
+        },
+        {
+          "job_id": "53378550_31",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 5%"
+        },
+        {
+          "job_id": "53378550_32",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 3%"
+        },
+        {
+          "job_id": "53378550_33",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53378550_34",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 4%"
+        },
+        {
+          "job_id": "53378550_35",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53378550_36",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 10%"
+        },
+        {
+          "job_id": "53378550_37",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53378550_38",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 7%"
+        },
+        {
+          "job_id": "53378550_39",
+          "job_name": "geoharm-agent-gpu",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53399429",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53399461",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53443047_2",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 2h walltime, finished in 7%"
+        },
+        {
+          "job_id": "53490041",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53524533",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53538798",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53621095",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53635889",
+          "job_name": "ollama_pull_31b",
+          "kind": "time_overprov",
+          "detail": "asked for 3h walltime, finished in 5%"
+        },
+        {
+          "job_id": "53638750",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53639055_32",
+          "job_name": "geoharm-agent-gpu-large",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53640048",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53642573",
+          "job_name": "apptainer_build_hermes_claude-code",
+          "kind": "time_overprov",
+          "detail": "asked for 2h walltime, finished in 5%"
+        },
+        {
+          "job_id": "53796181",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53801127_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53801127_10",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53801160",
+          "job_name": "3harness_be_qwen3coder",
+          "kind": "time_overprov",
+          "detail": "asked for 5h walltime, finished in 4%"
+        },
+        {
+          "job_id": "53802004_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53802194",
+          "job_name": "3harness_fixes_rerun",
+          "kind": "time_overprov",
+          "detail": "asked for 3h walltime, finished in 5%"
+        },
+        {
+          "job_id": "53802302",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53809960",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53813283_40",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53813302_30",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53816107_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53816864_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53816864_20",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53839275",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53839452",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53849227",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53873822_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 2h walltime, finished in 7%"
+        },
+        {
+          "job_id": "53873822_1",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 2h walltime, finished in 7%"
+        },
+        {
+          "job_id": "53873928_1",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 2h walltime, finished in 6%"
+        },
+        {
+          "job_id": "53882841",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53883477_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53883477_10",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53890909",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53929108_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 2h walltime, finished in 11%"
+        },
+        {
+          "job_id": "53929108_1",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 2h walltime, finished in 9%"
+        },
+        {
+          "job_id": "53929108_2",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 2h walltime, finished in 10%"
+        },
+        {
+          "job_id": "53929108_3",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 2h walltime, finished in 10%"
+        },
+        {
+          "job_id": "53929108_4",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 2h walltime, finished in 9%"
+        },
+        {
+          "job_id": "53929108_6",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 2h walltime, finished in 4%"
+        },
+        {
+          "job_id": "53929108_7",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 2h walltime, finished in 4%"
+        },
+        {
+          "job_id": "53929108_8",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 2h walltime, finished in 5%"
+        },
+        {
+          "job_id": "53931496_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53931496_1",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53931496_2",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53931496_3",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53931496_4",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53931496_5",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53931496_6",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53931496_7",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53931496_8",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53931496_9",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53931496_10",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 1%"
+        },
+        {
+          "job_id": "53931496_11",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53931496_12",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53931496_13",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53931496_14",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53931496_15",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53931496_16",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53931496_17",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53931496_19",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 12h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53945903",
+          "job_name": "bash",
+          "kind": "time_overprov",
+          "detail": "asked for 8h walltime, finished in 18%"
+        },
+        {
+          "job_id": "53947412",
+          "job_name": "bash",
+          "kind": "time_overprov",
+          "detail": "asked for 24h walltime, finished in 4%"
+        },
+        {
+          "job_id": "53951130_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 2h walltime, finished in 7%"
+        },
+        {
+          "job_id": "53951130_1",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 2h walltime, finished in 4%"
+        },
+        {
+          "job_id": "53951130_4",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 2h walltime, finished in 4%"
+        },
+        {
+          "job_id": "53951130_6",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "kind": "time_overprov",
+          "detail": "asked for 2h walltime, finished in 4%"
+        }
+      ],
+      "worst_offender": {
+        "job_id": "52360373",
+        "job_name": "phoenix-benchmark-reproduction",
+        "kind": "killed",
+        "detail": "ran out of walltime"
+      },
+      "recommendations": [
+        {
+          "job_id": "53378509_0",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 2%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378509_1",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378509_3",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 2%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378509_4",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378509_5",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378509_6",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 6%",
+          "suggested_flag": "--time=01:00:00"
+        },
+        {
+          "job_id": "53378509_7",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 2%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378509_11",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 3%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378509_14",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 4%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378509_18",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378509_19",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 4%",
+          "suggested_flag": "--time=00:45:00"
+        },
+        {
+          "job_id": "53378509_22",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 3%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378509_24",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 10%",
+          "suggested_flag": "--time=01:15:00"
+        },
+        {
+          "job_id": "53378509_26",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 2%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378509_27",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 4%",
+          "suggested_flag": "--time=00:45:00"
+        },
+        {
+          "job_id": "53378509_28",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 2%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378509_34",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 3%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378509_37",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378509_38",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 5%",
+          "suggested_flag": "--time=00:45:00"
+        },
+        {
+          "job_id": "53378509_39",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_0",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 4%",
+          "suggested_flag": "--time=00:45:00"
+        },
+        {
+          "job_id": "53378550_1",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_2",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 7%",
+          "suggested_flag": "--time=01:00:00"
+        },
+        {
+          "job_id": "53378550_3",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 10%",
+          "suggested_flag": "--time=01:30:00"
+        },
+        {
+          "job_id": "53378550_4",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 3%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_5",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 3%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_6",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 10%",
+          "suggested_flag": "--time=01:30:00"
+        },
+        {
+          "job_id": "53378550_7",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 2%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_8",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_15",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_16",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 4%",
+          "suggested_flag": "--time=00:45:00"
+        },
+        {
+          "job_id": "53378550_17",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 2%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_18",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 3%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_19",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_20",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 5%",
+          "suggested_flag": "--time=00:45:00"
+        },
+        {
+          "job_id": "53378550_21",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_22",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 3%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_23",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 4%",
+          "suggested_flag": "--time=00:45:00"
+        },
+        {
+          "job_id": "53378550_24",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 3%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_25",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_26",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 7%",
+          "suggested_flag": "--time=01:00:00"
+        },
+        {
+          "job_id": "53378550_27",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 2%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_29",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_30",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 9%",
+          "suggested_flag": "--time=01:15:00"
+        },
+        {
+          "job_id": "53378550_31",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 5%",
+          "suggested_flag": "--time=00:45:00"
+        },
+        {
+          "job_id": "53378550_32",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 3%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_33",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_34",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 4%",
+          "suggested_flag": "--time=00:45:00"
+        },
+        {
+          "job_id": "53378550_35",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_36",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 10%",
+          "suggested_flag": "--time=01:30:00"
+        },
+        {
+          "job_id": "53378550_37",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53378550_38",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 7%",
+          "suggested_flag": "--time=01:00:00"
+        },
+        {
+          "job_id": "53378550_39",
+          "job_name": "geoharm-agent-gpu",
+          "issue": "asked for 8h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53443047_2",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 2h walltime, used 7%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53635889",
+          "job_name": "ollama_pull_31b",
+          "issue": "asked for 3h walltime, used 5%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53639055_32",
+          "job_name": "geoharm-agent-gpu-large",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53642573",
+          "job_name": "apptainer_build_hermes_claude-code",
+          "issue": "asked for 2h walltime, used 5%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53801127_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53801127_10",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53801160",
+          "job_name": "3harness_be_qwen3coder",
+          "issue": "asked for 5h walltime, used 4%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53802004_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53802194",
+          "job_name": "3harness_fixes_rerun",
+          "issue": "asked for 3h walltime, used 5%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53813283_40",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53813302_30",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53816107_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53816864_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53816864_20",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53873822_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 2h walltime, used 7%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53873822_1",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 2h walltime, used 7%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53873928_1",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 2h walltime, used 6%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53883477_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53883477_10",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53929108_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 2h walltime, used 11%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53929108_1",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 2h walltime, used 9%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53929108_2",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 2h walltime, used 10%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53929108_3",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 2h walltime, used 10%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53929108_4",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 2h walltime, used 9%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53929108_6",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 2h walltime, used 4%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53929108_7",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 2h walltime, used 4%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53929108_8",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 2h walltime, used 5%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_1",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_2",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_3",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_4",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_5",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_6",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_7",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_8",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_9",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_10",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 1%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_11",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_12",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_13",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_14",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_15",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_16",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_17",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53931496_19",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 12h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53945903",
+          "job_name": "bash",
+          "issue": "asked for 8h walltime, used 18%",
+          "suggested_flag": "--time=02:15:00"
+        },
+        {
+          "job_id": "53947412",
+          "job_name": "bash",
+          "issue": "asked for 24h walltime, used 4%",
+          "suggested_flag": "--time=01:45:00"
+        },
+        {
+          "job_id": "53951130_0",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 2h walltime, used 7%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53951130_1",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 2h walltime, used 4%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53951130_4",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 2h walltime, used 4%",
+          "suggested_flag": "--time=00:30:00"
+        },
+        {
+          "job_id": "53951130_6",
+          "job_name": "geoharm-agent-gpu-xlarge",
+          "issue": "asked for 2h walltime, used 4%",
+          "suggested_flag": "--time=00:30:00"
+        }
+      ]
+    }
+  }
+}

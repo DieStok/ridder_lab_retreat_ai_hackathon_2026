@@ -1,0 +1,182 @@
+{
+  "lab_totals": {
+    "n_users": 1,
+    "total_cpu_hours": 478.3,
+    "total_gpu_hours": 217.7,
+    "total_kwh": 128.64,
+    "total_kg_co2": 34.73,
+    "biggest_emitter": "lbarbadillamartinez"
+  },
+  "per_user": {
+    "lbarbadillamartinez": {
+      "user": "lbarbadillamartinez",
+      "name": "lbarbadillamartinez",
+      "n_jobs": 69,
+      "n_failed": 9,
+      "n_cancelled": 1,
+      "n_timeout": 19,
+      "cpu_hours": 478.3,
+      "gpu_hours": 217.7,
+      "mem_gb_hours": 1893.1,
+      "avg_cpu_eff": 0.97,
+      "avg_mem_eff": null,
+      "avg_time_eff": 0.4,
+      "kwh": 128.64,
+      "kg_co2": 34.73,
+      "flags": [
+        {
+          "job_id": "53062622_0",
+          "job_name": "synthetic_all_kozaks_ARRAYS",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53430782_0",
+          "job_name": "synthetic_all_kozaks_ARRAYS",
+          "kind": "time_overprov",
+          "detail": "asked for 40h walltime, finished in 7%"
+        },
+        {
+          "job_id": "53432817_0",
+          "job_name": "synthetic_all_kozaks_ARRAYS",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53608757",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53610647_0",
+          "job_name": "synthetic_all_kozaks_ARRAYS",
+          "kind": "time_overprov",
+          "detail": "asked for 40h walltime, finished in 0%"
+        },
+        {
+          "job_id": "53611144_0",
+          "job_name": "synthetic_all_kozaks_ARRAYS",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53611249_0",
+          "job_name": "synthetic_all_kozaks_ARRAYS",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53802303",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53802452",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53802506",
+          "job_name": "cfDNA_filtering_TSS",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53802744",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "cancelled before completion"
+        },
+        {
+          "job_id": "53802745",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53808345",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53808487",
+          "job_name": "cfDNA_filtering_TSS",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53809470",
+          "job_name": "cfDNA_filtering_TSS",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53809475",
+          "job_name": "cfDNA_filtering_TSS",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53809477",
+          "job_name": "cfDNA_filtering_TSS",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53839252",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53848238",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53852290",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53854019",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        },
+        {
+          "job_id": "53883295",
+          "job_name": "bash",
+          "kind": "killed",
+          "detail": "ran out of walltime"
+        }
+      ],
+      "worst_offender": {
+        "job_id": "53062622_0",
+        "job_name": "synthetic_all_kozaks_ARRAYS",
+        "kind": "killed",
+        "detail": "ran out of walltime"
+      },
+      "recommendations": [
+        {
+          "job_id": "53430782_0",
+          "job_name": "synthetic_all_kozaks_ARRAYS",
+          "issue": "asked for 40h walltime, used 7%",
+          "suggested_flag": "--time=05:00:00"
+        },
+        {
+          "job_id": "53610647_0",
+          "job_name": "synthetic_all_kozaks_ARRAYS",
+          "issue": "asked for 40h walltime, used 0%",
+          "suggested_flag": "--time=00:30:00"
+        }
+      ]
+    }
+  }
+}

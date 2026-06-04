@@ -1,7 +1,7 @@
 ---
 title: RoboRoy HPC Ollama sacct-shaming pipeline
 type: feat
-status: active
+status: completed
 date: 2026-06-04
 scope: hackathon/submissions/team-f (roybot)
 branch: hackathon submodule `main`
@@ -213,29 +213,29 @@ curl -L "$BASE/northern_english_male/medium/en_GB-northern_english_male-medium.o
 ## Acceptance criteria
 
 ### Functional
-- [ ] `EXAMPLE_DIETER_05_06_2026.txt` exists in `submissions/team-f/`, is valid
+- [x] `EXAMPLE_DIETER_05_06_2026.txt` exists in `submissions/team-f/`, is valid
       `sacct --parsable2` (header + ≥1 dstoker job row), and is committed.
-- [ ] `scripts/ollama_hpc.sh serve-local` starts a reachable Ollama and prints an
+- [x] `scripts/ollama_hpc.sh serve-local` starts a reachable Ollama and prints an
       `export OLLAMA_BASE_URL=…` line; `stop-local` tears it down.
-- [ ] `submissions/team-f/.venv` exists (untracked) with `ollama`,
+- [x] `submissions/team-f/.venv` exists (untracked) with `ollama`,
       `python-dotenv`, `piper-tts` importable and `piper` on the venv PATH.
-- [ ] A Piper voice `.onnx` (+ `.onnx.json`) exists under `models/` (untracked).
-- [ ] roybot processes `EXAMPLE_DIETER_05_06_2026.txt` through the **real** Ollama
+- [x] A Piper voice `.onnx` (+ `.onnx.json`) exists under `models/` (untracked).
+- [x] roybot processes `EXAMPLE_DIETER_05_06_2026.txt` through the **real** Ollama
       LLM (output is not the deterministic fallback).
-- [ ] `--rename 'dstoker=Dieter - Herder of Claude Code'` makes the roast text
+- [x] `--rename 'dstoker=Dieter - Herder of Claude Code'` makes the roast text
       address the user by that exact phrase.
-- [ ] `scripts/run_roboroy.sbatch` runs the full pipeline under SLURM and exits 0.
-- [ ] **Done-when:** the roast **text is captured** on disk (`out/user_dstoker.md`,
+- [x] `scripts/run_roboroy.sbatch` runs the full pipeline under SLURM and exits 0.
+- [x] **Done-when:** the roast **text is captured** on disk (`out/user_dstoker.md`,
       containing "Dieter - Herder of Claude Code") **AND** the **audio recording
       exists** (`out/user_dstoker.wav` and/or `out/standup.wav`, non-empty).
 
 ### Non-functional / quality
-- [ ] No hardcoded absolute Ollama URL in roybot source (use `OLLAMA_BASE_URL` /
+- [x] No hardcoded absolute Ollama URL in roybot source (use `OLLAMA_BASE_URL` /
       `--ollama-host`).
-- [ ] Shared `hackathon/pyproject.toml` untouched; Piper installed only in venv.
-- [ ] README + `.env.example` updated in the same change set (repo rule #5).
-- [ ] `--mock` path still works (regression check).
-- [ ] geo_harmonizer attribution comment present in `ollama_hpc.sh`.
+- [x] Shared `hackathon/pyproject.toml` untouched; Piper installed only in venv.
+- [x] README + `.env.example` updated in the same change set (repo rule #5).
+- [x] `--mock` path still works (regression check).
+- [x] geo_harmonizer attribution comment present in `ollama_hpc.sh`.
 
 ## Dependencies & risks
 
