@@ -68,6 +68,34 @@ Claude will ask which project you're joining and guide you through the rest.
 
 ---
 
+## Use it in any coding agent
+
+The two commands work in every major coding agent, not just Claude Code. The
+canonical command lives in `.claude/commands/*.md`; copies for the other agents are
+**generated** from it by `scripts/sync_agent_commands.py` so they never drift.
+
+| Agent | Invoke as | Reads from |
+|-------|-----------|-----------|
+| Claude Code | `/onboard`, `/create-guide` | `.claude/commands/*.md` *(source)* |
+| Cursor | `/onboard`, `/create-guide` | `.cursor/commands/*.md` |
+| Gemini CLI | `/onboard`, `/create-guide` | `.gemini/commands/*.toml` |
+| opencode | `/onboard`, `/create-guide` | `.opencode/commands/*.md` |
+| Windsurf | `/onboard`, `/create-guide` | `.windsurf/workflows/*.md` |
+| OpenAI Codex | copy to `~/.codex/prompts/`, then `/onboard` | `.codex/prompts/*.md` |
+| Aider / Jules / any AGENTS.md agent | ask in plain language | `AGENTS.md` → source |
+
+After editing a command, regenerate the rest:
+
+```bash
+python3 scripts/sync_agent_commands.py          # rewrite all agent copies
+python3 scripts/sync_agent_commands.py --check  # fail if any copy is stale (CI)
+```
+
+See [`AGENTS.md`](AGENTS.md) for the full matrix and the rule that AGENTS.md-only
+agents must not run these workflows unprompted.
+
+---
+
 ## What it covers (Sturgeon project)
 
 | Step | Notebook | What you learn |
@@ -124,11 +152,17 @@ Summary: key paths, next steps
 
 ```
 submissions/team_tachterberg/
-├── README.md              ← this file
-├── PROPOSAL.md            ← design document
-└── .claude/
-    └── commands/
-        └── onboard.md     ← the skill (copy of what's in project-guides)
+├── README.md                      ← this file
+├── PROPOSAL.md                    ← design document
+├── AGENTS.md                      ← cross-agent matrix + rules
+├── scripts/
+│   └── sync_agent_commands.py     ← regenerates every agent copy from the source
+├── .claude/commands/              ← SOURCE OF TRUTH (onboard.md, create-guide.md)
+├── .cursor/commands/              ← generated (Cursor)
+├── .gemini/commands/              ← generated (Gemini CLI, .toml)
+├── .opencode/commands/            ← generated (opencode)
+├── .windsurf/workflows/           ← generated (Windsurf)
+└── .codex/prompts/                ← generated (copy to ~/.codex/prompts/)
 ```
 
 The canonical version of the skill lives in the public `project-guides` repo at:
