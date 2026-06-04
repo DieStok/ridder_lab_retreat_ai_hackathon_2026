@@ -152,6 +152,76 @@ If you also want the LLM + audio to run on the same schedule, that has to
 live somewhere with Ollama — the cluster compute nodes (via `sbatch`) or an
 off-cluster box. For the retreat demo we just run that part manually.
 
+## Running the whole thing on the HPC (Ollama on a GPU + sbatch)
+
+The HPC has no internet, so the LLM is the lab's **locally-installed Ollama**
+on a GPU node. One sbatch job does everything: dump a week of sacct, start a
+per-job Ollama, roast, and render audio with Piper. End-to-end:
+
+```bash
+cd hackathon/submissions/team-f
+
+# 1. one-time: isolated venv with the audio model (NOT in the shared toml)
+uv venv .venv --python 3.11
+uv pip install --python .venv/bin/python ollama python-dotenv piper-tts
+.venv/bin/python -m piper.download_voices en_GB-northern_english_male-medium \
+    --download-dir models           # ~63 MB .onnx + .json into models/ (gitignored)
+
+# 2. submit the pipeline (defaults to gemma4:26b on a 79 GB A100 MIG slice)
+sbatch scripts/run_roboroy.sbatch
+#   MODEL=qwen3.5:27b sbatch scripts/run_roboroy.sbatch     # override the model
+
+# 3. outputs land under out/<user>/  (per-user roast .md + .wav, standup, stats.json)
+```
+
+### How the Ollama wiring works (`scripts/ollama_hpc.sh`)
+
+Adapted from geo_harmonizer's `manage_ollama.sh`. It runs a **per-job** Ollama
+bound to a free port and prints `export` lines the sbatch `eval`s:
+
+```bash
+export OLLAMA_CONTEXT_LENGTH=8192          # BEFORE serve-local, so ollama serve inherits it
+eval "$(scripts/ollama_hpc.sh serve-local --warmup-model gemma4:26b --keep-alive -1)"
+trap 'scripts/ollama_hpc.sh stop-local || true' EXIT INT TERM
+# ... now $OLLAMA_BASE_URL points at the per-job server; roybot reads it ...
+```
+
+It points Ollama's model cache at the shared install
+(`$OLLAMA_INSTALL_DIR/ollama_models`) so pulls are cached across jobs and never
+hit the 5 GB home quota. `serve-local` / `stop-local` / `status` / `pull` are
+the subcommands; teardown is the caller's job (hence the `trap`).
+
+> **Context length matters.** Ollama otherwise defaults to a ~4096-token window
+> and *silently truncates* the prompt. We pin it twice — server-side via
+> `OLLAMA_CONTEXT_LENGTH` and per-request via roybot's `--num-ctx` (default
+> 8192). This is the belt-and-suspenders fix from geo_harmonizer's failure
+> taxonomy.
+
+### Addressing someone by a title (`--rename`)
+
+The roast/standup normally use the SLURM username. To address a person by a
+display name in the prose **and the audio** (output filenames stay on the
+username), use `--rename`:
+
+```bash
+python -m roybot --sacct EXAMPLE_DIETER_05_06_2026.txt --with-llm --with-audio \
+    --engine piper --rename 'dstoker=Dieter - Herder of Claude Code'
+```
+
+### Example data in the repo
+
+`EXAMPLE_<USER>_05_06_2026.txt` are real one-week `sacct --parsable2` dumps for
+six lab members, committed as ready-to-run inputs (e.g.
+`EXAMPLE_DIETER_05_06_2026.txt`). Two users (`atsakali`, `rstraver`) had no jobs
+in that window, so their dumps are header-only — kept on purpose to exercise the
+empty-input path. `run_roboroy.sbatch` skips empty dumps automatically.
+
+### Tests
+
+```bash
+.venv/bin/python -m pytest -q        # parser schema + every committed dump format-checks
+```
+
 ## What's actually computed
 
 Per job (using the same definitions as `seff`):

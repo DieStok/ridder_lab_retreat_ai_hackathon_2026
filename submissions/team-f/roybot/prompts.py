@@ -61,17 +61,22 @@ Style guide:
 
 def serious_user_prompt(stats: UserStats) -> str:
     return (
-        f"Stats for {stats.user} over the reporting window (JSON):\n"
+        f"Stats for {stats.name} over the reporting window (JSON):\n"
         f"```\n{json.dumps(stats.to_dict(), indent=2)}\n```\n"
         f"Write the summary now."
     )
 
 
 def roast_user_prompt(stats: UserStats) -> str:
+    # When a display name (honorific) is set, make the model address them by it
+    # verbatim — that's how the audio ends up saying e.g. the full title.
+    address = ""
+    if stats.display_name and stats.display_name != stats.user:
+        address = f'Address them by their full name, "{stats.name}", at least once. '
     return (
-        f"Stats for {stats.user} (JSON):\n"
+        f"Stats for {stats.name} (JSON):\n"
         f"```\n{json.dumps(stats.to_dict(), indent=2)}\n```\n"
-        f"Roast {stats.user} now."
+        f"{address}Roast {stats.name} now."
     )
 
 
@@ -92,12 +97,12 @@ def standup_prompt(stats_by_user: dict[str, UserStats]) -> str:
 def fallback_serious(stats: UserStats) -> str:
     if not stats.flags:
         return (
-            f"{stats.user}: {stats.n_jobs} jobs, {stats.cpu_hours:.1f} CPU-hours, "
+            f"{stats.name}: {stats.n_jobs} jobs, {stats.cpu_hours:.1f} CPU-hours, "
             f"{stats.kg_co2:.2f} kg CO2. No overprovisioning flagged. Nothing to change."
         )
     w = stats.worst_offender
     return (
-        f"{stats.user}: {stats.n_jobs} jobs, avg CPU eff "
+        f"{stats.name}: {stats.n_jobs} jobs, avg CPU eff "
         f"{int(stats.avg_cpu_eff * 100)}%, {stats.kg_co2:.2f} kg CO2. "
         f"Worst job: {w.job_name} ({w.detail}). "
         f"Recommendation: tighten the next sbatch for {w.job_name}."
@@ -106,10 +111,10 @@ def fallback_serious(stats: UserStats) -> str:
 
 def fallback_roast(stats: UserStats) -> str:
     if not stats.flags:
-        return f"{stats.user} did absolutely nothing wrong. Disappointing, really. Keep it up."
+        return f"{stats.name} did absolutely nothing wrong. Disappointing, really. Keep it up."
     w = stats.worst_offender
     return (
-        f"{stats.user}, mate. {w.detail}. {stats.kg_co2:.2f} kilograms of CO2, "
+        f"{stats.name}, mate. {w.detail}. {stats.kg_co2:.2f} kilograms of CO2, "
         f"for what was effectively a long lunch. Try `sbatch --help` sometime."
     )
 

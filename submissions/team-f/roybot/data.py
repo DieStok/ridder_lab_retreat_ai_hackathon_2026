@@ -111,25 +111,35 @@ def parse_sacct_parsable2(text: str) -> list[Job]:
         if len(cells) < len(header):
             cells = cells + [""] * (len(header) - len(cells))
         row = dict(zip(header, cells, strict=False))
+        # Case-insensitive column access. Real `sacct` normalises some headers
+        # to a different case than the field list we request — e.g. we ask for
+        # `CPUTimeRaw` but sacct prints `CPUTimeRAW`. A plain `row["CPUTimeRaw"]`
+        # then misses, silently zeroing cpu_time (and CPU efficiency) on real
+        # data while the mock path — which builds Jobs directly — looks fine.
+        lc = {k.lower(): v for k, v in row.items()}
+
+        def col(name: str, default: str = "") -> str:
+            return lc.get(name.lower(), default)
+
         # Skip step entries (we ran with -X but be defensive).
-        if "." in row.get("JobID", ""):
+        if "." in col("JobID"):
             continue
         try:
             jobs.append(
                 Job(
-                    job_id=row.get("JobID", ""),
-                    user=row.get("User", "") or "unknown",
-                    job_name=row.get("JobName", ""),
-                    partition=row.get("Partition", ""),
-                    state=row.get("State", ""),
-                    alloc_cpus=int(row.get("AllocCPUS") or 0),
-                    req_mem_mb=_parse_mem(row.get("ReqMem", "")),
-                    timelimit_sec=_parse_timelimit(row.get("Timelimit", "")),
-                    elapsed_sec=int(row.get("ElapsedRaw") or 0),
-                    cpu_time_sec=int(row.get("CPUTimeRaw") or 0),
-                    max_rss_mb=_parse_mem(row.get("MaxRSS", "")),
-                    n_gpus=_parse_gpus(row.get("AllocTRES", "")),
-                    exit_code=row.get("ExitCode", ""),
+                    job_id=col("JobID"),
+                    user=col("User") or "unknown",
+                    job_name=col("JobName"),
+                    partition=col("Partition"),
+                    state=col("State"),
+                    alloc_cpus=int(col("AllocCPUS") or 0),
+                    req_mem_mb=_parse_mem(col("ReqMem")),
+                    timelimit_sec=_parse_timelimit(col("Timelimit")),
+                    elapsed_sec=int(col("ElapsedRaw") or 0),
+                    cpu_time_sec=int(col("CPUTimeRaw") or 0),
+                    max_rss_mb=_parse_mem(col("MaxRSS")),
+                    n_gpus=_parse_gpus(col("AllocTRES")),
+                    exit_code=col("ExitCode"),
                     raw=row,
                 )
             )

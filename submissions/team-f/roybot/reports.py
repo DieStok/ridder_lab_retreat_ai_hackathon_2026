@@ -57,7 +57,7 @@ def _user_md(user: str, stats: UserStats, serious: str, roast: str) -> str:
         )
 
     return (
-        f"# {user} — weekly HPC report\n\n"
+        f"# {stats.name} — weekly HPC report\n\n"
         f"## At a glance\n\n"
         f"- Jobs: **{stats.n_jobs}** "
         f"({stats.n_failed} failed, {stats.n_cancelled} cancelled, {stats.n_timeout} timed out)\n"

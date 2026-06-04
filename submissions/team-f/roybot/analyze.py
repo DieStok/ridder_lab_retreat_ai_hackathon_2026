@@ -45,7 +45,8 @@ class Recommendation:
 
 @dataclass
 class UserStats:
-    user: str
+    user: str                    # SLURM username — used for output file keys
+    display_name: str = ""       # optional honorific used in prompts/reports (--rename)
     n_jobs: int = 0
     n_failed: int = 0
     n_cancelled: int = 0
@@ -62,9 +63,15 @@ class UserStats:
     worst_offender: Flag | None = None
     recommendations: list[Recommendation] = field(default_factory=list)
 
+    @property
+    def name(self) -> str:
+        """Name to address the user by in prose/audio — honorific if set, else username."""
+        return self.display_name or self.user
+
     def to_dict(self) -> dict:
         return {
             "user": self.user,
+            "name": self.name,
             "n_jobs": self.n_jobs,
             "n_failed": self.n_failed,
             "n_cancelled": self.n_cancelled,
@@ -268,5 +275,15 @@ def lab_totals(stats: dict[str, UserStats]) -> dict:
         "total_gpu_hours": round(sum(s.gpu_hours for s in stats.values()), 1),
         "total_kwh": round(sum(s.kwh for s in stats.values()), 2),
         "total_kg_co2": round(sum(s.kg_co2 for s in stats.values()), 2),
-        "biggest_emitter": max(stats.values(), key=lambda s: s.kg_co2).user if stats else None,
+        "biggest_emitter": max(stats.values(), key=lambda s: s.name).user if stats else None,
     }
+
+
+def apply_renames(stats: dict[str, UserStats], renames: dict[str, str]) -> None:
+    """Set display names in-place. `renames` maps SLURM username -> honorific.
+
+    Output file keys stay on the username; only prose/audio uses the honorific.
+    """
+    for user, pretty in renames.items():
+        if user in stats:
+            stats[user].display_name = pretty

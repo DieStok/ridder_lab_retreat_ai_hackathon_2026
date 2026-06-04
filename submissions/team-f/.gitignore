@@ -2,8 +2,9 @@
 .env
 .venv/
 
-# Pipeline outputs
+# Pipeline outputs (out/ for the default run, out_<model>/ for parallel runs)
 out/
+out_*/
 
 # Piper voice .onnx files — too big for git, see README for download URLs
 models/

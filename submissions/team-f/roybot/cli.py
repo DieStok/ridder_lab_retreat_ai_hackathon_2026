@@ -13,7 +13,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from .analyze import aggregate, lab_totals
+from .analyze import aggregate, apply_renames, lab_totals
 from .data import load_sacct_file
 from .llm import LLM
 from .mock_data import load_mock
@@ -29,6 +29,16 @@ def _parser() -> argparse.ArgumentParser:
     p.add_argument("--out", type=Path, default=Path("out"), help="Output directory (default: ./out)")
     p.add_argument("--with-llm", action="store_true", help="Call Ollama (falls back to deterministic text on failure).")
     p.add_argument("--model", default=None, help="Override Ollama model (defaults to qwen2.5:14b or $OLLAMA_MODEL).")
+    p.add_argument("--ollama-host", default=None,
+                   help="Ollama endpoint URL (defaults to $OLLAMA_BASE_URL or http://localhost:11434). "
+                        "On HPC, point at the per-job server from scripts/ollama_hpc.sh serve-local.")
+    p.add_argument("--num-ctx", type=int, default=None,
+                   help="Ollama context window in tokens (defaults to $OLLAMA_NUM_CTX / $OLLAMA_CONTEXT_LENGTH / 8192). "
+                        "Prevents silent prompt truncation at Ollama's ~4096 VRAM default.")
+    p.add_argument("--rename", action="append", default=[], metavar="USER=NAME",
+                   help="Address a SLURM user by a display name in the reports/audio, e.g. "
+                        "--rename 'dstoker=Dieter - Herder of Claude Code'. Repeatable. "
+                        "Output filenames still use the SLURM username.")
     p.add_argument("--with-audio", action="store_true", help="Generate audio for the stand-up monologue.")
     p.add_argument("--engine", choices=["say", "piper"], default="say",
                    help="TTS engine. 'say' is built-in on macOS; 'piper' is local + much more natural (see README).")
@@ -64,6 +74,22 @@ def main(argv: list[str] | None = None) -> int:
 
     # 2. Stats.
     stats = aggregate(jobs)
+
+    # 2b. Apply display-name overrides (--rename USER=NAME). Parsed here so a
+    # malformed pair fails fast with a clear message.
+    renames: dict[str, str] = {}
+    for pair in args.rename:
+        if "=" not in pair:
+            print(f"[roybot] ignoring malformed --rename {pair!r} (expected USER=NAME)", file=sys.stderr)
+            continue
+        user, name = pair.split("=", 1)
+        renames[user.strip()] = name.strip()
+    if renames:
+        apply_renames(stats, renames)
+        unmatched = [u for u in renames if u not in stats]
+        if unmatched:
+            print(f"[roybot] --rename users not in data (ignored): {', '.join(unmatched)}", file=sys.stderr)
+
     totals = lab_totals(stats)
     print(
         f"[roybot] {len(stats)} users, "
@@ -74,7 +100,7 @@ def main(argv: list[str] | None = None) -> int:
     )
 
     # 3. LLM (or fallback).
-    llm = LLM(model=args.model, fallback=not args.no_fallback)
+    llm = LLM(model=args.model, host=args.ollama_host, fallback=not args.no_fallback, num_ctx=args.num_ctx)
     if not args.with_llm:
         # Force fallback mode by swapping the client to None — uses the deterministic text.
         llm._unavailable_reason = "--with-llm not passed; using deterministic fallback"

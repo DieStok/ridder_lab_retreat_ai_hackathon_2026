@@ -1,0 +1,70 @@
+JobID|User|JobName|Partition|State|AllocCPUS|ReqMem|Timelimit|ElapsedRaw|CPUTimeRAW|MaxRSS|ReqTRES|AllocTRES|ExitCode
+53062622_0|lbarbadillamartinez|synthetic_all_kozaks_ARRAYS|gpu|TIMEOUT|2|3072M|1-16:00:00|144013|288026||billing=1,cpu=1,gres/gpu=1,mem=3072M,node=1|billing=2,cpu=2,gres/gpu:quadro_rtx_6000=1,gres/gpu=1,mem=3072M,node=1|0:0
+53429489|lbarbadillamartinez|cfDNA_cySeq_to_bed|cpu|CANCELLED by 50951|1|56320M|00:30:00|0|0||billing=1,cpu=1,mem=56320M,node=1||0:0
+53429492|lbarbadillamartinez|sequence_conservation|cpu|CANCELLED by 50951|2|102400M|04:30:00|133|266||billing=1,cpu=1,mem=102400M,node=1|billing=2,cpu=2,mem=102400M,node=1|0:0
+53429698|lbarbadillamartinez|cfDNA_cySeq_to_bed|cpu|FAILED|2|56320M|00:30:00|815|1630||billing=1,cpu=1,mem=56320M,node=1|billing=2,cpu=2,mem=56320M,node=1|127:0
+53430155|lbarbadillamartinez|sequence_conservation|cpu|FAILED|2|102400M|04:30:00|5176|10352||billing=1,cpu=1,mem=102400M,node=1|billing=2,cpu=2,mem=102400M,node=1|1:0
+53430782_0|lbarbadillamartinez|synthetic_all_kozaks_ARRAYS|gpu|FAILED|2|3072M|1-16:00:00|11401|22802||billing=1,cpu=1,gres/gpu=1,mem=3072M,node=1|billing=2,cpu=2,gres/gpu:quadro_rtx_6000=1,gres/gpu=1,mem=3072M,node=1|120:0
+53431199|lbarbadillamartinez|sequence_conservation|cpu|FAILED|2|102400M|04:30:00|5792|11584||billing=1,cpu=1,mem=102400M,node=1|billing=2,cpu=2,mem=102400M,node=1|1:0
+53432668_0|lbarbadillamartinez|synthetic_all_kozaks_ARRAYS|gpu|CANCELLED by 50951|2|3072M|1-16:00:00|57|114||billing=1,cpu=1,gres/gpu=1,mem=3072M,node=1|billing=2,cpu=2,gres/gpu:quadro_rtx_6000=1,gres/gpu=1,mem=3072M,node=1|0:0
+53432817_0|lbarbadillamartinez|synthetic_all_kozaks_ARRAYS|gpu|TIMEOUT|2|3072M|1-16:00:00|144016|288032||billing=1,cpu=1,gres/gpu=1,mem=3072M,node=1|billing=2,cpu=2,gres/gpu:quadro_rtx_6000=1,gres/gpu=1,mem=3072M,node=1|0:0
+53608757|lbarbadillamartinez|bash|cpu|TIMEOUT|2|15360M|01:30:00|5411|10822||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53610636_0|lbarbadillamartinez|synthetic_all_kozaks_ARRAYS|gpu|CANCELLED by 50951|2|3072M|1-16:00:00|33|66||billing=1,cpu=1,gres/gpu=1,mem=3072M,node=1|billing=2,cpu=2,gres/gpu:2g.20gb=1,gres/gpu=1,mem=3072M,node=1|0:0
+53610647_0|lbarbadillamartinez|synthetic_all_kozaks_ARRAYS|gpu|CANCELLED by 50951|2|3072M|1-16:00:00|446|892||billing=1,cpu=1,gres/gpu=1,mem=3072M,node=1|billing=2,cpu=2,gres/gpu:tesla_v100-pcie-16gb=1,gres/gpu=1,mem=3072M,node=1|0:0
+53610693_0|lbarbadillamartinez|synthetic_all_kozaks_ARRAYS|gpu|CANCELLED by 50951|2|3072M|1-16:00:00|238|476||billing=1,cpu=1,gres/gpu=1,mem=3072M,node=1|billing=2,cpu=2,gres/gpu:2g.20gb=1,gres/gpu=1,mem=3072M,node=1|0:0
+53610761_0|lbarbadillamartinez|synthetic_all_kozaks_ARRAYS|gpu|CANCELLED by 50951|2|3072M|1-16:00:00|57|114||billing=1,cpu=1,gres/gpu=1,mem=3072M,node=1|billing=2,cpu=2,gres/gpu:2g.20gb=1,gres/gpu=1,mem=3072M,node=1|0:0
+53610998_0|lbarbadillamartinez|synthetic_all_kozaks_ARRAYS|gpu|CANCELLED by 50951|2|3072M|1-16:00:00|6|12||billing=1,cpu=1,gres/gpu=1,mem=3072M,node=1|billing=2,cpu=2,gres/gpu:tesla_v100-pcie-16gb=1,gres/gpu=1,mem=3072M,node=1|0:0
+53611008_0|lbarbadillamartinez|synthetic_all_kozaks_ARRAYS|gpu|CANCELLED by 50951|2|3072M|1-16:00:00|73|146||billing=1,cpu=1,gres/gpu=1,mem=3072M,node=1|billing=2,cpu=2,gres/gpu:2g.20gb=1,gres/gpu=1,mem=3072M,node=1|0:0
+53611144_0|lbarbadillamartinez|synthetic_all_kozaks_ARRAYS|gpu|TIMEOUT|2|3072M|1-16:00:00|144029|288058||billing=1,cpu=1,gres/gpu=1,mem=3072M,node=1|billing=2,cpu=2,gres/gpu:2g.20gb=1,gres/gpu=1,mem=3072M,node=1|0:0
+53611249_0|lbarbadillamartinez|synthetic_all_kozaks_ARRAYS|gpu|TIMEOUT|2|3072M|1-16:00:00|144014|288028||billing=1,cpu=1,gres/gpu=1,mem=3072M,node=1|billing=2,cpu=2,gres/gpu:2g.20gb=1,gres/gpu=1,mem=3072M,node=1|0:0
+53611729_0|lbarbadillamartinez|synthetic_all_kozaks_ARRAYS|gpu|CANCELLED by 50951|2|3072M|1-16:00:00|64|128||billing=1,cpu=1,gres/gpu=1,mem=3072M,node=1|billing=2,cpu=2,gres/gpu:tesla_v100-pcie-16gb=1,gres/gpu=1,mem=3072M,node=1|0:0
+53611833_0|lbarbadillamartinez|synthetic_all_kozaks_ARRAYS|gpu|COMPLETED|2|3072M|1-16:00:00|95944|191888||billing=1,cpu=1,gres/gpu=1,mem=3072M,node=1|billing=2,cpu=2,gres/gpu:tesla_v100-pcie-16gb=1,gres/gpu=1,mem=3072M,node=1|0:0
+53611887_0|lbarbadillamartinez|synthetic_all_kozaks_ARRAYS|gpu|COMPLETED|2|3072M|1-16:00:00|95834|191668||billing=1,cpu=1,gres/gpu=1,mem=3072M,node=1|billing=2,cpu=2,gres/gpu:2g.20gb=1,gres/gpu=1,mem=3072M,node=1|0:0
+53801138|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|COMPLETED|2|15360M|01:30:00|10|20||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53801139|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|COMPLETED|2|15360M|01:30:00|14|28||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53801141|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|COMPLETED|2|15360M|01:30:00|7|14||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53801143|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|COMPLETED|2|15360M|01:30:00|10|20||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53801145|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|COMPLETED|2|15360M|01:30:00|8|16||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53801148|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|COMPLETED|2|15360M|01:30:00|8|16||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53802303|lbarbadillamartinez|bash|cpu|TIMEOUT|2|15360M|00:30:00|1818|3636||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53802394|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|OUT_OF_MEMORY|2|15360M|01:30:00|200|400||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:125
+53802395|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|OUT_OF_MEMORY|2|15360M|01:30:00|178|356||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:125
+53802397|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|OUT_OF_MEMORY|2|15360M|01:30:00|142|284||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:125
+53802398|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|COMPLETED|2|15360M|01:30:00|79|158||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53802401|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|COMPLETED|2|15360M|01:30:00|58|116||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53802452|lbarbadillamartinez|bash|cpu|TIMEOUT|2|15360M|00:30:00|1805|3610||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53802459|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|COMPLETED|2|15360M|01:30:00|21|42||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53802462|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|COMPLETED|2|15360M|01:30:00|42|84||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53802463|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|COMPLETED|2|15360M|01:30:00|14|28||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53802466|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|COMPLETED|2|15360M|01:30:00|14|28||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53802467|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|COMPLETED|2|15360M|01:30:00|22|44||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53802483|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|CANCELLED by 50951|2|15360M|01:30:00|284|568||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53802484|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|OUT_OF_MEMORY|2|15360M|00:30:00|375|750||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:125
+53802485|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|CANCELLED by 50951|2|15360M|00:30:00|294|588||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53802486|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|CANCELLED by 50951|2|15360M|00:30:00|289|578||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53802487|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|CANCELLED by 50951|2|15360M|00:30:00|272|544||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53802503|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|OUT_OF_MEMORY|2|35840M|00:30:00|1598|3196||billing=1,cpu=1,mem=35840M,node=1|billing=2,cpu=2,mem=35840M,node=1|0:125
+53802506|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|TIMEOUT|2|35840M|00:30:00|1829|3658||billing=1,cpu=1,mem=35840M,node=1|billing=2,cpu=2,mem=35840M,node=1|0:125
+53802507|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|OUT_OF_MEMORY|2|35840M|00:30:00|823|1646||billing=1,cpu=1,mem=35840M,node=1|billing=2,cpu=2,mem=35840M,node=1|0:125
+53802509|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|OUT_OF_MEMORY|2|35840M|00:30:00|1432|2864||billing=1,cpu=1,mem=35840M,node=1|billing=2,cpu=2,mem=35840M,node=1|0:125
+53802510|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|OUT_OF_MEMORY|2|35840M|00:30:00|1714|3428||billing=1,cpu=1,mem=35840M,node=1|billing=2,cpu=2,mem=35840M,node=1|0:125
+53802631|lbarbadillamartinez|sequence_conservation|cpu|FAILED|2|102400M|04:30:00|4611|9222||billing=1,cpu=1,mem=102400M,node=1|billing=2,cpu=2,mem=102400M,node=1|1:0
+53802644|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|COMPLETED|2|66560M|00:30:00|24|48||billing=1,cpu=1,mem=66560M,node=1|billing=2,cpu=2,mem=66560M,node=1|0:0
+53802697|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|COMPLETED|2|66560M|00:30:00|757|1514||billing=1,cpu=1,mem=66560M,node=1|billing=2,cpu=2,mem=66560M,node=1|0:0
+53802744|lbarbadillamartinez|bash|cpu|CANCELLED|1|15360M|00:30:00|0|0||billing=1,cpu=1,mem=15360M,node=1||0:0
+53802745|lbarbadillamartinez|bash|cpu|TIMEOUT|2|56320M|00:30:00|1822|3644||billing=1,cpu=1,mem=56320M,node=1|billing=2,cpu=2,mem=56320M,node=1|0:0
+53808345|lbarbadillamartinez|bash|cpu|TIMEOUT|2|56320M|01:30:00|5413|10826||billing=1,cpu=1,mem=56320M,node=1|billing=2,cpu=2,mem=56320M,node=1|0:0
+53808487|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|TIMEOUT|2|66560M|00:30:00|1813|3626||billing=1,cpu=1,mem=66560M,node=1|billing=2,cpu=2,mem=66560M,node=1|0:0
+53809470|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|TIMEOUT|2|66560M|00:30:00|1812|3624||billing=1,cpu=1,mem=66560M,node=1|billing=2,cpu=2,mem=66560M,node=1|0:0
+53809473|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|COMPLETED|2|66560M|00:30:00|1298|2596||billing=1,cpu=1,mem=66560M,node=1|billing=2,cpu=2,mem=66560M,node=1|0:0
+53809475|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|TIMEOUT|2|66560M|00:30:00|1812|3624||billing=1,cpu=1,mem=66560M,node=1|billing=2,cpu=2,mem=66560M,node=1|0:0
+53809477|lbarbadillamartinez|cfDNA_filtering_TSS|cpu|TIMEOUT|2|66560M|00:30:00|1812|3624||billing=1,cpu=1,mem=66560M,node=1|billing=2,cpu=2,mem=66560M,node=1|0:0
+53816839|lbarbadillamartinez|sequence_conservation|cpu|FAILED|2|102400M|04:30:00|5230|10460||billing=1,cpu=1,mem=102400M,node=1|billing=2,cpu=2,mem=102400M,node=1|1:0
+53839252|lbarbadillamartinez|bash|cpu|TIMEOUT|2|56320M|01:30:00|5414|10828||billing=1,cpu=1,mem=56320M,node=1|billing=2,cpu=2,mem=56320M,node=1|0:0
+53848238|lbarbadillamartinez|bash|cpu|TIMEOUT|2|56320M|02:30:00|9015|18030||billing=1,cpu=1,mem=56320M,node=1|billing=2,cpu=2,mem=56320M,node=1|0:0
+53852290|lbarbadillamartinez|bash|cpu|TIMEOUT|2|15360M|01:30:00|5403|10806||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|0:0
+53853550|lbarbadillamartinez|bash|gpu|FAILED|2|5120M|00:30:00|612|1224||billing=1,cpu=1,gres/gpu=1,mem=5120M,node=1|billing=2,cpu=2,gres/gpu:tesla_v100-pcie-16gb=1,gres/gpu=1,mem=5120M,node=1|1:0
+53854019|lbarbadillamartinez|bash|gpu|TIMEOUT|2|5120M|00:30:00|1818|3636||billing=1,cpu=1,gres/gpu=1,mem=5120M,node=1|billing=2,cpu=2,gres/gpu:quadro_rtx_6000=1,gres/gpu=1,mem=5120M,node=1|0:0
+53883227|lbarbadillamartinez|bash|cpu|FAILED|2|15360M|01:30:00|185|370||billing=1,cpu=1,mem=15360M,node=1|billing=2,cpu=2,mem=15360M,node=1|2:0
+53883295|lbarbadillamartinez|bash|gpu|TIMEOUT|2|10240M|00:20:00|1201|2402||billing=1,cpu=1,gres/gpu=1,mem=10240M,node=1|billing=2,cpu=2,gres/gpu:tesla_v100-pcie-16gb=1,gres/gpu=1,mem=10240M,node=1|0:0
+53883872_0|lbarbadillamartinez|synthetic_all_kozaks_ARRAYS|gpu|FAILED|2|3072M|1-16:00:00|42|84||billing=1,cpu=1,gres/gpu=1,mem=3072M,node=1|billing=2,cpu=2,gres/gpu:2g.20gb=1,gres/gpu=1,mem=3072M,node=1|1:0

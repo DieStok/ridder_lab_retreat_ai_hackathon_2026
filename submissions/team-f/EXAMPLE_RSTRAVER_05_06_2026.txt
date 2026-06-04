@@ -1,0 +1,1 @@
+JobID|User|JobName|Partition|State|AllocCPUS|ReqMem|Timelimit|ElapsedRaw|CPUTimeRAW|MaxRSS|ReqTRES|AllocTRES|ExitCode
