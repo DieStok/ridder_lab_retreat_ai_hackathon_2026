@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Projects - Lab Memory Atlas{% endblock %}
+{% block content %}
+<section class="page-header">
+  <p class="eyebrow">Projects</p>
+  <h1>Ongoing project pages</h1>
+  <p class="lede">Open a project dossier to see its intro, people, recent progress, private-visible actions, meeting memory, and literature leads.</p>
+</section>
+
+<section class="project-index-grid">
+  {% for project in view.projects %}
+  <a class="project-index-card" href="/projects/{{ project.id }}">
+    <div>
+      <span class="type-pill">{{ project.kind }}</span>
+      <h2>{{ project.label }}</h2>
+      <p>{{ project.description or 'No project introduction yet.' }}</p>
+    </div>
+    <div class="metric-row">
+      <span>{{ project.people|length }} people</span>
+      <span>{{ project.open_challenges|length }} challenges</span>
+      <span>{{ project.keywords|length }} keywords</span>
+    </div>
+  </a>
+  {% endfor %}
+</section>
+{% endblock %}

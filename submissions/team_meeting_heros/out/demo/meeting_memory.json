@@ -1,0 +1,435 @@
+{
+  "team": "meeting_heros",
+  "generated_at": "2026-05-07T09:22:33.232967+00:00",
+  "meeting_title": "Meeting Franka and Paul",
+  "meeting_type": "one_on_one",
+  "input_file": "additional_information_and_resources/Teams_transcript_example/Meeting Franka and Paul 20260501.vtt",
+  "speakers": [
+    "Paul",
+    "Rang-3, F.J. (Franka)"
+  ],
+  "summary": {
+    "one_sentence": "It was just integrating the validation thing, like just trying to use the markers from the paper for different cell types.",
+    "top_topics": [
+      "some",
+      "they",
+      "will",
+      "one",
+      "don",
+      "cell",
+      "very",
+      "cells",
+      "which",
+      "know",
+      "clusters",
+      "clustering"
+    ],
+    "decisions": [
+      {
+        "speaker": "Rang-3, F.J. (Franka)",
+        "text": "I'm actually seeing it happening on the right, so I'm going to have to hide that,",
+        "timestamp": "00:00:16.561 --> 00:00:19.414"
+      },
+      {
+        "speaker": "Rang-3, F.J. (Franka)",
+        "text": "But you're going to need some input, some transcript or a recording.",
+        "timestamp": "00:00:43.005 --> 00:00:46.046"
+      },
+      {
+        "speaker": "Paul",
+        "text": "we need to lower it and just let's see what happens if I just put it close to 0.",
+        "timestamp": "00:16:56.780 --> 00:17:01.202"
+      },
+      {
+        "speaker": "Paul",
+        "text": "Yeah, I will, I will, I will check, let's see what's best.",
+        "timestamp": "00:20:29.761 --> 00:20:29.921"
+      },
+      {
+        "speaker": "Paul",
+        "text": "Great, so let's see.",
+        "timestamp": "00:23:19.481 --> 00:23:20.641"
+      },
+      {
+        "speaker": "Rang-3, F.J. (Franka)",
+        "text": "Yeah, let's see.",
+        "timestamp": "00:23:20.001 --> 00:23:24.886"
+      },
+      {
+        "speaker": "Rang-3, F.J. (Franka)",
+        "text": "And let's look at some new map and some and the handcrafted features.",
+        "timestamp": "00:23:33.601 --> 00:23:34.641"
+      },
+      {
+        "speaker": "Paul",
+        "text": "So now let's see how it goes.",
+        "timestamp": "00:27:15.409 --> 00:27:18.481"
+      }
+    ],
+    "open_questions": [
+      {
+        "speaker": "Rang-3, F.J. (Franka)",
+        "text": "Okay, how are you doing?",
+        "timestamp": "00:00:55.681 --> 00:00:57.761"
+      },
+      {
+        "speaker": "Paul",
+        "text": "So, can you see my VS code?",
+        "timestamp": "00:01:02.961 --> 00:01:04.161"
+      },
+      {
+        "speaker": "Paul",
+        "text": "And combining it with RNA sec, right?",
+        "timestamp": "00:01:42.961 --> 00:01:46.721"
+      },
+      {
+        "speaker": "Paul",
+        "text": "How can we interpret or validate?",
+        "timestamp": "00:01:48.801 --> 00:01:50.721"
+      },
+      {
+        "speaker": "Rang-3, F.J. (Franka)",
+        "text": "Can you first tell me a bit about how was it to implement these other image foundation models?",
+        "timestamp": "00:02:26.281 --> 00:02:32.050"
+      },
+      {
+        "speaker": "Rang-3, F.J. (Franka)",
+        "text": "Were they easy to implement or?",
+        "timestamp": "00:02:26.281 --> 00:02:32.050"
+      },
+      {
+        "speaker": "Rang-3, F.J. (Franka)",
+        "text": "Dependencies or?",
+        "timestamp": "00:02:58.561 --> 00:03:00.001"
+      },
+      {
+        "speaker": "Rang-3, F.J. (Franka)",
+        "text": "And did you already look into this rotation or not yet?",
+        "timestamp": "00:03:35.761 --> 00:03:39.633"
+      }
+    ]
+  },
+  "actions": [
+    {
+      "id": "A001",
+      "owner": "Rang-3, F.J. (Franka)",
+      "task": "automatic summaries and action lists or meetings.",
+      "status": "new",
+      "evidence": "00:00:43.005 --> 00:00:46.046",
+      "review_note": "Needs human approval before becoming the official action list."
+    },
+    {
+      "id": "A002",
+      "owner": "Paul",
+      "task": "Very good, so maybe I will just share my screen.",
+      "status": "new",
+      "evidence": "00:00:58.241 --> 00:01:01.121",
+      "review_note": "Needs human approval before becoming the official action list."
+    },
+    {
+      "id": "A003",
+      "owner": "Paul",
+      "task": "And then just not looking at the handcraft features for now and just try to cluster using both embeddings from the different models now, not only new spire.",
+      "status": "new",
+      "evidence": "00:01:28.241 --> 00:01:34.230",
+      "review_note": "Needs human approval before becoming the official action list."
+    },
+    {
+      "id": "A004",
+      "owner": "Paul",
+      "task": "So I will just show you what kind of outputs I'm getting, when I want to,",
+      "status": "new",
+      "evidence": "00:02:15.721 --> 00:02:18.850",
+      "review_note": "Needs human approval before becoming the official action list."
+    },
+    {
+      "id": "A005",
+      "owner": "Rang-3, F.J. (Franka)",
+      "task": "I would try to go directly from the genes to a score.",
+      "status": "new",
+      "evidence": "00:11:56.193 --> 00:12:02.778",
+      "review_note": "Needs human approval before becoming the official action list."
+    },
+    {
+      "id": "A006",
+      "owner": "Rang-3, F.J. (Franka)",
+      "task": "either ask us or maybe we can do it ourselves, actually use an established tool for cell type identification that will give you",
+      "status": "new",
+      "evidence": "00:12:44.801 --> 00:12:48.363",
+      "review_note": "Needs human approval before becoming the official action list."
+    },
+    {
+      "id": "A007",
+      "owner": "Rang-3, F.J. (Franka)",
+      "task": "After this meeting, I'll send Christian a message to ask him to run some cell typing tools on this data set so that you have semi-reliable labels to work with.",
+      "status": "new",
+      "evidence": "00:14:59.463 --> 00:15:02.161",
+      "review_note": "Needs human approval before becoming the official action list."
+    },
+    {
+      "id": "A008",
+      "owner": "Paul",
+      "task": "we need to lower it and just let's see what happens if I just put it close to 0.",
+      "status": "new",
+      "evidence": "00:16:56.780 --> 00:17:01.202",
+      "review_note": "Needs human approval before becoming the official action list."
+    },
+    {
+      "id": "A009",
+      "owner": "Paul",
+      "task": "Yeah, I will, I will, I will check, let's see what's best.",
+      "status": "new",
+      "evidence": "00:20:29.761 --> 00:20:29.921",
+      "review_note": "Needs human approval before becoming the official action list."
+    },
+    {
+      "id": "A010",
+      "owner": "Paul",
+      "task": "I will do it for the next one.",
+      "status": "new",
+      "evidence": "00:21:02.161 --> 00:21:06.001",
+      "review_note": "Needs human approval before becoming the official action list."
+    },
+    {
+      "id": "A011",
+      "owner": "Paul",
+      "task": "Of course, I'll try.",
+      "status": "new",
+      "evidence": "00:21:53.681 --> 00:21:59.015",
+      "review_note": "Needs human approval before becoming the official action list."
+    },
+    {
+      "id": "A012",
+      "owner": "Paul",
+      "task": "Okay, so maybe the next one I will be able to show you better.",
+      "status": "new",
+      "evidence": "00:22:04.081 --> 00:22:04.241",
+      "review_note": "Needs human approval before becoming the official action list."
+    }
+  ],
+  "previous_action_assessments": [],
+  "literature_followups": [
+    {
+      "question": "so they have the spatial transcriptomics, and then they have 64 protein stainings.",
+      "search_query": "they spatial transcriptomics protein stainings",
+      "importance": 4,
+      "estimated_effort": 2,
+      "risk_reward_score": 5,
+      "source": "Rang-3, F.J. (Franka)"
+    },
+    {
+      "question": "So the how good its clustering is that now defined on the spatial features or on the gene expression features?",
+      "search_query": "features its clustering defined spatial",
+      "importance": 3,
+      "estimated_effort": 2,
+      "risk_reward_score": 4,
+      "source": "Rang-3, F.J. (Franka)"
+    },
+    {
+      "question": "So this is a paper that describes a general workflow on how to combine spatial transcriptomics and spatial proteomics.",
+      "search_query": "spatial paper describes general workflow",
+      "importance": 3,
+      "estimated_effort": 2,
+      "risk_reward_score": 4,
+      "source": "Rang-3, F.J. (Franka)"
+    },
+    {
+      "question": "And there they do have cell type annotations based on the spatial proteomics, so not the transcriptomics.",
+      "search_query": "they cell type annotations based",
+      "importance": 3,
+      "estimated_effort": 2,
+      "risk_reward_score": 4,
+      "source": "Rang-3, F.J. (Franka)"
+    },
+    {
+      "question": "Can you first tell me a bit about how was it to implement these other image foundation models?",
+      "search_query": "first tell bit implement these",
+      "importance": 2,
+      "estimated_effort": 2,
+      "risk_reward_score": 3,
+      "source": "Rang-3, F.J. (Franka)"
+    },
+    {
+      "question": "But looking in detail to Newspire, I just realized that they are not training the model using crops.",
+      "search_query": "looking detail newspire realized they",
+      "importance": 2,
+      "estimated_effort": 2,
+      "risk_reward_score": 3,
+      "source": "Paul"
+    },
+    {
+      "question": "that that paper uses to identify tumor cells are just not a very high quality in",
+      "search_query": "paper uses identify tumor cells",
+      "importance": 2,
+      "estimated_effort": 2,
+      "risk_reward_score": 3,
+      "source": "Rang-3, F.J. (Franka)"
+    },
+    {
+      "question": "today on collecting some other data sets that have this spatial proteomics and",
+      "search_query": "today collecting some other data",
+      "importance": 2,
+      "estimated_effort": 2,
+      "risk_reward_score": 3,
+      "source": "Rang-3, F.J. (Franka)"
+    }
+  ],
+  "people": {
+    "Rang-3, F.J. (Franka)": {
+      "speaker": "Rang-3, F.J. (Franka)",
+      "topics": [
+        "they",
+        "some",
+        "bit",
+        "will",
+        "cell",
+        "one",
+        "well",
+        "kind"
+      ],
+      "recent_contributions": [
+        "I'm actually seeing it happening on the right, so I'm going to have to hide that, otherwise it's distracting.",
+        "But you're going to need some input, some transcript or a recording.",
+        "Yeah, let's see."
+      ],
+      "open_actions": [
+        {
+          "id": "A001",
+          "owner": "Rang-3, F.J. (Franka)",
+          "task": "automatic summaries and action lists or meetings.",
+          "status": "new",
+          "evidence": "00:00:43.005 --> 00:00:46.046",
+          "review_note": "Needs human approval before becoming the official action list."
+        },
+        {
+          "id": "A005",
+          "owner": "Rang-3, F.J. (Franka)",
+          "task": "I would try to go directly from the genes to a score.",
+          "status": "new",
+          "evidence": "00:11:56.193 --> 00:12:02.778",
+          "review_note": "Needs human approval before becoming the official action list."
+        },
+        {
+          "id": "A006",
+          "owner": "Rang-3, F.J. (Franka)",
+          "task": "either ask us or maybe we can do it ourselves, actually use an established tool for cell type identification that will give you",
+          "status": "new",
+          "evidence": "00:12:44.801 --> 00:12:48.363",
+          "review_note": "Needs human approval before becoming the official action list."
+        },
+        {
+          "id": "A007",
+          "owner": "Rang-3, F.J. (Franka)",
+          "task": "After this meeting, I'll send Christian a message to ask him to run some cell typing tools on this data set so that you have semi-reliable labels to work with.",
+          "status": "new",
+          "evidence": "00:14:59.463 --> 00:15:02.161",
+          "review_note": "Needs human approval before becoming the official action list."
+        }
+      ],
+      "suggested_helpers": [
+        {
+          "person": "Paul",
+          "shared_topics": [
+            "one",
+            "some",
+            "will"
+          ]
+        }
+      ]
+    },
+    "Paul": {
+      "speaker": "Paul",
+      "topics": [
+        "some",
+        "one",
+        "will",
+        "don",
+        "which",
+        "very",
+        "cells",
+        "sounds"
+      ],
+      "recent_contributions": [
+        "01 because I saw how where the probabilities are and I was like, okay, we need to lower it and just let's see what happens if I just put it close to 0.",
+        "Yeah, I will, I will, I will check, let's see what's best.",
+        "Great, so let's see."
+      ],
+      "open_actions": [
+        {
+          "id": "A002",
+          "owner": "Paul",
+          "task": "Very good, so maybe I will just share my screen.",
+          "status": "new",
+          "evidence": "00:00:58.241 --> 00:01:01.121",
+          "review_note": "Needs human approval before becoming the official action list."
+        },
+        {
+          "id": "A003",
+          "owner": "Paul",
+          "task": "And then just not looking at the handcraft features for now and just try to cluster using both embeddings from the different models now, not only new spire.",
+          "status": "new",
+          "evidence": "00:01:28.241 --> 00:01:34.230",
+          "review_note": "Needs human approval before becoming the official action list."
+        },
+        {
+          "id": "A004",
+          "owner": "Paul",
+          "task": "So I will just show you what kind of outputs I'm getting, when I want to,",
+          "status": "new",
+          "evidence": "00:02:15.721 --> 00:02:18.850",
+          "review_note": "Needs human approval before becoming the official action list."
+        },
+        {
+          "id": "A008",
+          "owner": "Paul",
+          "task": "we need to lower it and just let's see what happens if I just put it close to 0.",
+          "status": "new",
+          "evidence": "00:16:56.780 --> 00:17:01.202",
+          "review_note": "Needs human approval before becoming the official action list."
+        },
+        {
+          "id": "A009",
+          "owner": "Paul",
+          "task": "Yeah, I will, I will, I will check, let's see what's best.",
+          "status": "new",
+          "evidence": "00:20:29.761 --> 00:20:29.921",
+          "review_note": "Needs human approval before becoming the official action list."
+        },
+        {
+          "id": "A010",
+          "owner": "Paul",
+          "task": "I will do it for the next one.",
+          "status": "new",
+          "evidence": "00:21:02.161 --> 00:21:06.001",
+          "review_note": "Needs human approval before becoming the official action list."
+        },
+        {
+          "id": "A011",
+          "owner": "Paul",
+          "task": "Of course, I'll try.",
+          "status": "new",
+          "evidence": "00:21:53.681 --> 00:21:59.015",
+          "review_note": "Needs human approval before becoming the official action list."
+        },
+        {
+          "id": "A012",
+          "owner": "Paul",
+          "task": "Okay, so maybe the next one I will be able to show you better.",
+          "status": "new",
+          "evidence": "00:22:04.081 --> 00:22:04.241",
+          "review_note": "Needs human approval before becoming the official action list."
+        }
+      ],
+      "suggested_helpers": [
+        {
+          "person": "Rang-3, F.J. (Franka)",
+          "shared_topics": [
+            "one",
+            "some",
+            "will"
+          ]
+        }
+      ]
+    }
+  }
+}

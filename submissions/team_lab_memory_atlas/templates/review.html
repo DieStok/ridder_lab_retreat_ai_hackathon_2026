@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Review Queue - Lab Memory Atlas{% endblock %}
+{% block content %}
+<section class="page-header">
+  <p class="eyebrow">Review Queue</p>
+  <h1>{{ view.pending_reviews|length }} draft updates</h1>
+  <p class="lede">Approve, edit, or reject meeting-derived changes before they become part of the lab-visible atlas.</p>
+</section>
+
+<section class="review-list">
+  {% for item in view.pending_reviews %}
+  <article class="review-item">
+    <div class="review-meta">
+      <span class="type-pill">{{ item.item_type.replace('_', ' ') }}</span>
+      {% if item.sensitive %}<span class="sensitive-pill">Sensitive</span>{% endif %}
+    </div>
+    <h2>{{ item.title }}</h2>
+    <p class="evidence">{{ item.evidence }}</p>
+    <form action="/review/{{ item.id }}/approve" method="post" class="review-form">
+      <textarea name="edited_text" rows="3">{{ item.proposed_text }}</textarea>
+      <div class="button-row">
+        <button class="primary-button" type="submit">Approve</button>
+        <button class="ghost-button" formaction="/review/{{ item.id }}/reject" formmethod="post" type="submit">Reject</button>
+      </div>
+    </form>
+  </article>
+  {% else %}
+  <div class="empty-state">
+    <h2>No drafts waiting</h2>
+    <p>Import a transcript to create profile updates, action items, and follow-up questions.</p>
+    <a class="primary-link" href="/upload">Import transcript</a>
+  </div>
+  {% endfor %}
+</section>
+{% endblock %}

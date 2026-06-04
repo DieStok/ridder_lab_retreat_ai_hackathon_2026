@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Edit Group' if group else 'Add Group' }} - Lab Memory Atlas{% endblock %}
+{% block content %}
+<section class="page-header">
+  <p class="eyebrow">Admin</p>
+  <h1>{{ 'Edit group' if group else 'Add group' }}</h1>
+</section>
+
+<form class="form-panel wide-form" action="{{ form_action }}" method="post">
+  <label><span>Label</span><input name="label" value="{{ group.label if group else '' }}" required></label>
+  <label><span>Kind</span><input name="kind" value="{{ group.kind if group else 'theme' }}"></label>
+  <label><span>Description</span><textarea name="description" rows="4">{{ group.description if group else '' }}</textarea></label>
+  <label><span>Keywords</span><textarea name="keywords" rows="3">{{ group.keywords|join('\n') if group else '' }}</textarea></label>
+  <label><span>Open challenges</span><textarea name="open_challenges" rows="3">{{ group.open_challenges|join('\n') if group else '' }}</textarea></label>
+
+  <fieldset class="checkbox-grid">
+    <legend>Members</legend>
+    {% for person in admin.people %}
+    <label class="{{ 'archived-option' if person.archived else '' }}">
+      <input type="checkbox" name="member_ids" value="{{ person.id }}" {% if group and group.id in person.projects %}checked{% endif %}>
+      <span>{{ person.name }}{% if person.archived %} (archived){% endif %}</span>
+    </label>
+    {% endfor %}
+  </fieldset>
+  <div class="button-row">
+    <button class="primary-button" type="submit">Save group</button>
+    <a class="ghost-link" href="/admin/groups">Cancel</a>
+  </div>
+</form>
+
+{% if group %}
+<section class="admin-section">
+  <h2>Quick membership edits</h2>
+  <form class="inline-form" action="/admin/groups/{{ group.id }}/members/add" method="post">
+    <select name="person_id">
+      {% for person in admin.people %}
+      {% if group.id not in person.projects %}
+      <option value="{{ person.id }}">{{ person.name }}</option>
+      {% endif %}
+      {% endfor %}
+    </select>
+    <button class="ghost-button" type="submit">Add member</button>
+  </form>
+  <div class="admin-list compact-list">
+    {% for person in admin.members_by_project[group.id] %}
+    <article class="admin-row">
+      <div><strong>{{ person.name }}</strong><p>{{ person.role }}</p></div>
+      <form action="/admin/groups/{{ group.id }}/members/{{ person.id }}/remove" method="post">
+        <button class="ghost-button" type="submit">Remove</button>
+      </form>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{% endblock %}

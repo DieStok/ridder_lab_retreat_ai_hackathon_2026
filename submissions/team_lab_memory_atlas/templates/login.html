@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Member Login - Lab Memory Atlas{% endblock %}
+{% block content %}
+<section class="page-header">
+  <p class="eyebrow">Member login</p>
+  <h1>Open your private action view</h1>
+  <p class="lede">Action plans are shown only to the assigned person, their supervisors, Jeroen as PI, and admins.</p>
+</section>
+
+<form class="form-panel compact-form" action="/login" method="post">
+  {% if error %}
+  <div class="form-error">{{ error }}</div>
+  {% endif %}
+  {% if members %}
+  <label>
+    <span>Lab member</span>
+    <select name="person_id" required>
+      {% for person in members %}
+      <option value="{{ person.id }}">{{ person.name }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>
+    <span>Password or PIN</span>
+    <input name="password" type="password" autocomplete="current-password" required>
+  </label>
+  <button class="primary-button" type="submit">Sign in</button>
+  {% else %}
+  <div class="empty-state flat">
+    <h2>No member logins enabled</h2>
+    <p>An admin can enable login and set a password from a person profile.</p>
+  </div>
+  {% endif %}
+</form>
+{% endblock %}

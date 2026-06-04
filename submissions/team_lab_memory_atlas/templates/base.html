@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Lab Memory Atlas{% endblock %}</title>
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', path='de-ridder-lab-knight.svg') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='app.css') }}">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="{{ url_for('static', path='de-ridder-lab-knight.svg') }}" alt="">
+        </span>
+        <span class="brand-copy">
+          <strong>de ridder lab</strong>
+          <small>People and project map</small>
+        </span>
+      </a>
+      <nav class="nav-list">
+        <a class="{{ 'active' if active == 'atlas' else '' }}" href="/">Members</a>
+        <a class="{{ 'active' if active == 'projects' else '' }}" href="/projects">Projects</a>
+        <a class="{{ 'active' if active == 'actions' else '' }}" href="/actions">Actions</a>
+        <a class="{{ 'active' if active == 'meetings' else '' }}" href="/meetings">Meetings</a>
+        {% if admin_logged_in or member_logged_in %}
+        <a class="{{ 'active' if active == 'review' else '' }}" href="/review">Review Queue</a>
+        <a class="{{ 'active' if active == 'upload' else '' }}" href="/upload">Import</a>
+        {% endif %}
+        {% if admin_logged_in %}
+        <a class="{{ 'active' if active == 'admin' else '' }}" href="/admin">Admin</a>
+        {% endif %}
+      </nav>
+      <div class="identity-panel">
+        {% if current_person %}
+        <span>Signed in</span>
+        <strong>{{ current_person.name }}</strong>
+        <form action="/logout" method="post">
+          <button class="sidebar-button" type="submit">Log out member</button>
+        </form>
+        {% else %}
+        <span>Private actions</span>
+        <a class="sidebar-link-button {{ 'active' if active == 'login' else '' }}" href="/login">Member login</a>
+        {% endif %}
+      </div>
+      {% if admin_logged_in %}
+      <form action="/admin/logout" method="post">
+        <button class="sidebar-button" type="submit">Log out admin</button>
+      </form>
+      {% endif %}
+      <div class="sidebar-note">
+        <span class="note-label">Review first</span>
+        <p>Meeting-derived updates stay draft-only until approved.</p>
+      </div>
+    </aside>
+    <main class="main">
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+  {% block scripts %}{% endblock %}
+</body>
+</html>
