@@ -19,3 +19,6 @@ __pycache__/
 
 # macOS
 .DS_Store
+
+# Personal demo run sheet — local only, not for the repo
+DEMO.md
