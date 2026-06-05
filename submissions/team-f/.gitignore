@@ -26,3 +26,6 @@ __pycache__/
 
 # Personal demo run sheet — local only, not for the repo
 DEMO.md
+
+# Transient sacct dumps (the 29MB tachterberg input lives here, not in git)
+.sacct_tmp/
