@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RoboRoy — De Ridder Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0c0c0e;
+    --char:#141417;
+    --soot:#1d1d22;
+    --ash:#9a978f;
+    --bone:#ece7dc;
+    --ember:#ff7a18;
+    --amber:#ffb627;
+    --moss:#84a07c;       /* efficiency champion green */
+    --line:rgba(236,231,220,.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
+  body{
+    background:var(--ink);color:var(--bone);
+    font-family:"Big Shoulders Display",sans-serif;
+    overflow-x:hidden;
+  }
+  /* CRT grain + scanline atmosphere */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:50;pointer-events:none;
+    background:repeating-linear-gradient(0deg,rgba(0,0,0,.16) 0 1px,transparent 1px 3px);
+    mix-blend-mode:multiply;opacity:.5;
+  }
+  body::after{
+    content:"";position:fixed;inset:0;z-index:49;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .deck{counter-reset:slide}
+  section.slide{
+    scroll-snap-align:start;
+    min-height:100vh;width:100%;
+    padding:7vh 8vw;position:relative;
+    display:flex;flex-direction:column;justify-content:center;
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+  }
+  /* running header */
+  .chrome{
+    position:absolute;top:3.2vh;left:8vw;right:8vw;
+    display:flex;justify-content:space-between;align-items:center;
+    font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--ash);z-index:5;
+  }
+  .chrome .tick{color:var(--ember)}
+  .slide::after{
+    counter-increment:slide;content:"0" counter(slide) " / 03";
+    position:absolute;bottom:3.4vh;right:8vw;
+    font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.2em;color:var(--ash);
+  }
+  .kicker{
+    font-family:"JetBrains Mono",monospace;font-size:.8rem;font-weight:500;
+    letter-spacing:.34em;text-transform:uppercase;color:var(--ember);
+    display:flex;align-items:center;gap:.8rem;
+  }
+  .kicker::before{content:"";width:42px;height:2px;background:var(--ember);display:inline-block}
+
+  h1{font-weight:900;line-height:.86;letter-spacing:-.02em;text-transform:uppercase}
+  h2{font-weight:800;line-height:.9;letter-spacing:-.01em;text-transform:uppercase}
+
+  /* ---------- SLIDE 1 ---------- */
+  #s1{display:grid;grid-template-columns:1.25fr .9fr;gap:5vw;align-items:center}
+  #s1 .lede{max-width:42ch}
+  #s1 h1{font-size:clamp(4.5rem,13vw,12rem);color:var(--bone)}
+  #s1 h1 .ro{color:var(--ember)}
+  #s1 .sub{
+    font-family:"Instrument Serif",serif;font-style:italic;
+    font-size:clamp(1.5rem,2.6vw,2.4rem);color:var(--amber);
+    margin:1.4rem 0 2.4rem;line-height:1.15;
+  }
+  .problems{display:flex;flex-direction:column;gap:1.05rem;max-width:46ch}
+  .problems li{
+    list-style:none;display:flex;gap:1rem;align-items:flex-start;
+    font-size:1.32rem;font-weight:600;line-height:1.18;color:var(--bone);
+  }
+  .problems li span{
+    font-family:"JetBrains Mono",monospace;color:var(--ember);
+    font-size:.95rem;font-weight:700;padding-top:.25rem;flex:none;
+  }
+  .portrait{
+    position:relative;aspect-ratio:1;border:1px solid var(--line);
+    border-radius:4px;overflow:hidden;background:var(--char);
+    box-shadow:0 40px 90px -30px rgba(0,0,0,.9);
+  }
+  .portrait img{width:100%;height:100%;object-fit:cover;
+    filter:contrast(1.05) saturate(.85) brightness(.92);mix-blend-mode:luminosity;opacity:.92}
+  .portrait::after{content:"";position:absolute;inset:0;
+    background:radial-gradient(120% 80% at 70% 10%,transparent,rgba(255,122,24,.14) 60%,rgba(12,12,14,.7));}
+  .portrait .cap{
+    position:absolute;bottom:0;left:0;right:0;padding:.7rem 1rem;
+    font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--bone);background:rgba(12,12,14,.55);
+    border-top:1px solid var(--line);backdrop-filter:blur(3px);z-index:2;
+  }
+
+  /* ---------- SLIDE 2 ---------- */
+  #s2 h2{font-size:clamp(2.6rem,6vw,5rem);margin:.6rem 0 .4rem;max-width:18ch}
+  #s2 .gloss{font-family:"Instrument Serif",serif;font-style:italic;color:var(--ash);
+    font-size:clamp(1.1rem,1.8vw,1.5rem);max-width:52ch;margin-bottom:3.2rem}
+  .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line)}
+  .step{padding:1.8rem 1.5rem;position:relative;border-right:1px solid var(--line)}
+  .step:last-child{border-right:none}
+  .step .n{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.2em;color:var(--ember)}
+  .step h3{font-size:1.7rem;font-weight:800;text-transform:uppercase;margin:.5rem 0 .5rem;line-height:.95}
+  .step p{font-size:1.02rem;font-weight:600;color:var(--ash);line-height:1.25}
+  .step.local{background:linear-gradient(180deg,rgba(132,160,124,.08),transparent)}
+  .step.local h3{color:var(--moss)}
+  .step .arrow{position:absolute;right:-11px;top:50%;transform:translateY(-50%);
+    color:var(--ember);font-family:"JetBrains Mono",monospace;font-size:1.2rem;z-index:3;
+    background:var(--ink);padding:2px 0}
+  .step:last-child .arrow{display:none}
+  .twoout{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.4rem}
+  .card{border:1px solid var(--line);padding:1.4rem 1.6rem;border-radius:3px;background:var(--char)}
+  .card .tag{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+  .card.serious .tag{color:var(--moss)} .card.roast .tag{color:var(--ember)}
+  .card p{font-family:"Instrument Serif",serif;font-style:italic;font-size:1.25rem;line-height:1.3;margin-top:.6rem;color:var(--bone)}
+  .badge{margin-top:2.2rem;display:inline-flex;align-items:center;gap:.7rem;
+    font-family:"JetBrains Mono",monospace;font-size:.82rem;letter-spacing:.12em;
+    color:var(--moss);border:1px solid rgba(132,160,124,.4);padding:.55rem 1rem;border-radius:99px}
+  .badge::before{content:"";width:8px;height:8px;border-radius:99px;background:var(--moss);box-shadow:0 0 12px var(--moss)}
+
+  /* custom audio player */
+  .player{display:inline-flex;align-items:center;gap:1rem;
+    border:1px solid var(--ember);border-radius:99px;padding:.5rem .5rem .5rem 1.4rem;
+    background:linear-gradient(90deg,rgba(255,122,24,.10),transparent);cursor:pointer;
+    font-family:"JetBrains Mono",monospace;-webkit-user-select:none;user-select:none;
+    transition:background .25s,transform .15s}
+  .player:hover{background:linear-gradient(90deg,rgba(255,122,24,.18),transparent);transform:translateY(-1px)}
+  .player .meta{display:flex;flex-direction:column;line-height:1.1}
+  .player .meta .t{font-size:.92rem;font-weight:700;letter-spacing:.04em;color:var(--bone);text-transform:uppercase}
+  .player .meta .s{font-size:.66rem;letter-spacing:.12em;color:var(--ash);text-transform:uppercase;margin-top:.2rem}
+  .player .btn{flex:none;width:46px;height:46px;border-radius:99px;border:none;cursor:pointer;
+    background:var(--ember);color:var(--ink);display:grid;place-items:center;
+    box-shadow:0 0 0 0 rgba(255,122,24,.5);transition:box-shadow .3s,background .2s}
+  .player .btn svg{width:18px;height:18px;display:block}
+  .player.playing .btn{background:var(--amber);animation:pulse 1.6s infinite}
+  .player.playing .meta .s{color:var(--ember)}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,182,39,.5)}70%{box-shadow:0 0 0 14px rgba(255,182,39,0)}100%{box-shadow:0 0 0 0 rgba(255,182,39,0)}}
+  @media print{.player{display:none}}
+
+  /* ---------- SLIDE 3 ---------- */
+  #s3{display:grid;grid-template-columns:1fr 1.05fr;gap:5vw;align-items:center}
+  #s3 .head h2{font-size:clamp(2.4rem,5.5vw,4.6rem);margin:.5rem 0 .3rem}
+  #s3 .head .gloss{font-family:"JetBrains Mono",monospace;font-size:.8rem;letter-spacing:.14em;color:var(--ash);text-transform:uppercase}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2.2rem}
+  .stat{background:var(--ink);padding:1.5rem 1.4rem}
+  .stat .v{font-size:clamp(2.4rem,5vw,3.4rem);font-weight:900;line-height:.9;color:var(--amber)}
+  .stat.bad .v{color:var(--ember)}
+  .stat .l{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ash);margin-top:.5rem}
+  .roastbox{border-left:3px solid var(--ember);padding:.3rem 0 .3rem 1.6rem;background:
+    linear-gradient(90deg,rgba(255,122,24,.07),transparent)}
+  .roastbox .who{font-family:"JetBrains Mono",monospace;font-size:.74rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--ember);display:flex;align-items:center;gap:.6rem}
+  .roastbox .who::after{content:"♨ dry british voice";color:var(--ash);font-size:.66rem;letter-spacing:.1em}
+  .roastbox blockquote{font-family:"Instrument Serif",serif;font-style:italic;
+    font-size:clamp(1.5rem,2.5vw,2.15rem);line-height:1.22;color:var(--bone);margin-top:1rem}
+  .fix{margin-top:1.8rem;font-family:"JetBrains Mono",monospace;font-size:.95rem;color:var(--ash)}
+  .fix b{color:var(--moss);font-weight:700}
+  .fix .old{color:var(--ember);text-decoration:line-through;text-decoration-color:rgba(255,122,24,.5)}
+  .closer{margin-top:2.4rem;font-family:"Instrument Serif",serif;font-style:italic;
+    font-size:1.6rem;color:var(--amber)}
+
+  /* nav hint */
+  .hint{position:fixed;bottom:3.4vh;left:8vw;z-index:40;
+    font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.2em;
+    color:var(--ash);text-transform:uppercase;opacity:.6}
+
+  @media(max-width:900px){
+    #s1,#s3{grid-template-columns:1fr;gap:3rem}
+    .portrait{max-width:340px}
+    .flow{grid-template-columns:1fr 1fr}
+    .step .arrow{display:none}
+  }
+
+  /* ---- PRINT / PDF: one 16:9 page per slide, backgrounds preserved ---- */
+  @page{size:13.333in 7.5in;margin:0}
+  @media print{
+    html,body{background:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    body::before,body::after{display:none}      /* drop scanline/grain for crisp print */
+    .hint{display:none}
+    .deck{counter-reset:slide}
+    section.slide{
+      height:7.5in;min-height:0;width:13.333in;
+      padding:0.85in 1in;
+      page-break-after:always;break-after:page;
+      border-bottom:none;
+    }
+    section.slide:last-child{page-break-after:auto;break-after:auto}
+    .chrome{top:.4in;left:1in;right:1in}
+    .slide::after{bottom:.45in;right:1in}
+  }
+</style>
+</head>
+<body>
+<div class="hint">↓ / → to advance</div>
+<div class="deck">
+
+  <!-- SLIDE 1 -->
+  <section class="slide" id="s1">
+    <div class="chrome"><span>De Ridder Lab · Spring Retreat 2026</span><span class="tick">● team-f</span></div>
+    <div class="lede">
+      <div class="kicker">The HPC babysitter</div>
+      <h1>Robo<span class="ro">Roy</span></h1>
+      <p class="sub">“Double the Roy, double the fun.”<br>Roy could nag you every week. Roy has better things to do.</p>
+      <ul class="problems">
+        <li><span>01</span>Everyone over-requests CPUs, RAM &amp; GPUs “to be safe” — nobody checks <code>seff</code> afterward.</li>
+        <li><span>02</span>One person reserves 8 GPUs and uses 1. Everyone else queues.</li>
+        <li><span>03</span>Wasted walltime is wasted energy — and quietly, wasted carbon.</li>
+      </ul>
+    </div>
+    <div class="portrait">
+      <img src="roboroy.png" alt="RoboRoy" onerror="this.style.display='none'">
+      <div class="cap">RoboRoy · reads your week, reads you</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 2 -->
+  <section class="slide" id="s2">
+    <div class="chrome"><span>What it does</span><span class="tick">all local · no data leaves the machine</span></div>
+    <div class="kicker">One command, end to end</div>
+    <h2>From <em>sacct</em> to a roast in 30 seconds.</h2>
+    <p class="gloss">Reads a week of SLURM accounting — real or mock — computes per-user efficiency, energy &amp; CO₂, then a <em>local</em> LLM writes the reports and a stand-up monologue, read aloud in a dry British voice.</p>
+
+    <div class="flow">
+      <div class="step"><div class="n">INPUT</div><h3>sacct</h3><p>A week of SLURM jobs: walltime, CPU, GPU, mem.<span class="arrow">→</span></p></div>
+      <div class="step"><div class="n">COMPUTE</div><h3>Efficiency &amp; CO₂</h3><p>Per-user overprovisioning, kWh, kg CO₂.<span class="arrow">→</span></p></div>
+      <div class="step local"><div class="n">LOCAL LLM</div><h3>Ollama</h3><p>Auto-routes to the smallest GPU that fits. Offline.<span class="arrow">→</span></p></div>
+      <div class="step"><div class="n">OUTPUT</div><h3>Report + Voice</h3><p>Markdown + Piper / <code>say</code> audio.</p></div>
+    </div>
+
+    <div class="twoout">
+      <div class="card serious"><div class="tag">▣ Serious report</div>
+        <p>“Many <code>geoharm-agent-gpu</code> tasks were overprovisioned on time. Next time use <code>--time=00:30:00</code>.”</p></div>
+      <div class="card roast"><div class="tag">♨ Roy says</div>
+        <p>“A staggering achievement in doing nothing.”</p></div>
+    </div>
+    <div style="display:flex;gap:1.6rem;align-items:center;flex-wrap:wrap;margin-top:2.2rem">
+      <div class="player" data-audio="out_gemma4_26b/dieter/standup.wav">
+        <button class="btn" aria-label="Play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l12-7z"/></svg></button>
+        <div class="meta"><span class="t">Hear the 30-second stand-up</span><span class="s">▶ lab monologue · dry british voice</span></div>
+      </div>
+      <div class="badge">all local · auto GPU-routing · runs on HPC</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3 -->
+  <section class="slide" id="s3">
+    <div class="chrome"><span>The proof · one real week</span><span class="tick">live, on stage</span></div>
+    <div class="left">
+      <div class="head">
+        <div class="kicker">Caught in the act</div>
+        <h2>685 jobs.<br>4% of the time used.</h2>
+        <div class="gloss">Dieter — Herder of Claude Code · real sacct, this week</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="v">1,246</div><div class="l">CPU-hours</div></div>
+        <div class="stat bad"><div class="v">9.11 kg</div><div class="l">CO₂ emitted</div></div>
+        <div class="stat"><div class="v">685</div><div class="l">jobs · 321 failed</div></div>
+        <div class="stat bad"><div class="v">4%</div><div class="l">avg walltime used</div></div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="roastbox">
+        <div class="who">Roy says</div>
+        <blockquote>“Requesting 12h walltime only to finish in 0% is a staggering achievement in doing nothing. Try checking if the job has actually started.”</blockquote>
+      </div>
+      <div class="player" data-audio="out_gemma4_26b/dieter/user_dstoker.wav" style="margin-top:1.6rem">
+        <button class="btn" aria-label="Play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l12-7z"/></svg></button>
+        <div class="meta"><span class="t">Hear Roy roast Dieter</span><span class="s">▶ the actual clip · 0:20</span></div>
+      </div>
+      <p class="fix">8h GPU job, used 2% &nbsp;→&nbsp; <span class="old">--time=08:00:00</span> &nbsp;<b>--time=00:30:00</b></p>
+      <p class="closer">Actionable. Local. And it makes the lab laugh once.</p>
+    </div>
+  </section>
+
+</div>
+<script>
+  // arrow / space navigation between slides
+  const slides=[...document.querySelectorAll('.slide')];
+  let i=0;
+  function go(n){i=Math.max(0,Math.min(slides.length-1,n));slides[i].scrollIntoView({behavior:'smooth'});}
+  addEventListener('keydown',e=>{
+    if(['ArrowDown','ArrowRight',' ','PageDown'].includes(e.key)){e.preventDefault();go(i+1);}
+    if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(i-1);}
+  });
+  // keep index in sync when scrolling manually
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting)i=slides.indexOf(en.target);}),{threshold:.5});
+  slides.forEach(s=>io.observe(s));
+
+  // ---- audio players ----
+  const PLAY='<path d="M7 5v14l12-7z"/>', PAUSE='<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>';
+  const players=[...document.querySelectorAll('.player')].map(el=>{
+    const a=new Audio(el.dataset.audio); a.preload='auto';
+    const icon=el.querySelector('svg');
+    const reset=()=>{el.classList.remove('playing');icon.innerHTML=PLAY;};
+    a.addEventListener('ended',reset);
+    el.addEventListener('click',()=>{
+      if(a.paused){
+        players.forEach(p=>{if(p.a!==a){p.a.pause();p.a.currentTime=0;p.reset();}});
+        a.play().then(()=>{el.classList.add('playing');icon.innerHTML=PAUSE;})
+                .catch(err=>{el.querySelector('.s').textContent='⚠ file not found — open from team-f/';});
+      } else {a.pause();reset();}
+    });
+    return {a,reset};
+  });
+</script>
+</body>
+</html>
